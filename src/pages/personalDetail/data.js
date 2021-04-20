@@ -85,26 +85,20 @@ function Data(props, ref) {
     }
     commentList.qualityItemList.forEach((item)=>{
         let obj = {
-            text: item.itemName
+            name: item.itemName,
+            max: 100
         };
         xList.push(obj);
-        // if(item.rank == "A"){
-        //     dataList.push(80);
-        // } else if(item.rank == "B"){
-        //     dataList.push(70);
-        // } else if(item.rank == "C"){
-        //     dataList.push(60);
-        // } else {
-        //     dataList.push(50);
-        // }
         if(item.rank == "A"){
-            dataList.push([10]);
+            dataList.push(100);
         } else if(item.rank == "B"){
-            dataList.push([10]);
+            dataList.push(80);
         } else if(item.rank == "C"){
-            dataList.push([10]);
+            dataList.push(60);
+        } else if(item.rank){
+            dataList.push(40);
         } else {
-            dataList.push([40]);
+            dataList.push(0);
         }
     })
     let myEchart = echarts.init(document.getElementById('evaluate-echart'));

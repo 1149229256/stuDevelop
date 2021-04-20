@@ -13,7 +13,6 @@ import React, {
   useLayoutEffect,
   forwardRef,
 } from "react";
-import $ from "jquery";
 import { Modal, Empty } from '@/component/common';
 import { Scrollbars } from "react-custom-scrollbars";
 import echarts from "echarts/lib/echarts";
@@ -633,6 +632,9 @@ function TeacherCount(props, ref) {
       }
       nationality.push(obj);
     }
+    useLayoutEffect(() => {
+      // titleDom = "学籍统计" + <span>{"-" + currentKind.key}</span>
+    }, [currentKind])
   return (
     <div className={`TeacherCount`}>
       <Loading
@@ -667,11 +669,6 @@ function TeacherCount(props, ref) {
                     setCurrentKind(item);
                     setModalStuList(item.dataList);
                     setStuStatusVisible(true);
-                    setTimeout(() => {
-                      $(".stu-member-info .ant-modal-title").append(
-                        `<span class="modal-small-title">- ${item.key}</span>`
-                      )
-                    }, 100);
                     
                   }}
                   >
@@ -714,7 +711,7 @@ function TeacherCount(props, ref) {
         onOk={()=>setStuStatusVisible(true)}
         onCancel={()=>setStuStatusVisible(false)}
         footer={null}
-        // destroyOnClose={true}
+        destroyOnClose={false}
         width={576}
         className="stu-member-info"
         bodyStyle={{height: 432 + 'px', padding: '20px 5px 20px 36px'}}

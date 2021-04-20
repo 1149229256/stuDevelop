@@ -378,6 +378,9 @@ function AnalysisTop(props, ref) {
       // ignoreElements: function($(".analysis-content")[0]){
       //   return false
       // },
+      // useCORS: true,
+      useCORS: true,
+      allowTaint: false,
       backgroundColor: '#ffffff',
     }).then(canvas => {
       const imgUrl = canvas.toDataURL();
@@ -407,6 +410,7 @@ function AnalysisTop(props, ref) {
       if(ModuleID == "schoolLiveMsg"){
         imgName += "校园生活档案_";
       }
+      let userName = sessionStorage.getItem("UserInfo")? JSON.parse(sessionStorage.getItem("UserInfo")).UserName: "";
       let termName = TermSelect.value? JSON.parse(TermSelect.value).termName: "";
       let gradeName = "";
       Array.isArray(gradeList) && gradeList.map((item, index)=>{
@@ -414,7 +418,10 @@ function AnalysisTop(props, ref) {
           gradeName = item.gradeName;
         }
       });
-      a.download = imgName + termName + (gradeName?"_" + gradeName: "") + (currentClassName?"_" + currentClassName: "");
+      a.download = imgName + termName + (gradeName?"_" + gradeName: "") + (
+        userIdentity == "student"?
+        "_" + userName:
+        currentClassName?"_" + currentClassName: "");
       let event = new MouseEvent("click");
       a.dispatchEvent(event);
     });

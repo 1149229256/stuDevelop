@@ -303,7 +303,7 @@ function CourseShow(props, ref) {
         }
         let currentTermInfo = currentTerm.value && JSON.parse(currentTerm.value);
         //课堂活跃表现
-        let url = BasicProxy + "/api/learning2/performance/statistics/batch?type=3" +
+        let url = BasicProxy + "/api/learning2/performance/statistics/batch?type=4" +
         "&schoolId=" + SchoolID +
         "&termId=" + currentTermInfo.termId +
         "&start=" + currentTermInfo.startDate.substr(0, 10) +
@@ -317,7 +317,7 @@ function CourseShow(props, ref) {
             }
         })
         //查学校时需要请求原接口
-        url = BasicProxy + "/api/learning2/performance/statistics?type=4" +
+        url = BasicProxy + "/api/learning2/performance/statistics?type=3" +
         "&studentId=" + (userIdentity == "student"? UserID: "") +
         "&classId=" + currentClass +
         "&gradeId=" + currentGrade +

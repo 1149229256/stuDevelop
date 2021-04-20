@@ -605,7 +605,10 @@
         color: #0099ff;
         text-decoration: underline;
         cursor: pointer;
-        margin-left: calc(100% - 120px);
+        float: right;
+        line-height: 28px;
+        margin-right: 50px;
+        // margin-left: calc(100% - 120px);
         &:hover {
             opacity: 0.75;
         }

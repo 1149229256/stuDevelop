@@ -120,19 +120,12 @@ function DetailWork(props, ref) {
         if(userIdentity == "manager" && !currentGrade && !currentClass){
             return;
         }
-        let classList = sessionStorage.getItem("classList")? JSON.parse(sessionStorage.getItem("classList")): [];
-        let classGradeId = "";
-        classList.forEach((item)=>{
-            if(item.classId == currentClass){
-                classGradeId = item.gradeId;
-            }
-        })
         let currentTermInfo = currentTerm.value && JSON.parse(currentTerm.value);
         //获取全年级各科作业平均分
         let url = BasicProxy + "/api/learning2/homework/avgScore?type=3" +
         "&studentId=" + (userIdentity == "student"? UserID: "") +
         "&classId=" + currentClass +
-        "&gradeId=" + (currentGrade? currentGrade: classGradeId) +
+        "&gradeId=" + currentGrade +
         "&schoolId=" + SchoolID +
         "&termId=" + currentTermInfo.termId +
         "&start=" + currentTermInfo.startDate.substr(0, 10) +
@@ -170,13 +163,7 @@ function DetailWork(props, ref) {
             return;
         }
         let currentTermInfo = currentTerm.value && JSON.parse(currentTerm.value);
-        let classList = sessionStorage.getItem("classList")? JSON.parse(sessionStorage.getItem("classList")): [];
-        let classGradeId = "";
-        classList.forEach((item)=>{
-            if(item.classId == currentClass){
-                classGradeId = item.gradeId;
-            }
-        })
+
         // SchoolID = "S27-511-AF57";
         // currentTermInfo.termId = "2020-202101";
         // currentClass = "d8ed1a21-39bc-4403-8330-5f9bd578f721";
@@ -193,7 +180,7 @@ function DetailWork(props, ref) {
         ) +
         "&studentId=" + (userIdentity == "student"? UserID: "") +
         "&classId=" + currentClass +
-        "&gradeId=" + (currentGrade? currentGrade: classGradeId)+
+        "&gradeId=" + currentGrade +
         "&schoolId=" + SchoolID +
         "&termId=" + currentTermInfo.termId +
         "&start=" + currentTermInfo.startDate.substr(0, 10) +
@@ -213,13 +200,7 @@ function DetailWork(props, ref) {
             return;
         }
         let currentTermInfo = currentTerm.value && JSON.parse(currentTerm.value);
-        let classList = sessionStorage.getItem("classList")? JSON.parse(sessionStorage.getItem("classList")): [];
-        let classGradeId = "";
-        classList.forEach((item)=>{
-            if(item.classId == currentClass){
-                classGradeId = item.gradeId;
-            }
-        })
+
         // SchoolID = "S27-511-AF57";
         // currentTermInfo.termId = "2020-202101";
         // currentClass = "d8ed1a21-39bc-4403-8330-5f9bd578f721";
@@ -236,7 +217,7 @@ function DetailWork(props, ref) {
         ) +
         "&studentId=" + (userIdentity == "student"? UserID: "") +
         "&classId=" + currentClass +
-        "&gradeId=" + (currentGrade? currentGrade: classGradeId) +
+        "&gradeId=" + currentGrade +
         "&schoolId=" + SchoolID +
         "&termId=" + currentTermInfo.termId +
         "&start=" + currentTermInfo.startDate.substr(0, 10) +
@@ -1556,7 +1537,7 @@ function DetailWork(props, ref) {
     //学科日常分数
     useEffect(() => { 
         //获取学科列表
-        if(detailScoreList.length == 0){
+        if(detailScoreList.length == 0 && gradeDetailScoreList.length == 0){
             return;
         }
         let xList = [], myList = [], classDataList = [], subjectList = [], gradeDataList = [], seriesList = [];
@@ -1564,8 +1545,8 @@ function DetailWork(props, ref) {
             detailScoreList.forEach((item, index)=>{
                 item.everydayLessonScoreDataList &&
                 item.everydayLessonScoreDataList.forEach((child)=>{
-                    subjectList.push(child.subject);
-                    xList.push(child.homeworkName);
+                    subjectList.push(child.subjectName);
+                    xList.push(child.date);
                 })
             })
             subjectList = [...new Set(subjectList)];
@@ -1574,8 +1555,8 @@ function DetailWork(props, ref) {
                 xList.forEach((child)=>{
                     item.everydayLessonScoreDataList &&
                     item.everydayLessonScoreDataList.forEach((child2)=>{
-                        if((currentSubject && child2.homeworkName == child && child2.subject == currentSubject) ||
-                        (!currentSubject && child2.homeworkName == child && child2.subject == item.everydayLessonScoreDataList[0].subject)){
+                        if((currentSubject && child2.date == child && child2.subjectName == currentSubject) ||
+                        (!currentSubject && child2.date == child && child2.subjectName == item.everydayLessonScoreDataList[0].subjectName)){
                             arr.push(child2.score.toFixed(1));
                         }
                     })
@@ -1589,32 +1570,27 @@ function DetailWork(props, ref) {
                     data: arr
                 },)
             })
-            subjectList = [...new Set(subjectList)];
-            setSubjectList(subjectList);
-            !currentSubject && setCurrentSubject(subjectList[0]);
         } else if(userIdentity == "student"){
             detailScoreList.forEach((item)=>{
-                if((currentSubject && item.subject == currentSubject) ||
-                (!currentSubject && item.subject == detailScoreList[0].subject)){
-                    xList.push(item.homeworkName);
+                xList.push(item.date);
+                if((currentSubject && item.subjectName == currentSubject) ||
+                (!currentSubject && item.subjectName == detailScoreList[0].subjectName)){
                     myList.push(item.score);
                 }
-                subjectList.push(item.subject);
+                subjectList.push(item.subjectName);
             })
             classDetailScoreList.forEach((item)=>{
-                if((currentSubject && item.subject == currentSubject) ||
-                (!currentSubject && item.subject == classDetailScoreList[0].subject)){
+                if((currentSubject && item.subjectName == currentSubject) ||
+                (!currentSubject && item.subjectName == classDetailScoreList[0].subjectName)){
                     classDataList.push(item.score);
                 }
             })
             gradeDetailScoreList.forEach((item)=>{
-                if((currentSubject && item.subject == currentSubject) ||
-                (!currentSubject && item.subject == gradeDetailScoreList[0].subject)){
+                if((currentSubject && item.subjectName == currentSubject) ||
+                (!currentSubject && item.subjectName == gradeDetailScoreList[0].subjectName)){
                     gradeDataList.push(item.score);
                 }
             })
-            subjectList = [...new Set(subjectList)];
-            setSubjectList(subjectList);
             !currentSubject && setCurrentSubject(subjectList[0]);
             seriesList = [
                 {
@@ -1666,21 +1642,19 @@ function DetailWork(props, ref) {
             ]
         } else if(currentClass){
             detailScoreList.forEach((item)=>{
-                if((currentSubject && item.subject == currentSubject) ||
-                (!currentSubject && item.subject == detailScoreList[0].subject)){
-                    xList.push(item.homeworkName);
+                xList.push(item.date);
+                if((currentSubject && item.subjectName == currentSubject) ||
+                (!currentSubject && item.subjectName == detailScoreList[0].subjectName)){
                     myList.push(item.score);
                 }
-                subjectList.push(item.subject);
+                subjectList.push(item.subjectName);
             })
             gradeDetailScoreList.forEach((item)=>{
-                if((currentSubject && item.subject == currentSubject) ||
-                (!currentSubject && item.subject == gradeDetailScoreList[0].subject)){
+                if((currentSubject && item.subjectName == currentSubject) ||
+                (!currentSubject && item.subjectName == gradeDetailScoreList[0].subjectName)){
                     gradeDataList.push(item.score);
                 }
             })
-            subjectList = [...new Set(subjectList)];
-            setSubjectList(subjectList);
             !currentSubject && setCurrentSubject(subjectList[0]);
             seriesList = [
                 {
@@ -1715,16 +1689,14 @@ function DetailWork(props, ref) {
                 },
             ]
         } else {
-            detailScoreList.forEach((item)=>{ 
-                if((currentSubject && item.subject == currentSubject) ||
-                (!currentSubject && item.subject == detailScoreList[0].subject)){
-                    xList.push(item.homeworkName);
+            detailScoreList.forEach((item)=>{
+                xList.push(item.date);
+                if((currentSubject && item.subjectName == currentSubject) ||
+                (!currentSubject && item.subjectName == detailScoreList[0].subjectName)){
                     myList.push(item.score);
                 }
-                subjectList.push(item.subject);
+                subjectList.push(item.subjectName);
             })
-            subjectList = [...new Set(subjectList)];
-            setSubjectList(subjectList);
             !currentSubject && setCurrentSubject(subjectList[0]);
             seriesList = [
                 {
@@ -1744,7 +1716,6 @@ function DetailWork(props, ref) {
                 },
             ]
         }
-        console.log(xList);
         let myEchart = echarts.init(document.getElementById("detail-grade-echart"));
         myEchart.resize();
         let option = {
@@ -1802,16 +1773,12 @@ function DetailWork(props, ref) {
             },
             xAxis: {
                 type: 'category',
-                name: '作业',
+                name: '月份',
                 nameTextStyle: {
                     color: '#999999'
                 },
                 axisLabel: {
-                    interval: 0,
-                    color: '#999999',
-                    formatter: function(value){
-                        return value && value.length > 5? value.substr(0, 5) + "...": value
-                    }
+                    color: '#666'
                 },
                 axisTick: {
                     show: false
@@ -1875,7 +1842,7 @@ function DetailWork(props, ref) {
     Array.isArray(subjectList) && subjectList.forEach((item, index)=>{
         arr2.push(item);
         if(((index + 1) % 7 == 0) || index == subjectList.length - 1){
-            updateSubjectList.push(arr2);
+            updateSubjectList.push(arr);
             arr2 = [];
         }
     })
@@ -2099,7 +2066,7 @@ function DetailWork(props, ref) {
                     tip="加载中..."
                     spinning={subjectVisible}>
                     {
-                        detailScoreList.length > 0?
+                        detailScoreList.length > 0 || gradeAvgScoreList > 0?
                         <div className="detail-grade-echart" id="detail-grade-echart"></div>:
                         <Empty
                         className={"bar-empty"}

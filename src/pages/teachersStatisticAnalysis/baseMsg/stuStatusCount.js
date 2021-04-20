@@ -31,7 +31,16 @@ let { BasicProxy } = ipConfig;
         userStatus
     } = props;
     // const [userStatus, setUserStatus] = useState({});
-    
+    const getBase64Image = (img) => {  
+        var canvas = document.createElement("canvas");  
+        canvas.width = img.width;  
+        canvas.height = img.height;  
+        var ctx = canvas.getContext("2d");  
+        ctx.drawImage(img, 0, 0, img.width, img.height);  
+        var ext = img.src.substring(img.src.lastIndexOf(".")+1).toLowerCase();  
+        var dataURL = canvas.toDataURL("image/"+ext);  
+        return dataURL;  
+   } 
     // userStatus.extraInfoJson = JSON.parse(userStatus.extraInfoJson);
     // console.log(userStatus.extraInfoJson);
     return (
@@ -57,12 +66,20 @@ let { BasicProxy } = ipConfig;
                     {userStatus.extraInfoJson && userStatus.extraInfoJson["出生地"]?
                     userStatus.extraInfoJson["出生地"]: "--"}
                 </td> 
-                <td rowSpan="6" style={{
-                    backgroundImage: `url(${userStatus.photoPath})`,
-                    backgroundSize: `calc(100% - 24px) calc(100% - 24px)`,
-                    backgroundRepeat: 'no-repeat',
-                    backgroundPosition: 'center center'
-                    }}>
+                <td rowSpan="6" 
+                // style={{
+                //     backgroundImage: `url(${(userStatus.photoPath)})`,
+                //     backgroundSize: `calc(100% - 24px) calc(100% - 24px)`,
+                //     backgroundRepeat: 'no-repeat',
+                //     backgroundPosition: 'center center'
+                //     }}
+                    >
+                        <img style={{
+                            display: 'inline-block',
+                            width: 'calc(100% - 24px)',
+                            height: '168px',
+
+                        }} src={userStatus.photoPath} crossorigin="anonymous"/>
                 </td>
             </tr>
             <tr>

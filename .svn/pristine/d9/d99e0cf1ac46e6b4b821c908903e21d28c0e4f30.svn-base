@@ -35,43 +35,6 @@
     }
 }
 
-.height-weight-modal {
-    .top-output {
-        float: right;
-        width: 72px;
-        height: 30px;
-        line-height: 30px;
-        color: #fefefe;
-        text-align: center;
-        background-image: linear-gradient(90deg, #39d7ff 0%, #009cff 100%);
-        background-blend-mode: normal, normal;
-        margin-right: 10px;
-        margin-bottom: 10px;
-        border-radius: 3px;
-        cursor: pointer;
-        .outputlogo {
-            display: inline-block;
-            vertical-align: middle;
-            position: relative;
-            top: -1px;
-            width: 14px;
-            height: 14px;
-            margin-right: 3px;
-            background-image: url(../../app/images/btn-output.png);
-        }
-        &:hover {
-            opacity: 0.75;
-        }
-    }
-}
-
-.modal-small-title {
-    display: inline-block;
-    margin-left: 12px;
-    font-size: 16px;
-    color: #c7eeff;
-}
-
 .course-status {
     .search-container {
         position: relative;

@@ -314,7 +314,6 @@ function Analysis(props, ref) {
                   productMsg={levelHash[productLevel]}
                   setShowType={setShowType}
                   setCheckList={setCheckList}
-                  gradeList={gradeList}
                   reflashError={reflashError}
                   term={topRef.current? topRef.current.TermSelect: updateTermList[0]}
                   userIdentity={userIdentity}

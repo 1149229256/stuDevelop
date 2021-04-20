@@ -1112,7 +1112,7 @@ function PersonStudy(props, ref) {
                         <div className="circle-green">
                         {
                         typeof studyStatistic.avgTime == "number"?
-                        parseInt(studyStatistic.avgTime):
+                        (studyStatistic.avgTime).toFixed(1):
                         "--"
                         }
                         </div>

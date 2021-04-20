@@ -10,6 +10,7 @@ function StuStatistic(props){
         data
     } = props;
     const [userStatus, setUserStatus] = useState(data? data: {});
+     
     return (
         <div className="stu-statistic-template">
             <table className="base-info" border="1" borderColor="#b7e1e5">
@@ -33,12 +34,13 @@ function StuStatistic(props){
                     {userStatus.extraInfoJson && userStatus.extraInfoJson["出生地"]?
                     userStatus.extraInfoJson["出生地"]: "--"}
                 </td> 
-            <td rowSpan="6" style={{
-                backgroundImage: `url(${userStatus.photoPath})`,
-                backgroundSize: `calc(100% - 24px) calc(100% - 24px)`,
-                backgroundRepeat: 'no-repeat',
-                backgroundPosition: 'center center'
-            }}></td>
+                <td rowSpan="6">
+                        <img style={{
+                            display: 'inline-block',
+                            width: 'calc(100% - 24px)',
+                            height: '168px',
+                        }} src={userStatus.photoPath} crossorigin="anonymous"/>
+                </td>
             </tr>
             <tr>
                 <td>籍贯</td>

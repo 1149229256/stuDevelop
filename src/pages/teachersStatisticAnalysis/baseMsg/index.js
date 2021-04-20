@@ -33,6 +33,7 @@ import StuStatistic from "./stuStatiscModal";
 import HistoryModal from "../historyModal";
 import fetch from "../../../util/fetch";
 import ipConfig from "../../../util/ipConfig";
+import html2canvas from "html2canvas";
 import { message } from "antd";
 
 let { BasicProxy } = ipConfig;
@@ -55,7 +56,8 @@ function BaseMsg(props, ref) {
     setShowType,
     setCheckList,
     checkList,
-    reflashError
+    reflashError,
+    gradeList
   } = props;
   const selectLevel = 2;
   // const { selectLevel } = productMsg;
@@ -592,6 +594,39 @@ function BaseMsg(props, ref) {
             setModalShowType("detail");
         }
     })
+  }
+  const outputPage = (data) => {
+    let node = $(".stu-statistic-template");
+    html2canvas(node[0], {
+      width: node.width() - 10,
+      height: node.height() + 10,
+      scale: (0.75, 0.75),
+      // ignoreElements: function($(".analysis-content")[0]){
+      //   return false
+      // },
+      // useCORS: true,
+      useCORS: true,
+      allowTaint: false,
+      backgroundColor: '#ffffff',
+    }).then(canvas => {
+      const imgUrl = canvas.toDataURL();
+      // 获取截图base64 
+      // let img = document.createElement("img");
+      // img.src = imgUrl;
+      // console.log(node[0])
+      // node[0].appendChild(img);
+      let a = document.createElement("a");
+      a.href = imgUrl;
+      let imgName = "学籍档案_";
+      let termName = term.value? JSON.parse(term.value).termName: "";
+      let gradeName = data.gradeName;
+      let className = data.className;
+      let userName = data.studentName;
+      a.download = imgName + termName + (gradeName?"_" + gradeName: "") + (className?"_" + className: "") +
+      "_" + userName;
+      let event = new MouseEvent("click");
+      a.dispatchEvent(event);
+    });
   }
   return (
     <div className="BaseMsg" id="stuStatusMsg">
@@ -1544,6 +1579,13 @@ function BaseMsg(props, ref) {
                   <span className="reback-prev" onClick={()=>setModalShowType("list")}>返回学生列表</span>:
                   ""
                 }
+                <div 
+                className="top-output" 
+                onClick={()=>outputPage(stuStatistic)}
+                style={{marginRight: (userIdentity == "student"? 50: "")}}>
+                  <i className="outputlogo"></i>
+                  导出
+                </div>
                 <StuStatistic data={stuStatistic}/>
                 {/* <Table
                 style={{marginTop: 20}}
