@@ -1,0 +1,144 @@
+    /*
+ *                        _oo0oo_
+ *                       o8888888o
+ *                       88" . "88
+ *                       (| -_- |)
+ *                       0\  =  /0
+ *                     ___/`---'\___
+ *                   .' \\|     |// '.
+ *                  / \\|||  :  |||// \
+ *                 / _||||| -:- |||||- \
+ *                |   | \\\  - /// |   |
+ *                | \_|  ''\---/''  |_/ |
+ *                \  .-\__  '-'  ___/-. /
+ *              ___'. .'  /--.--\  `. .'___
+ *           ."" '<  `.___\_<|>_/___.' >' "".
+ *          | | :  `- \`.;`\ _ /`;.`/ - ` : | |
+ *          \  \ `_.   \_ __\ /__ _/   .-` /  /
+ *      =====`-.____`.___ \_____/___.-`___.-'=====
+ *                        `=---='
+ * 
+ * 
+ *      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * 
+ *            佛祖保佑       永不宕机     永无BUG
+ * 
+ * @Author: zhuzesen
+ * @LastEditors: zhuzesen
+ * @Date: 2020-12-25 09:18:27
+ * @LastEditTime: 2020-12-25 09:18:28
+ * @Description: 
+ * @FilePath: \teacher-development\src\pages\teachersStatisticAnalysis\teachingAbility\index.scss
+ */
+    
+    .TeacherER,
+    .TeacherTP,
+    .TeacherEC,
+    .TeacherRA,
+    .TeacherRP,
+    .TeacherECourse {
+        .ter-left {
+            position: relative;
+            display: inline-block;
+            width: 50%;
+            vertical-align: top;
+            height: 280px;
+            .tb-tip {
+                // margin-top: 10px;
+                padding-left: 5px;
+                text-align: left;
+            }
+            .ter-echarts {
+                height: 220px;
+                margin-top: 10px;
+            }
+            .ter-all {
+                position: absolute;
+                font-size: 12px;
+                left: 50%;
+                text-align: center;
+                transform: translateX(-50%);
+                line-height: 20px;
+                color: #333333;
+                top: 120px;
+                -webkit-transform: translateX(-50%);
+                -moz-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                -o-transform: translateX(-50%);
+                span {
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+            }
+            .ter-title {
+                position: relative;
+                font-size: 14px;
+                line-height: 20px;
+                margin-bottom: 0;
+                text-align: center;
+                color: #333333;
+            }
+        }
+        .ter-right {
+            height: 280px;
+        }
+        .ter-pie-left,
+        .ter-pie-right {
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            width: 50%;
+            .ter-echarts {
+                height: 200px;
+            }
+            .ter-all {
+                top: 90px;
+                font-size: 12px;
+                color: #333333;
+                span {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    
+    .TeacherECourse {
+        .ter-echarts {
+            text-align: center;
+            line-height: 220px;
+        }
+        .pentacle {
+            position: relative;
+            width: 54px;
+            height: 51px;
+            margin: 0 10px;
+            vertical-align: middle;
+            display: inline-block;
+            background: url(./images/img-pentacle.png) no-repeat center center / contain;
+        }
+        .pentacle-active {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 54px;
+            height: 51px;
+            display: inline-block;
+            background: url(./images/img-pentacle-active.png) no-repeat left center / 54px 51px;
+        }
+    }
+    
+    .TeacherRP {
+        .ter-left {
+            .ter-all {
+                top: 140px;
+            }
+        }
+    }
+    
+    .TeacherEC {
+        .ter-left {
+            .ter-all {
+                top: 100px;
+            }
+        }
+    }

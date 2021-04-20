@@ -1,0 +1,196 @@
+/*
+组件：按钮组
+*/
+
+.Button {
+    text-align: center;
+    color: #fff;
+    border: none;
+    box-sizing: border-box;
+}
+
+.ant-btn {
+    &.btn-large {
+        min-width: 240px;
+        height: 42px;
+        line-height: 42px;
+        font-size: 20px;
+        padding: 0 25px;
+    }
+    &.btn-small {
+        min-width: 72px;
+        height: 28px;
+        line-height: 28px;
+        font-size: 14px;
+        padding: 0 15px;
+    }
+    &.btn-normal {
+        min-width: 160px;
+        height: 32px;
+        line-height: 32px;
+        font-size: 16px;
+        padding: 0 20px;
+    }
+    &.btn-size {
+        width: auto;
+        height: 32px;
+        line-height: 32px;
+        font-size: 16px;
+        padding: 0 20px;
+    }
+    &.btn-orange {
+        box-sizing: border-box;
+        border: none;
+        background-image: linear-gradient(90deg, #ffba15 0%, #ff9f0b 45%, #ff8400 100%);
+        &:hover {
+            background-image: linear-gradient(90deg, #ffcf5b 0%, #ffb42e 45%, #ff9900 100%);
+            color: #fff;
+        }
+        &:focus {
+            background-image: linear-gradient(90deg, #ffba15 0%, #ff9f0b 45%, #ff8400 100%);
+            color: #fff;
+        }
+    }
+    &.btn-green {
+        box-sizing: border-box;
+        border: none;
+        background-image: linear-gradient(90deg, #00e566 0%, #12d033 45%, #23ba00 100%);
+        &:hover {
+            background-image: linear-gradient(90deg, #00f36d 0%, #14e037 45%, #27cd00 100%);
+            color: #fff;
+        }
+        &:focus {
+            background-image: linear-gradient(90deg, #00e566 0%, #12d033 45%, #23ba00 100%);
+            color: #fff;
+        }
+    }
+    &.btn-blue {
+        box-sizing: border-box;
+        border: none;
+        background-image: linear-gradient(90deg, #0fc1fc 0%, #1da4fe 100%);
+        &:hover {
+            background-image: linear-gradient(90deg, #32ccff 0%, #3ab0ff 100%);
+            color: #fff;
+        }
+        &:focus {
+            background-image: linear-gradient(90deg, #0fc1fc 0%, #1da4fe 100%);
+            color: #fff;
+        }
+    }
+    &.btn-red {
+        box-sizing: border-box;
+        border: none;
+        background-image: linear-gradient(90deg, #ff593e 0%, #ff1b10 100%);
+        &:hover {
+            background-image: linear-gradient(90deg, #ff6b53 0%, #ff352b 100%);
+            color: #fff;
+        }
+        &:focus {
+            background-image: linear-gradient(90deg, #ff593e 0%, #ff1b10 100%);
+            color: #fff;
+        }
+    }
+    &.btn-mazarine {
+        box-sizing: border-box;
+        border: none;
+        background-image: linear-gradient(90deg, #4585ce 0%, #236bbe 62%, #0051ae 100%);
+        &:hover {
+            background-image: linear-gradient(90deg, #369ae0 0%, #1f82dd 62%, #0769da 100%);
+            color: #fff;
+        }
+        &:focus {
+            background-image: linear-gradient(90deg, #4585ce 0%, #236bbe 62%, #0051ae 100%);
+            color: #fff;
+        }
+    }
+    &.btn-disabled {
+        box-sizing: border-box;
+        border: none;
+        background-image: linear-gradient(90deg, #d1d1d1 0%, #949494 100%);
+        color: #fff !important;
+        &:hover {
+            background-image: linear-gradient(90deg, #d1d1d1 0%, #949494 100%);
+        }
+        &:focus {
+            background-image: linear-gradient(90deg, #d1d1d1 0%, #949494 100%);
+        }
+    }
+    /*default*/
+    &.btn-orange-default {
+        box-sizing: content-box;
+        color: #ff8400;
+        border: 1px #ff8400 solid!important;
+        &:hover {
+            background-image: linear-gradient(90deg, #ffcf5b 0%, #ffb42e 45%, #ff9900 100%);
+            color: #fff;
+        }
+        // &:focus {
+        //     background-image: linear-gradient(90deg, #ffba15 0%, #ff9f0b 45%, #ff8400 100%);
+        //     color: #fff;
+        // }
+    }
+    &.btn-green-default {
+        box-sizing: content-box;
+        color: #23ba00;
+        border: 1px solid #23ba00!important;
+        &:hover {
+            background-image: linear-gradient(90deg, #00f36d 0%, #14e037 45%, #27cd00 100%);
+            color: #fff;
+        }
+        // &:focus {
+        //     background-image: linear-gradient(90deg, #00e566 0%, #12d033 45%, #23ba00 100%);
+        //     color: #fff;
+        // }
+    }
+    &.btn-blue-default {
+        box-sizing: content-box;
+        color: #0099ff;
+        border: 1px solid #0099ff!important;
+        &:hover {
+            background-image: linear-gradient(90deg, #22c8ff 0%, #11a6ef 55%, #0085de 100%);
+            color: #fff;
+        }
+        // &:focus {
+        //     background-image: linear-gradient(90deg, #22c8ff 0%, #11a6ef 55%, #0085de 100%);
+        //     color: #fff;
+        // }
+    }
+    &.btn-red-default {
+        box-sizing: content-box;
+        color: #ff1b10;
+        border: 1px solid #ff1b10!important;
+        &:hover {
+            border: 1px solid #ff1b10;
+            background-image: linear-gradient(90deg, #ff6b53 0%, #ff352b 100%);
+            color: #fff;
+        }
+        // &:focus {
+        //     background-image: linear-gradient(90deg, #ff593e 0%, #ff1b10 100%);
+        //     color: #fff;
+        // }
+    }
+    &.btn-mazarine-default {
+        box-sizing: content-box;
+        color: #0051ae;
+        border: 1px solid #0051ae!important;
+        &:hover {
+            background-image: linear-gradient(90deg, #369ae0 0%, #1f82dd 62%, #0769da 100%);
+            color: #fff;
+        }
+        // &:focus {
+        //     background-image: linear-gradient(90deg, #4585ce 0%, #236bbe 62%, #0051ae 100%);
+        //     color: #fff;
+        // }
+    }
+    &.btn-disabled-default {
+        box-sizing: content-box;
+        color: #7a7a7a;
+        border: 1px solid #7a7a7a!important;
+        &:hover {
+            background-image: linear-gradient(90deg, #d1d1d1 0%, #949494 100%);
+        }
+        // &:focus {
+        //     background-image: linear-gradient(90deg, #d1d1d1 0%, #949494 100%);
+        // }
+    }
+}

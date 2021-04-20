@@ -1,0 +1,126 @@
+/*
+ *  ┌───┐   ┌───┬───┬───┬───┐ ┌───┬───┬───┬───┐ ┌───┬───┬───┬───┐ ┌───┬───┬───┐
+ *  │Esc│   │ F1│ F2│ F3│ F4│ │ F5│ F6│ F7│ F8│ │ F9│F10│F11│F12│ │P/S│S L│P/B│  ┌┐    ┌┐    ┌┐
+ *  └───┘   └───┴───┴───┴───┘ └───┴───┴───┴───┘ └───┴───┴───┴───┘ └───┴───┴───┘  └┘    └┘    └┘
+ *  ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┐ ┌───┬───┬───┐ ┌───┬───┬───┬───┐
+ *  │~ `│! 1│@ 2│# 3│$ 4│% 5│^ 6│& 7│* 8│( 9│) 0│_ -│+ =│ BacSp │ │Ins│Hom│PUp│ │N L│ / │ * │ - │
+ *  ├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─────┤ ├───┼───┼───┤ ├───┼───┼───┼───┤
+ *  │ Tab │ Q │ W │ E │ R │ T │ Y │ U │ I │ O │ P │{ [│} ]│ | \ │ │Del│End│PDn│ │ 7 │ 8 │ 9 │   │
+ *  ├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴─────┤ └───┴───┴───┘ ├───┼───┼───┤ + │
+ *  │ Caps │ A │ S │ D │ F │ G │ H │ J │ K │ L │: ;│" '│ Enter  │               │ 4 │ 5 │ 6 │   │
+ *  ├──────┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴────────┤     ┌───┐     ├───┼───┼───┼───┤
+ *  │ Shift  │ Z │ X │ C │ V │ B │ N │ M │< ,│> .│? /│  Shift   │     │ ↑ │     │ 1 │ 2 │ 3 │   │
+ *  ├─────┬──┴─┬─┴──┬┴───┴───┴───┴───┴───┴──┬┴───┼───┴┬────┬────┤ ┌───┼───┼───┐ ├───┴───┼───┤ E││
+ *  │ Ctrl│    │Alt │         Space         │ Alt│    │    │Ctrl│ │ ← │ ↓ │ → │ │   0   │ . │←─┘│
+ *  └─────┴────┴────┴───────────────────────┴────┴────┴────┴────┘ └───┴───┴───┘ └───────┴───┴───┘
+ * 
+ * @Author: zhuzesen
+ * @LastEditors: zhuzesen
+ * @Date: 2020-12-28 09:45:52
+ * @LastEditTime: 2020-12-28 09:45:53
+ * @Description: 
+ * @FilePath: \teacher-development\src\pages\teachersStatisticAnalysis\informationizeAbility\index.scss
+ */
+
+.TeacherInternet {
+    .ter-left {
+        position: relative;
+        display: inline-block;
+        width: 50%;
+        vertical-align: top;
+        height: 280px;
+        .tb-tip {
+            // margin-top: 10px;
+            padding-left: 5px;
+            text-align: left;
+        }
+        .ter-echarts {
+            height: 220px;
+            margin-top: 10px;
+        }
+        .ter-all {
+            position: absolute;
+            font-size: 12px;
+            left: 50%;
+            text-align: center;
+            transform: translateX(-50%);
+            line-height: 20px;
+            color: #333333;
+            top: 120px;
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            -o-transform: translateX(-50%);
+            span {
+                font-size: 16px;
+                font-weight: bold;
+            }
+        }
+        .ter-title {
+            position: relative;
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 0;
+            text-align: center;
+            color: #333333;
+        }
+    }
+    .ter-right {
+        height: 280px;
+    }
+    .ter-pie-left,
+    .ter-pie-right {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+        .ter-echarts {
+            height: 200px;
+        }
+        .ter-all {
+            top: 90px;
+            font-size: 12px;
+            color: #333333;
+            span {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+.TeacherOnline {
+    .tp-tilte {
+        margin-top: 16px;
+        line-height: 20px;
+        font-size: 14px;
+        text-align: center;
+        font-weight: bold;
+        color: #333333;
+        &::before {
+            content: "";
+            width: 334px;
+            height: 20px;
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 10px;
+            background: url(./images/image-devide.png) no-repeat center center / 100% 1px;
+        }
+        &::after {
+            content: "";
+            width: 334px;
+            height: 20px;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 10px;
+            transform: rotate(180deg);
+            background: url(./images/image-devide.png) no-repeat center center / 100% 1px;
+            -webkit-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+        }
+    }
+    .tb-charts {
+        height: 210px;
+    }
+}

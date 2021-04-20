@@ -1,0 +1,153 @@
+/*
+ * _______________#########_______________________ 
+ * ______________############_____________________ 
+ * ______________#############____________________ 
+ * _____________##__###########___________________ 
+ * ____________###__######_#####__________________ 
+ * ____________###_#######___####_________________ 
+ * ___________###__##########_####________________ 
+ * __________####__###########_####_______________ 
+ * ________#####___###########__#####_____________ 
+ * _______######___###_########___#####___________ 
+ * _______#####___###___########___######_________ 
+ * ______######___###__###########___######_______ 
+ * _____######___####_##############__######______ 
+ * ____#######__#####################_#######_____ 
+ * ____#######__##############################____ 
+ * ___#######__######_#################_#######___ 
+ * ___#######__######_######_#########___######___ 
+ * ___#######____##__######___######_____######___ 
+ * ___#######________######____#####_____#####____ 
+ * ____######________#####_____#####_____####_____ 
+ * _____#####________####______#####_____###______ 
+ * ______#####______;###________###______#________ 
+ * ________##_______####________####______________ 
+ * 
+ * @Author: zhuzesen
+ * @LastEditors: zhuzesen
+ * @Date: 2020-11-17 18:51:07
+ * @LastEditTime: 2020-12-02 21:47:31
+ * @Description: 
+ * @FilePath: \teacher-development\src\component\common\index.scss
+ */
+
+@charset "UTF-8";
+@import "~compass-mixins/lib/animate";
+@import "~compass-mixins/lib/compass";
+
+/*公共变量 start*/
+
+$themeColor: #333333; //整个界面的文字主题色
+$tableBgColor: #ebebeb; //table的鼠标浮动的背景色
+$pagiThemeColor: #379ef5; //分页的主题色
+$pageDisabled: #d9d9d9; //分页禁止点击颜色
+$dropBorder: #bac7d9; //下拉组件正常主题色
+$dropHoverBorder: #5897ed; //下拉组件鼠标悬停后的边框色
+$dropHoverBg: #e8edf5; //下拉组件鼠标悬停后的背景色
+$dropDisabled: #bfbfbf; //下拉组件禁用主题色
+$image_url: "../images/";
+$MenuSelect: linear-gradient(90deg, #ff4200 0%, #ffab3d 100%);
+
+/*菜单栏栏目选中状态*/
+
+
+/*公共变量 end*/
+
+
+/*公共minix start*/
+
+@mixin textOverFlow() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@mixin flex {
+    display: flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+}
+
+@mixin justify-content($dir) {
+    justify-content: $dir;
+    -ms-flex-pack: $dir;
+}
+
+@mixin flex-direction($dir) {
+    flex-direction: $dir;
+    -ms-flex-direction: $dir;
+}
+
+@mixin align-items($dir) {
+    align-items: $dir;
+    -ms-flex-align: $dir;
+}
+
+@mixin flex-wrap($dir) {
+    flex-wrap: $dir;
+    -ms-flex-wrap: $dir;
+}
+
+
+/*公共mixin end*/
+
+
+/*公共css start*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #333333;
+    // background-color: #f5f5f5!important;
+    font-family: "Microsoft YaHei"!important;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    *zoom: 1;
+    /*ie6清除浮动的方式 *号只有IE6-IE7执行，其他浏览器不执行*/
+}
+
+
+/*公共css end*/
+
+//分页
+@import "./scss/pagination";
+//搜索
+@import "./scss/search";
+//下拉
+@import "./scss/dropdown";
+//loading加载中
+@import "./scss/loading";
+//弹出提示框
+@import "./scss/alert";
+//单选
+@import "./scss/radio";
+//table
+@import "./scss/table";
+//多选
+@import "./scss/checkbox";
+//界面框架
+@import "./scss/frame";
+//modal
+@import "./scss/modal";
+//emptybox 空数据
+@import "./scss/empty";
+//input 输入框
+@import "./scss/input";
+//tooltip 提示框
+@import "./scss/tooltip";
+//tooltip 按钮组
+@import "./scss/button";

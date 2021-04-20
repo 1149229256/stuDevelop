@@ -1,0 +1,21 @@
+/*
+输入框
+*/
+
+textarea.ant-input {
+  resize: none;
+  border: 1px solid #bac7d9;
+  line-height: 28px;
+  font-size: 14px;
+  padding: 10px 12px 10px 8px;
+  outline: none;
+  color: #333;
+}
+
+.MyAntdInput {
+  line-height: 1;
+}
+
+.ant-input {
+  line-height: 1;
+}

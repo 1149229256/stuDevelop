@@ -1,0 +1,99 @@
+@import "../../common/mixin.scss";
+.ant-tabs {
+    position: relative;
+    height: 100%;
+    .ant-tabs-content-holder {
+        height: calc(100% - 49px);
+        .ant-tabs-content {
+            height: 100%;
+        }
+    }
+    .ant-tabs-tab-active {
+        background: #2bb5c3 !important;
+    }
+    .tab-nav-bar {
+        height: 49px;
+        // line-height: 48px;
+        border-bottom: 1px solid #2bb5c3;
+        margin: 0;
+        background: #fff;
+        //
+        &.haveSearch {
+            padding-right: 210px;
+        }
+        .ant-tabs-nav-wrap .ant-tabs-ink-bar {
+            height: 100%;
+        }
+        .ant-tabs-tab {
+            position: relative;
+            z-index: 2;
+            padding: 0 40px 0 20px;
+            color: #666666;
+            margin: 0;
+            cursor: auto;
+            &::before {
+                content: "";
+                position: absolute;
+                width: 1px;
+                height: 16px;
+                background-color: #c3c3c3;
+                left: -0.5px;
+                @include v-center;
+            }
+            &:first-of-type {
+                &::before {
+                    display: none;
+                }
+            }
+            &.ant-tabs-tab-active {
+                color: #fff;
+                &::before {
+                    display: none;
+                }
+                &+.ant-tabs-tab {
+                    &::before {
+                        display: none;
+                    }
+                }
+                .ant-tabs-tab-btn {
+                    color: #fff;
+                    .tab-close-btn {
+                        background: url(./images/icon-close-active.png) no-repeat center center/contain;
+                    }
+                }
+            }
+            .ant-tabs-tab-btn {
+                position: relative;
+                cursor: pointer;
+                &:focus {
+                    color: inherit;
+                }
+                .tab-name {}
+                .tab-close-btn {
+                    position: absolute;
+                    width: 14px;
+                    height: 14px;
+                    right: -20px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    -webkit-transform: translateY(-50%);
+                    -moz-transform: translateY(-50%);
+                    -ms-transform: translateY(-50%);
+                    -o-transform: translateY(-50%);
+                    background: url(./images/icon-close.png) no-repeat center center/contain;
+                }
+            }
+            // &:active{
+            // }
+        }
+    }
+}
+
+.search-context {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 48px;
+    line-height: 48px;
+}

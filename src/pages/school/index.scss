@@ -1,0 +1,269 @@
+/*
+ *                   ___====-_  _-====___
+ *             _--^^^#####//      \\#####^^^--_
+ *          _-^##########// (    ) \\##########^-_
+ *         -############//  |\^^/|  \\############-
+ *       _/############//   (@::@)   \############\_
+ *      /#############((     \\//     ))#############\
+ *     -###############\\    (oo)    //###############-
+ *    -#################\\  / VV \  //#################-
+ *   -###################\\/      \//###################-
+ *  _#/|##########/\######(   /\   )######/\##########|\#_
+ *  |/ |#/\#/\#/\/  \#/\##\  |  |  /##/\#/  \/\#/\#/\#| \|
+ *  `  |/  V  V  `   V  \#\| |  | |/#/  V   '  V  V  \|  '
+ *     `   `  `      `   / | |  | | \   '      '  '   '
+ *                      (  | |  | |  )
+ *                     __\ | |  | | /__
+ *                    (vvv(VVV)(VVV)vvv)
+ * 
+ *      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * 
+ *                神兽保佑            永无BUG
+ * 
+ * @Author: zhuzesen
+ * @LastEditors: zhuzesen
+ * @Date: 2020-12-22 15:22:15
+ * @LastEditTime: 2020-12-23 08:51:35
+ * @Description: 
+ * @FilePath: \teacher-development\src\pages\teacherSchoolList\index.scss
+ */
+
+@import "../../component/common/mixin.scss";
+.TeacherSchoolList {}
+
+.SchoolList {
+    position: relative;
+    background: #fff;
+    .pl-top {
+        position: relative;
+        line-height: 54px;
+        height: 54px;
+        padding: 0 20px;
+        .plt-select {
+            float: left;
+            height: 100%;
+            margin-left: 10px;
+        }
+        .plt-search {
+            float: right;
+            height: 100%;
+            .home-search {
+                width: 280px;
+                border-radius: 3px;
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+                -ms-border-radius: 3px;
+                -o-border-radius: 3px;
+            }
+        }
+    }
+    .pl-table {
+        padding: 0 20px;
+        height: calc(100% - 54px);
+        padding-bottom: 20px;
+        .lg-table-box .lg-table .ant-table .ant-table-thead tr th {
+            &:first-of-type {
+                padding-left: 68px;
+            }
+        }
+        .table-name {
+            padding-left: 54px !important;
+            i {
+                display: inline-block;
+                width: 24px;
+                height: 24px;
+                vertical-align: middle;
+                margin-right: 10px;
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+            }
+            font-size: 14px;
+            color: #333333;
+        }
+        .table-userid {
+            font-size: 14px;
+            color: #999999;
+        }
+        .table-belondName {
+            font-size: 14px;
+            color: #81370f;
+        }
+        .table-Gender {
+            font-size: 14px;
+            color: #666;
+        }
+        .table-TeachAge {
+            font-size: 14px;
+            color: #999;
+        }
+        .table-Politics {
+            font-size: 14px;
+            color: #333;
+        }
+        .table-TitleName {
+            font-size: 14px;
+            color: #999;
+        }
+        .table-HonorNames {
+            font-size: 14px;
+            color: #009900;
+        }
+        .btn-check {
+            display: inline-block;
+            width: 17px;
+            height: 18px;
+            cursor: pointer;
+            vertical-align: middle;
+            background: url(./images/icon-check.png) no-repeat center center / contain;
+            opacity: 0.9;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+    .ant-table-cell-fix-right {
+        background-color: #fff !important;
+    }
+    .open-columns {
+        position: relative;
+        // opacity: 1;
+        height: 100%;
+        background-color: rgba(28, 150, 254, 0.16);
+        i {
+            position: absolute;
+            width: 15px;
+            height: 13px;
+            cursor: pointer;
+            opacity: 0.9;
+            @include center;
+            background: url(./images/icon-more-columns.png) no-repeat center center / contain;
+            &:hocer {
+                opacity: 1;
+            }
+        }
+    }
+    .lg-table-box {
+        // position: relative;
+        // min-height: 400px;
+        margin-right: 10px;
+    }
+    .lg-table .ant-table .ant-table-thead {
+        tr {
+            th {
+                height: 27px;
+                line-height: 20px;
+            }
+            .two-col {
+                position: relative;
+                color: #75c0e8;
+                font-weight: 100;
+                padding-top: 7px;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 1px;
+                    height: 18px;
+                    background-color: #94c5de;
+                    // @include v-center;
+                    top: 18px;
+                    left: -0.5px;
+                }
+                // &::after {
+                //     content: "";
+                //     position: absolute;
+                //     width: 1px;
+                //     height: 18px;
+                //     background-color: #94c5de;
+                //     // @include v-center;
+                //     top: 18px;
+                //     right: -0.5px;
+                // }
+            }
+            .two-col-bottom {
+                padding-bottom: 7px;
+            }
+            .two-col-center-border {
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 1px;
+                    height: 18px;
+                    background-color: #94c5de;
+                    // @include v-center;
+                    top: 18px;
+                    left: -0.5px;
+                }
+            }
+        }
+    }
+    .ant-table {
+        .table-SchoolName {
+            font-size: 14px;
+            color: #81370f;
+            cursor: pointer;
+        }
+        .table-count {
+            font-size: 14px;
+            color: #666666;
+        }
+    }
+}
+
+.lg-table-more-tooltip {
+    .ant-tooltip-arrow {
+        display: none;
+    }
+    .ant-tooltip-inner {
+        padding: 0;
+    }
+    padding: 0;
+    // box-shadow: 1px 2px 12px 0px rgba(0, 0, 0, 0.24);
+    border-radius: 3px;
+    // border: solid 1px #bac7d9;
+    max-width: none;
+    .more-content {
+        width: 200px;
+        height: 316px;
+        // background-color: #ffffff;
+        box-shadow: 1px 3px 12px 0px rgba(0, 0, 0, 0.24);
+        // border-radius: 3px;
+        padding-top: 2px;
+        .more-title {
+            line-height: 40px;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            color: #399cd0;
+            margin-bottom: 0;
+        }
+        .more-map {
+            height: 276px;
+            width: 200px;
+            padding-bottom: 10px;
+            .c-select-bar {
+                line-height: 27px;
+                font-size: 14px;
+                color: #333333;
+                padding-left: 16px;
+                .ant-checkbox-disabled+span {
+                    color: #333333;
+                }
+            }
+        }
+    }
+}
+
+.SchoolList .pl-table .lg-table-box .lg-table .ant-table .ant-table-thead tr th:first-of-type {
+    padding-left: 0;
+}
+
+.SchoolListDetail {
+    height: 100%;
+    .SchoolListDetail-frame {
+        height: 100%;
+        border: none;
+    }
+}

@@ -1,0 +1,358 @@
+/*
+ * ......................................&&.........................
+ * ....................................&&&..........................
+ * .................................&&&&............................
+ * ...............................&&&&..............................
+ * .............................&&&&&&..............................
+ * ...........................&&&&&&....&&&..&&&&&&&&&&&&&&&........
+ * ..................&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&..............
+ * ................&...&&&&&&&&&&&&&&&&&&&&&&&&&&&&.................
+ * .......................&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&.........
+ * ...................&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&...............
+ * ..................&&&   &&&&&&&&&&&&&&&&&&&&&&&&&&&&&............
+ * ...............&&&&&@  &&&&&&&&&&..&&&&&&&&&&&&&&&&&&&...........
+ * ..............&&&&&&&&&&&&&&&.&&....&&&&&&&&&&&&&..&&&&&.........
+ * ..........&&&&&&&&&&&&&&&&&&...&.....&&&&&&&&&&&&&...&&&&........
+ * ........&&&&&&&&&&&&&&&&&&&.........&&&&&&&&&&&&&&&....&&&.......
+ * .......&&&&&&&&.....................&&&&&&&&&&&&&&&&.....&&......
+ * ........&&&&&.....................&&&&&&&&&&&&&&&&&&.............
+ * ..........&...................&&&&&&&&&&&&&&&&&&&&&&&............
+ * ................&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&............
+ * ..................&&&&&&&&&&&&&&&&&&&&&&&&&&&&..&&&&&............
+ * ..............&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&....&&&&&............
+ * ...........&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&......&&&&............
+ * .........&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&.........&&&&............
+ * .......&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&...........&&&&............
+ * ......&&&&&&&&&&&&&&&&&&&...&&&&&&...............&&&.............
+ * .....&&&&&&&&&&&&&&&&............................&&..............
+ * ....&&&&&&&&&&&&&&&.................&&...........................
+ * ...&&&&&&&&&&&&&&&.....................&&&&......................
+ * ...&&&&&&&&&&.&&&........................&&&&&...................
+ * ..&&&&&&&&&&&..&&..........................&&&&&&&...............
+ * ..&&&&&&&&&&&&...&............&&&.....&&&&...&&&&&&&.............
+ * ..&&&&&&&&&&&&&.................&&&.....&&&&&&&&&&&&&&...........
+ * ..&&&&&&&&&&&&&&&&..............&&&&&&&&&&&&&&&&&&&&&&&&.........
+ * ..&&.&&&&&&&&&&&&&&&&&.........&&&&&&&&&&&&&&&&&&&&&&&&&&&.......
+ * ...&&..&&&&&&&&&&&&.........&&&&&&&&&&&&&&&&...&&&&&&&&&&&&......
+ * ....&..&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&...........&&&&&&&&.....
+ * .......&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&..............&&&&&&&....
+ * .......&&&&&.&&&&&&&&&&&&&&&&&&..&&&&&&&&...&..........&&&&&&....
+ * ........&&&.....&&&&&&&&&&&&&.....&&&&&&&&&&...........&..&&&&...
+ * .......&&&........&&&.&&&&&&&&&.....&&&&&.................&&&&...
+ * .......&&&...............&&&&&&&.......&&&&&&&&............&&&...
+ * ........&&...................&&&&&&.........................&&&..
+ * .........&.....................&&&&........................&&....
+ * ...............................&&&.......................&&......
+ * ................................&&......................&&.......
+ * .................................&&..............................
+ * ..................................&..............................
+ * 
+ * @Author: zhuzesen
+ * @LastEditors: zhuzesen
+ * @Date: 2020-12-08 13:54:07
+ * @LastEditTime: 2020-12-15 10:55:12
+ * @Description: 
+ * @FilePath: \teacher-development\src\component\editor\index.scss
+ */
+
+@import "../common/mixin.scss";
+.lg-editor {
+    padding: 28px 0;
+    .editor-table {
+        width: 100%;
+        tr {
+            // height: 46px;
+            line-height: 30px;
+            td {
+                position: relative;
+                &:first-of-type {
+                    width: 180px;
+                    text-align: right;
+                    font-size: 14px;
+                    color: #666666;
+                    vertical-align: super;
+                    padding-right: 12px;
+                    line-height: 46px;
+                }
+                &:nth-of-type(2) {
+                    width: calc(100% - 180px);
+                    text-align: left;
+                    padding: 8px 0;
+                }
+                .title-input {
+                    width: 720px;
+                }
+                .source-input {
+                    width: 360px;
+                }
+                .limit-input {
+                    width: 120px;
+                }
+                .handle-upload {
+                    display: inline-block;
+                    margin: 8px 0;
+                }
+                .ant-radio-checked {
+                    &+span {
+                        color: #0099ff;
+                    }
+                }
+                .file-content {
+                    position: relative;
+                    display: inline-block;
+                    vertical-align: top;
+                    // width: 92px;
+                    background: #e0f0f3;
+                    border-radius: 3px;
+                    margin: 8px 15px 8px 0;
+                    font-family: Microsoft YaHei;
+                    margin-right: 15px;
+                    font-size: 14px;
+                    padding: 0 20px 0 8px;
+                    max-width: 300px;
+                    height: 30px;
+                    line-height: 30px;
+                    background-color: rgba($color: #80acc5, $alpha: 0.5);
+                    .file-name,
+                    .file-type {
+                        color: #333333;
+                    }
+                    .file-size {
+                        font-size: 14px;
+                        // margin-right: 20px;
+                        color: #999999;
+                        vertical-align: top;
+                    }
+                    .file-type {
+                        vertical-align: top;
+                        margin-right: 10px;
+                    }
+                    .file-name {
+                        display: inline-block;
+                        max-width: 45%;
+                        vertical-align: top;
+                        @include textOverFlow;
+                    }
+                    .file-delete {
+                        position: absolute;
+                        @include v-center;
+                        cursor: pointer;
+                        font-size: 20px;
+                        right: 8px;
+                        color: #105764;
+                        &:hover {
+                            color: #f60;
+                        }
+                    }
+                    &::before {
+                        content: "";
+                        position: relative;
+                        display: inline-block;
+                        vertical-align: sub;
+                        width: 15px;
+                        height: 30px;
+                        margin-right: 9px;
+                        background: url(./images/unknown.png) no-repeat center center / contain;
+                    }
+                    &.file-type-video {
+                        &::before {
+                            background: url(./images/video.png) no-repeat center center / contain;
+                        }
+                    }
+                    &.file-type-audio {
+                        &::before {
+                            background: url(./images/audio.png) no-repeat center center / contain;
+                        }
+                    }
+                    &.file-type-zip {
+                        &::before {
+                            background: url(./images/zip.png) no-repeat center center / contain;
+                        }
+                    }
+                    &.file-type-doc {
+                        &::before {
+                            background: url(./images/doc.png) no-repeat center center / contain;
+                        }
+                    }
+                    &.file-type-docx {
+                        &::before {
+                            background: url(./images/docx.png) no-repeat center center / contain;
+                        }
+                    }
+                    &.file-type-excel {
+                        &::before {
+                            background: url(./images/excel.png) no-repeat center center / contain;
+                        }
+                    }
+                    &.file-type-ppt {
+                        &::before {
+                            background: url(./images/ppt.png) no-repeat center center / contain;
+                        }
+                    }
+                    &.file-type-pdf {
+                        &::before {
+                            background: url(./images/pdf.png) no-repeat center center / contain;
+                        }
+                    }
+                    &.file-type-html {
+                        &::before {
+                            background: url(./images/html.png) no-repeat center center / contain;
+                        }
+                    }
+                    &.file-type-txt {
+                        &::before {
+                            background: url(./images/txt.png) no-repeat center center / contain;
+                        }
+                    }
+                    &.file-type-pic {
+                        &::before {
+                            background: url(./images/png.png) no-repeat center center / contain;
+                        }
+                    }
+                }
+                .file-upload {
+                    position: relative;
+                    display: inline-block;
+                    // width: 92px;
+                    height: 30px;
+                    background-color: #80acc5;
+                    border-radius: 3px;
+                    overflow: hidden;
+                    line-height: 30px;
+                    padding: 0 10px;
+                    font-size: 14px;
+                    color: #ffffff;
+                    // cursor: pointer;
+                    vertical-align: top;
+                    // @include v-center;
+                    // top: 24px;
+                    &::before {
+                        content: "";
+                        position: relative;
+                        display: inline-block;
+                        width: 12px;
+                        vertical-align: top;
+                        cursor: pointer;
+                        height: 100%;
+                        margin-right: 4px;
+                        background: url(./images/icon-add.png) no-repeat center center/contain;
+                    }
+                    .file-input {
+                        position: absolute;
+                        cursor: pointer;
+                        background: transparent;
+                        // margin-left: -200px;
+                        left: -100%;
+                        /* right: 0; */
+                        width: 200%;
+                        // width: 100%;
+                        height: 100%;
+                        top: 0;
+                        opacity: 0;
+                        color: transparent;
+                        &:focus {
+                            border: none;
+                            outline: none;
+                        }
+                    }
+                }
+                .dom-CompletePercert {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    cursor: no-drop;
+                    height: 100%;
+                    width: 100%;
+                    background: #80acc5;
+                    text-align: center;
+                    z-index: 100;
+                }
+                .input-box {
+                    position: relative;
+                }
+                .forbinClick {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    background: #000;
+                }
+                .file-tip {
+                    font-size: 12px;
+                    padding-left: 10px;
+                    color: #fe0000;
+                }
+                .main-input {
+                    width: 931px;
+                    // height: 234px;
+                    height: auto;
+                }
+                .td-main {
+                    height: 250px;
+                    display: inline-block;
+                    line-height: 46px;
+                }
+                .td-file {
+                    min-height: 46px;
+                    display: inline-block;
+                    line-height: 46px;
+                }
+            }
+            .must {
+                &::before {
+                    content: "* ";
+                    font-size: 14px;
+                    color: #ff0000;
+                }
+            }
+        }
+    }
+    .editor-input {
+        height: 30px;
+        line-height: 28px;
+        border-radius: 3px;
+        border: solid 1px #dedede;
+        &:focus {
+            box-shadow: none;
+            border-color: rgb(88, 151, 237);
+        }
+    }
+    .editor-handle {
+        margin-top: 28px;
+        text-align: center;
+        line-height: 36px;
+        li {
+            margin: 0 8px;
+            cursor: pointer;
+            display: inline-block;
+            opacity: 0.9;
+            &:hover {
+                opacity: 1;
+            }
+        }
+        .handle-preview {
+            padding: 0 2px;
+            font-size: 16px;
+            line-height: 18px;
+            text-decoration: underline;
+            color: #0099ff;
+        }
+        .handle-btn {
+            padding: 0 25px;
+            font-size: 16px;
+            color: #fefefe;
+            height: 36px;
+            border-radius: 18px;
+        }
+        .handle-draft {
+            background-image: linear-gradient(90deg, #39d7ff 0%, #009cff 100%), linear-gradient(#a1adb4, #a1adb4);
+        }
+        .handle-publish {
+            background-image: linear-gradient(90deg, #3bcd3b 0%, #2fb22f 100%), linear-gradient(#a1adb4, #a1adb4);
+        }
+        .handle-cancel {
+            background-image: linear-gradient(90deg, #ff586c 0%, #ff7b9d 100%), linear-gradient(#a1adb4, #a1adb4);
+        }
+    }
+}

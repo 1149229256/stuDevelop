@@ -1,0 +1,103 @@
+//头部长方形动画
+
+@include keyframes("oblong"){
+  from {
+    right: 53px;
+    top: 150px;
+  }
+  to {
+    right: 425px;
+    top: -470px;
+  }
+}
+//头部圆形动画
+@include keyframes("circle-animation1"){
+  from {
+    top: -120px;
+  }
+  50% {
+    top: -180px;
+  }
+  to {
+    top: -120px;
+  }
+}
+@include keyframes("circle-animation2"){
+  from {
+    top: 50px;
+    left: 48%;
+  }
+  50% {
+    top: 80px;
+    left: 58%;
+  }
+  to {
+    top: 50px;
+    left: 48%;
+  }
+}
+@include keyframes("circle-animation3"){
+  from {
+    top: -10px;
+    left: 4%;
+  }
+  50% {
+    top: 20px;
+    left: -6%;
+  }
+  to {
+    top: -10px;
+    left: 4%;
+  }
+}
+@include keyframes("circle-animation4"){
+  from {
+    top: 30px;
+    left: 38%;
+  }
+  50% {
+    top: 50px;
+    left: 28%;
+  }
+  to {
+    top: 30px;
+    left: 38%;
+  }
+}
+@include keyframes("circle-animation5"){
+  from {
+    top: 80px;
+    left: 325px;
+  }
+  50% {
+    top: 180px;
+    left: 385px;
+  }
+  to {
+    top: 80px;
+    left: 325px;
+  }
+}
+@include keyframes("circle-animation6"){
+  from {
+    top: 150px;
+    left: 1182px;
+  }
+  50% {
+    top: 60px;
+    left: 1142px;
+  }
+  to {
+    top: 150px;
+    left: 1182px;
+  }
+}
+//头部方型动画
+@include keyframes('squareAndTriangle'){
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-700px) rotate(600deg);
+  }
+}

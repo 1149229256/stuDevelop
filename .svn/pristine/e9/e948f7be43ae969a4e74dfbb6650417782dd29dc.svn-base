@@ -1,0 +1,203 @@
+@import "../../common/mixin.scss";
+.Frame-topBar-default {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 64px;
+    background: url(./images/image-top-bg.png) no-repeat right center / 100% 64px;
+}
+
+.Frame-topBar {
+    z-index: 1;
+    .Frame-devide {
+        position: relative;
+        float: right;
+        height: 100%;
+        line-height: 64px;
+        padding: 0 10px;
+        &::after {
+            content: "";
+            position: absolute;
+            right: -0.5px;
+            top: 50%;
+            height: 12px;
+            width: 0;
+            opacity: 0.32;
+            border-left: 1px solid #c6d7e4;
+            transform: translateY(-6px);
+            -webkit-transform: translateY(-6px);
+            -moz-transform: translateY(-6px);
+            -ms-transform: translateY(-6px);
+            -o-transform: translateY(-6px);
+        }
+        &:first-of-type {
+            &::after {
+                display: none;
+            }
+        }
+    }
+    .Frame-logo {
+        position: absolute;
+        width: 239px;
+        height: 51px;
+        bottom: -4px;
+        left: 19px;
+        background: url(../../../pages/app/images/header-logo.png) no-repeat;
+    }
+    .Frame-userMsg {
+        float: right;
+        height: 100%;
+        line-height: 64px;
+        position: relative;
+        // &::after {
+        //     display: none;
+        // }
+        .user-pic {
+            display: inline-block;
+            vertical-align: middle;
+            width: 28px;
+            height: 28px;
+            margin: 0 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            -webkit-border-radius: 50%;
+        }
+        .user-iden {
+            display: inline-block;
+            vertical-align: middle;
+            width: 84px;
+            height: 16px;
+            line-height: 16px;
+            padding: 0 3px 0 24px;
+            margin: 0 5px;
+            text-align: center;
+            font-size: 10px;
+            color: #ffffff;
+            @include textOverFlow();
+        }
+        .user-name {
+            display: inline-block;
+            max-width: 100px;
+            font-size: 14px;
+            vertical-align: middle;
+            color: #feffff;
+            cursor: pointer;
+            opacity: 0.85;
+            // margin: 0 4px 0 8px;
+            @include textOverFlow;
+        }
+        .logout {
+            display: inline-block;
+            vertical-align: middle;
+            width: 14px;
+            margin-right: 24px;
+            height: 14px;
+            background: url(./images/icon-logout.png) no-repeat center center/14px 14px;
+            cursor: pointer;
+        }
+    }
+    .Frame-open {
+        float: right;
+        height: 100%;
+        line-height: 64px;
+        span {
+            margin: 0 10px;
+            font-size: 14px;
+            font-weight: normal;
+            font-stretch: normal;
+            letter-spacing: 0px;
+            color: #ffffff;
+            opacity: 0.85;
+            padding-left: 18px;
+            cursor: pointer;
+            &:hover {
+                opacity: 1;
+            }
+            &.open-msg {
+                position: relative;
+                .msg {
+                    display: inline-block;
+                    height: 19px;
+                    width: 18px;
+                    top: 0;
+                    left: 0;
+                    position: absolute;
+                }
+                // background: url(./images/icon-msg.png) no-repeat left center / 14px 14px;
+            }
+            &.open-help {
+                background: url(./images/icon-help.png) no-repeat left center / 14px 14px;
+            }
+        }
+    }
+    .Frame-time {
+        font-size: 14px;
+        color: #ffffff;
+        opacity: 0.85;
+        padding: 0 20px;
+        .time-space {
+            display: inline-block;
+            width: 6px;
+            vertical-align: top;
+        }
+    }
+}
+
+.Frame-topBar-teacher {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    background: url(./images/image-top-bg-2.png) no-repeat center center / 100% 150px;
+    .tb-bar {
+        height: 40px;
+        line-height: 40px;
+        padding: 0 calc(50% - 600px);
+        background-color: rgba(#000000, 0.1);
+        .tb-logo {
+            float: left;
+            width: 30px;
+            // display: inline-block;
+            height: 40px;
+            background: url(./images/image-platform-logo.png) no-repeat center center / contain;
+        }
+        .tb-title {
+            float: left;
+            line-height: 40px;
+            font-size: 16px;
+            color: #fefefe;
+            margin-left: 8px;
+        }
+        .Frame-devide {
+            height: 40px;
+            line-height: 40px;
+            padding: 0;
+        }
+    }
+    .tb-name {
+        position: relative;
+        margin: 0 calc(50% - 600px);
+        // bottom: 0;
+        margin-top: 21px;
+        left: 30px;
+        min-width: 500px;
+        height: 89px;
+        background: url(./images/image-top-name-teacher.png) no-repeat left center / contain;
+        .tb-module-name {
+            margin-left: 240px;
+            margin-top: 18px;
+            display: inline-block;
+            text-align: center;
+            // width: 102px;
+            padding: 0 10px;
+            height: 20px;
+            background-color: rgba(#000000, 0.24);
+            border-radius: 10px;
+            font-size: 14px;
+            color: rgba(#ffffff, 0.72);
+        }
+    }
+}

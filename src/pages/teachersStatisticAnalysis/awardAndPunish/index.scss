@@ -1,0 +1,372 @@
+//列表容器为空占位图样式
+.list-empty {
+    .tips-error-4 {
+        display: block;
+        margin: 0 auto;
+    }
+    .initTitle {
+        display: inline-block;
+        position: relative;
+        left: 50%;
+        margin-top: 0;
+        transform: translateX(-50%);
+    }
+}
+
+.award-and-punish {
+    .award-info {
+        min-height: 200px;
+        padding: 0 20px;
+        p {
+            margin: 0;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .award-info-top {
+            height: 178px;
+            padding-top: 30px;
+            .award-sum {
+                width: 17%;
+                display: inline-block;
+                vertical-align: middle;
+                .circle {
+                    width: 92px;
+                    height: 92px;
+                    border-radius: 50%;
+                    line-height: 92px;
+                    margin: 0 auto;
+                    background-color: #2edba6;
+                    font-size: 30px;
+                    color: white;
+                    text-align: center;
+                    box-shadow: 0px 4px 10px 0px rgba(46, 219, 166, 0.45);
+                }
+                p {
+                    text-align: center;
+                    color: #656565;
+                    padding-top: 6px;
+                }
+            }
+            .slice-line {
+                display: inline-block;
+                vertical-align: top;
+                width: 1px;
+                height: 116px;
+                background-color: #cccccc;
+                border-radius: 1px;
+            }
+            .award-list {
+                // display: inline-block;
+                // vertical-align: middle;
+                // padding-bottom: 20px;
+                .award-one {
+                    display: inline-block;
+                    vertical-align: top;
+                    width: 10.3%;
+                    padding: 0 5px;
+                    .awardlogo {
+                        display: block;
+                        width: 39px;
+                        height: 53px;
+                        margin: 0 auto 8px;
+                        background-image: url(../../app/images/medal-4.png);
+                        background-size: 100% 100%;
+                        background-repeat: no-repeat;
+                        &.award-1 {
+                            background-image: url(../../app/images/medal-1.png);
+                        }
+                        &.award-2 {
+                            background-image: url(../../app/images/medal-2.png);
+                        }
+                        &.award-3 {
+                            background-image: url(../../app/images/medal-3.png);
+                        }
+                        &.award-4 {
+                            background-image: url(../../app/images/medal-4.png);
+                        }
+                    }
+                    p {
+                        text-align: center;
+                        // line-height: 14px;
+                        font-size: 12px;
+                        color: #666666;
+                    }
+                }
+            }
+            .ant-carousel {
+                width: calc(83% - 1px);
+                display: inline-block;
+                vertical-align: middle;
+                padding-left: 50px;
+                height: 100px;
+                .award-dot {
+                    bottom: -24px !important;
+                    left: -12%;
+                    li {
+                        width: 7px !important;
+                        height: 7px !important;
+                        border-radius: 50% !important;
+                        background-color: #cccccc !important;
+                        button {
+                            height: 7px !important;
+                            background: transparent !important;
+                        }
+                    }
+                    .slick-active {
+                        width: 7px !important;
+                        height: 7px !important;
+                        border-radius: 50% !important;
+                        background-color: #2edba6 !important;
+                    }
+                }
+            }
+        }
+        .award-pie-echart {
+            background-color: #f5f5f5;
+            margin-bottom: 24px;
+            .rank-position-echart,
+            .level-position-echart {
+                width: calc(50% - 0.5px);
+                height: 270px;
+                display: inline-block;
+                vertical-align: middle;
+            }
+            .slice-line {
+                display: inline-block;
+                width: 1px;
+                height: 140px;
+                background-color: #cccccc;
+                border-radius: 1px;
+                margin-top: 65px;
+                vertical-align: top;
+            }
+        }
+        .award-bar-container {
+            position: relative;
+            .select-container {
+                position: absolute;
+                top: 0;
+                left: 30px;
+                span {
+                    display: inline-block;
+                    line-height: 30px;
+                    color: #999999;
+                    margin-right: 8px;
+                }
+                .select {
+                    position: relative;
+                    z-index: 2;
+                    .ant-select-selector {
+                        width: 100px;
+                        height: 30px;
+                        border-radius: 3px;
+                        vertical-align: middle;
+                    }
+                    .ant-select-selection-item {
+                        color: #333333;
+                        padding-right: 0;
+                    }
+                    .ant-select-arrow {
+                        right: 0;
+                    }
+                }
+            }
+            .award-statistic-echart {
+                width: 100%;
+                height: 316px;
+            }
+        }
+    }
+    .punish-info {
+        padding: 24px;
+        .punish-left {
+            display: inline-block;
+            width: 50%;
+            vertical-align: top;
+            .punish-count {
+                color: #999999;
+                span {
+                    font-size: 16px;
+                    font-weight: 600;
+                }
+            }
+            .circle-container {
+                padding: 30px 60px 0;
+                .punish-kind-info {
+                    width: 33%;
+                    display: inline-block;
+                    vertical-align: middle;
+                    .circle {
+                        width: 72px;
+                        height: 72px;
+                        line-height: 72px;
+                        text-align: center;
+                        border-radius: 50%;
+                        margin: 0 auto;
+                        color: white;
+                        font-size: 20px;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        &.blue {
+                            background-color: #3caeff;
+                            box-shadow: 0px 4px 10px 0px rgba(#3caeff, 0.45);
+                        }
+                        &.orange {
+                            background-color: #ffaf54;
+                            box-shadow: 0px 4px 10px 0px rgba(#ffaf54, 0.45);
+                        }
+                        &.red {
+                            background-color: #fd8276;
+                            box-shadow: 0px 4px 10px 0px rgba(#fd8276, 0.45);
+                        }
+                    }
+                    p {
+                        color: #656565;
+                        padding-top: 10px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        .punish-right {
+            width: 50%;
+            display: inline-block;
+            vertical-align: top;
+            background-color: #f5f5f5;
+            padding: 18px 0 0 0;
+            .echart-title {
+                display: inline-block;
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+                span {
+                    display: inline-block;
+                    line-height: 24px;
+                    color: #333333;
+                    margin-right: 5px;
+                }
+                .select {
+                    .ant-select-selector {
+                        width: 80px;
+                        height: 24px;
+                        border-radius: 3px;
+                        vertical-align: middle;
+                    }
+                    .ant-select-selection-item {
+                        color: #333333;
+                        padding-right: 0;
+                        font-size: 12px;
+                        line-height: 22px;
+                    }
+                    .ant-select-arrow {
+                        right: 2px;
+                    }
+                }
+            }
+            .punish-statistic-echart {
+                height: 210px;
+            }
+        }
+    }
+    .award-punish-rank {
+        padding-bottom: 20px;
+        .rank-list {
+            padding: 0 54px 0 0;
+            margin: 0;
+            list-style: none;
+            li {
+                line-height: 20px;
+                margin-bottom: 12px;
+                .ranklogo {
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-right: 12px;
+                    width: 18px;
+                    height: 20px;
+                    background-image: url(../../app/images/rank-medal-4.png);
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    &.one {
+                        background-image: url(../../app/images/rank-medal-1.png);
+                    }
+                    &.two {
+                        background-image: url(../../app/images/rank-medal-2.png);
+                    }
+                    &.three {
+                        background-image: url(../../app/images/rank-medal-3.png);
+                    }
+                }
+                img {
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    margin-right: 7px;
+                }
+                .rank-name {
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: calc(60% - 77px);
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                }
+                .rank-grade {
+                    width: 40%;
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-left: 20px;
+                    color: #999999;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    &.one {
+                        color: #f13132;
+                    }
+                    &.two {
+                        color: #a247e8;
+                    }
+                    &.three {
+                        color: #001e97;
+                    }
+                }
+            }
+        }
+        .award-rank,
+        .punish-rank {
+            position: relative;
+            width: calc(40% - 1px);
+            height: 204px;
+            display: inline-block;
+            vertical-align: top;
+            padding: 24px 0 0 150px;
+            .award-logo {
+                display: inline-block;
+                width: 30px;
+                height: 78px;
+                position: absolute;
+                top: 0;
+                left: 92px;
+                background-image: url(../../app/images/award-title.png);
+            }
+            .punish-logo {
+                display: inline-block;
+                width: 30px;
+                height: 78px;
+                position: absolute;
+                top: 0;
+                left: 92px;
+                background-image: url(../../app/images/punish-title.png);
+            }
+        }
+        .slice-line {
+            display: inline-block;
+            vertical-align: top;
+            width: 1px;
+            height: 127px;
+            margin-top: 38px;
+            background-color: #cccccc;
+        }
+    }
+}

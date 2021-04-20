@@ -1,0 +1,9 @@
+.lg-page {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    // background: rgba(#000, 0.2);
+    .lg-page-proversion {
+        margin-bottom: 0;
+    }
+}

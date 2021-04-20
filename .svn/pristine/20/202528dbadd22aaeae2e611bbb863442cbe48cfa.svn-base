@@ -1,0 +1,59 @@
+/*公共minix start*/
+
+@mixin textOverFlow() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@mixin flex {
+    display: flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+}
+
+@mixin justify-content($dir) {
+    justify-content: $dir;
+    -ms-flex-pack: $dir;
+}
+
+@mixin flex-direction($dir) {
+    flex-direction: $dir;
+    -ms-flex-direction: $dir;
+}
+
+@mixin align-items($dir) {
+    align-items: $dir;
+    -ms-flex-align: $dir;
+}
+
+@mixin flex-wrap($dir) {
+    flex-wrap: $dir;
+    -ms-flex-wrap: $dir;
+}
+
+// 垂直居中
+@mixin v-center {
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+// 垂直水平居中
+@mixin center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+
+/*公共mixin end*/

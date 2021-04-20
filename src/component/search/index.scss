@@ -1,0 +1,42 @@
+/*
+ *           佛曰:  
+ *                   写字楼里写字间，写字间里程序员；  
+ *                   程序人员写程序，又拿程序换酒钱。  
+ *                   酒醒只在网上坐，酒醉还来网下眠；  
+ *                   酒醉酒醒日复日，网上网下年复年。  
+ *                   但愿老死电脑间，不愿鞠躬老板前；  
+ *                   奔驰宝马贵者趣，公交自行程序员。  
+ *                   别人笑我忒疯癫，我笑自己命太贱；  
+ *                   不见满街漂亮妹，哪个归得程序员？
+ * 
+ * @Author: zhuzesen
+ * @LastEditors: zhuzesen
+ * @Date: 2021-01-07 20:07:27
+ * @LastEditTime: 2021-01-08 14:15:23
+ * @Description: 
+ * @FilePath: \teacher-development\src\component\search\index.scss
+ */
+
+.lg-search {
+    display: inline-block;
+    .lg-search-in {
+        border-radius: 3px;
+        border: solid 1px #dedede;
+        height: 30px;
+        line-height: 30px;
+        min-width: auto;
+    }
+    .lg-search-box {
+        .ant-tooltip-arrow {
+            display: none;
+        }
+        .ant-tooltip-inner {
+            padding: 0;
+        }
+        padding: 0;
+        box-shadow: 1px 2px 12px 0px rgba(0, 0, 0, 0.24);
+        border-radius: 3px;
+        border: solid 1px #bac7d9;
+        max-width: none;
+    }
+}

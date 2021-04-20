@@ -1,0 +1,290 @@
+@mixin live-card($color, $bgImage) {
+    // width: calc(33% - 24px);
+    width: 268px;
+    height: 74px;
+    border-radius: 8px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px;
+    background-color: rgba($color, 0.1);
+    .livelogo {
+        float: left;
+        width: 54px;
+        height: 54px;
+        margin: 10px;
+        background-image: $bgImage;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    .live-name {
+        font-size: 14px;
+        color: #333333;
+        margin-top: 14px;
+        span {
+            font-size: 16px;
+            color: $color;
+        }
+    }
+    p {
+        margin: 0;
+        padding: 0 10px 0 0;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        &:last-of-type {
+            color: #999999;
+            font-size: 12px;
+        }
+    }
+}
+
+.my-live {
+    padding: 0 20px 20px;
+    .show-top {
+        display: inline-block;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 116px;
+        padding-top: 24px;
+        .course-time {
+            @include live-card(#628af0, url(./images/course-time.png))
+        }
+        .schoolhome-time {
+            @include live-card(#e69946, url(./images/schoolhome-time.png))
+        }
+        .school-in-time {
+            @include live-card(#31af69, url(./images/school-in-time.png))
+        }
+        .school-out-time {
+            @include live-card(#4ec4f5, url(./images/school-out-time.png))
+        }
+    }
+    .select-container {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 0 12px 15px;
+        span {
+            display: inline-block;
+            line-height: 30px;
+            color: #999999;
+            margin-right: 8px;
+        }
+        .select {
+            .ant-select-selector {
+                width: 100px;
+                height: 30px;
+                border-radius: 3px;
+                vertical-align: middle;
+            }
+            .ant-select-selection-item {
+                color: #333333;
+                padding-right: 0;
+            }
+            .ant-select-arrow {
+                right: 0;
+            }
+        }
+    }
+    .show-bottom {
+        background-color: #f5f5f5;
+        .kinds-time-echart {
+            width: 100%;
+            height: 308px;
+        }
+    }
+}
+
+.my-consume {
+    padding: 0 20px 20px;
+    .show-top {
+        display: inline-block;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 20px;
+        .consume-level {
+            @include live-card(#27ad9f, url(./images/consume-level.png))
+        }
+        .consume-sum {
+            @include live-card(#ec6868, url(./images/consume-sum.png))
+        }
+        .consume-count {
+            @include live-card(#7297f4, url(./images/consume-count.png))
+        }
+        .consume-frequency {
+            @include live-card(#ed9230, url(./images/consume-frequency.png))
+        }
+    }
+    .show-center {
+        .consume-kind-echart,
+        .consume-area-echart,
+        .consume-time-echart {
+            display: inline-block;
+            vertical-align: top;
+            width: calc(33% - 1px);
+            height: 260px;
+        }
+        .slice-line {
+            display: inline-block;
+            vertical-align: top;
+            width: 1px;
+            height: 140px;
+            background-color: #cccccc;
+            border-radius: 1px;
+            margin-top: 65px;
+        }
+    }
+    .select-container {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 0 12px 15px;
+        span {
+            display: inline-block;
+            line-height: 30px;
+            color: #999999;
+            margin-right: 8px;
+        }
+        .select {
+            .ant-select-selector {
+                width: 100px;
+                height: 30px;
+                border-radius: 3px;
+                vertical-align: middle;
+            }
+            .ant-select-selection-item {
+                color: #333333;
+                padding-right: 0;
+            }
+            .ant-select-arrow {
+                right: 0;
+            }
+        }
+    }
+    .show-bottom {
+        background-color: #f5f5f5;
+        .consume-sum-echart,
+        .consume-count-echart {
+            width: calc(50% - 0.5px);
+            display: inline-block;
+            vertical-align: top;
+            height: 281px;
+        }
+        .slice-line {
+            display: inline-block;
+            vertical-align: top;
+            width: 1px;
+            height: 201px;
+            background-color: #cccccc;
+            border-radius: 1px;
+            margin-top: 53px;
+        }
+    }
+}
+
+.my-internet {
+    padding: 0 20px 20px;
+    .show-top {
+        display: inline-block;
+        // position: relative;
+        // left: 50%;
+        // transform: translateX(-50%);
+        margin-top: 20px;
+        .internet-time {
+            @include live-card(#ec6868, url(./images/internet-time.png))
+        }
+        .internet-count {
+            @include live-card(#7297f4, url(./images/internet-count.png))
+        }
+        .internet-frequency {
+            @include live-card(#27ad9f, url(./images/internet-frequency.png))
+        }
+    }
+    .show-center {
+        .kind-position-echart,
+        .place-position-echart,
+        .time-position-echart {
+            display: inline-block;
+            vertical-align: top;
+            width: calc(33% - 1px);
+            height: 260px;
+        }
+        .slice-line {
+            display: inline-block;
+            vertical-align: top;
+            width: 1px;
+            height: 140px;
+            background-color: #cccccc;
+            border-radius: 1px;
+            margin-top: 65px;
+        }
+    }
+    .select-container {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 0 12px 15px;
+        span {
+            display: inline-block;
+            line-height: 30px;
+            color: #999999;
+            margin-right: 8px;
+        }
+        .select {
+            .ant-select-selector {
+                width: 100px;
+                height: 30px;
+                border-radius: 3px;
+                vertical-align: middle;
+            }
+            .ant-select-selection-item {
+                color: #333333;
+                padding-right: 0;
+            }
+            .ant-select-arrow {
+                right: 0;
+            }
+        }
+    }
+    .show-bottom {
+        background-color: #f5f5f5;
+        .internet-time-echart,
+        .internet-count-echart {
+            width: calc(50% - 0.5px);
+            display: inline-block;
+            vertical-align: top;
+            height: 281px;
+        }
+        .slice-line {
+            display: inline-block;
+            vertical-align: top;
+            width: 1px;
+            height: 201px;
+            background-color: #cccccc;
+            border-radius: 1px;
+            margin-top: 53px;
+        }
+    }
+}
+
+.my-contact {
+    padding: 0 20px 20px;
+    .show-top {
+        display: inline-block;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 20px;
+        .contact-count {
+            @include live-card(#ed9230, url(./images/contact-count.png))
+        }
+        .online-contact-count {
+            @include live-card(#7297f4, url(./images/online-contact-count.png))
+        }
+        .online-contact-frequency {
+            @include live-card(#27ad9f, url(./images/online-contact-frequency.png))
+        }
+        .online-contact-time {
+            @include live-card(#ec6868, url(./images/online-contact-time.png))
+        }
+    }
+}

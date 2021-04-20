@@ -1,0 +1,99 @@
+html, body {
+  font-size: 16px;
+}
+
+ul li {
+  list-style: none;
+}
+.introduce_content{
+  font-size: 1rem;
+  padding-left:2rem;
+  line-height:1.875rem;
+  margin:1rem 0px;
+}
+.terminal {
+  font-size: 1.25rem;
+  background-color: #E5E5E5;
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: 2rem; }
+
+.help_container {
+  padding: 2.8rem 1.25rem; }
+
+.content_title {
+  text-align: left;
+  line-height: 2rem;
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+.introduce {
+  background-color: #D7E4BD;
+  border: 1px solid #000000;
+  margin-top: 2rem; }
+
+.introduce_title {
+  font-weight: bold;
+  padding-left: 0.625rem;
+  padding-top: 0.625rem;
+}
+
+
+.text, .text_indent_two {
+  line-height: 1.5rem;
+  font-size: 1rem;
+}
+
+.text_img {
+  display: block;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #cdcdcd;
+}
+
+.img_introduce {
+  text-align: center;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  margin-bottom: 0.878rem; }
+
+.text_title1 {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 0.8rem 0px;
+}
+.text_title2{
+  font-size: 1.1rem;
+  padding-left:2rem;
+}
+.text_indent_four{
+  padding-left: 4rem;
+  font-size: 1rem;
+  line-height: 1.875rem;
+}
+.text_indent_two {
+  padding-left: 2rem;
+  font-size: 1rem;
+  line-height: 1.875rem;
+}
+
+.img_left {
+  max-width: 100%;
+  margin-top: 1rem;
+  margin-bottom:0.5rem;
+}
+
+.img_left_introduce {
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.text_inline_img {
+  vertical-align: middle;
+}
+
+/*# sourceMappingURL=Help_Content.css.map */

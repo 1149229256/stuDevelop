@@ -1,0 +1,41 @@
+/*
+ * 
+ *    ┏┓　　　┏┓
+ *  ┏┛┻━━━┛┻┓
+ *  ┃　　　　　　　┃
+ *  ┃　　　━　　　┃
+ *  ┃　＞　　　＜　┃
+ *  ┃　　　　　　　┃
+ *  ┃...　⌒　...　┃
+ *  ┃　　　　　　　┃
+ *  ┗━┓　　　┏━┛
+ *      ┃　　　┃　
+ *      ┃　　　┃
+ *      ┃　　　┃
+ *      ┃　　　┃  神兽保佑
+ *      ┃　　　┃  代码无bug　　
+ *      ┃　　　┃
+ *      ┃　　　┗━━━┓
+ *      ┃　　　　　　　┣┓
+ *      ┃　　　　　　　┏┛
+ *      ┗┓┓┏━┳┓┏┛
+ *        ┃┫┫　┃┫┫
+ *        ┗┻┛　┗┻┛
+ * 
+ * @Author: zhuzesen
+ * @LastEditors: zhuzesen
+ * @Date: 2021-01-05 09:16:24
+ * @LastEditTime: 2021-01-05 09:16:25
+ * @Description: 
+ * @FilePath: \teacher-development\src\pages\notice\index.scss
+ */
+
+.Notice {
+    height: 100%;
+    width: 100%;
+    .notice-iframe {
+        border: none;
+        height: 100%;
+        width: 100%;
+    }
+}

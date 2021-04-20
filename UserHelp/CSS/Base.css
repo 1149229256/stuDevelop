@@ -1,0 +1,463 @@
+﻿@charset "utf-8";
+
+/* 全局样式 */
+
+html,
+body {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: white;
+    font-family: 微软雅黑;
+    overflow-y: auto;
+    -webkit-text-size-adjust: 100%;
+}
+
+html,
+body span {
+    font-family: 微软雅黑;
+    font-size: 14px;
+    text-align: left;
+    font-weight: normal;
+}
+
+html,
+body label {
+    font-family: 微软雅黑;
+    font-size: 14px;
+}
+
+html,
+body a {
+    font-family: 微软雅黑;
+    font-size: 14px;
+    text-align: left;
+    text-decoration: none;
+}
+
+html,
+body input {
+    font-family: 微软雅黑;
+    font-size: 14px;
+}
+
+html,
+body div {
+    box-sizing: border-box;
+    word-break: break-all;
+}
+
+html,
+body li {
+    list-style: none
+}
+
+body,
+ul {
+    margin: 0;
+    padding: 0
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+#header {
+    float: left;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #006dbe;
+    color: white;
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+#header span {
+    font-size: 16px;
+    color: white;
+    margin-left: 4px;
+}
+
+#footer {
+    float: left;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background-color: #074677;
+    color: white;
+    text-align: center;
+}
+
+#footer span {
+    font-size: 12px;
+    color: white;
+    margin-left: 10px;
+}
+
+#content {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: -moz-calc(100% - 100px);
+    height: -webkit-calc(100% - 100px);
+    height: calc(100% - 100px);
+    min-height: 600px
+}
+
+#list {
+    background-color: #074677;
+    float: left;
+    height: 100%;
+    width: 20%;
+    overflow-x: visible;
+    overflow-y: auto;
+    border-right: 1px solid #e5e5e5;
+    overflow-x: hidden;
+}
+
+#page {
+    float: left;
+    height: 100%;
+    width: 80%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.pdfobject-container {
+    position: relative;
+    z-index: 1;
+}
+
+.pdfobject {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+}
+
+#pageframe {
+    float: left;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border: none;
+    /*display: none;*/
+}
+
+
+/*#versionframe{*/
+
+
+/*float:left;*/
+
+
+/*height:100%;*/
+
+
+/*width:100%;*/
+
+
+/*overflow-x:hidden;*/
+
+
+/*overflow-y:auto;*/
+
+
+/*border:none;*/
+
+
+/*}*/
+
+.listarrow {
+    position: absolute;
+    height: 61px;
+    width: 17px;
+    left: 20%;
+    top: -moz-calc(50% - 30px);
+    top: -webkit-calc(50% - 30px);
+    top: calc(50% - 30px);
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.jumpurl {
+    cursor: pointer;
+}
+
+#content[data-showlist='1'] .listarrow {
+    background: url(../Images/Base/icon_arrow.png) 0 0 no-repeat;
+}
+
+#content[data-showlist='0'] .listarrow {
+    background: url(../Images/Base/icon_arrow.png) 0 -62px no-repeat;
+}
+
+#content[data-showlist='1'] #list {
+    animation: listopen 0.6s 1 forwards;
+    -moz-animation: listopen 0.6s 1 forwards;
+    -webkit-animation: listopen 0.6s 1 forwards;
+    -o-animation: listopen 0.6s 1 forwards;
+}
+
+#content[data-showlist='0'] #list {
+    animation: listclose 0.6s 1 forwards;
+    -moz-animation: listclose 0.6s 1 forwards;
+    -webkit-animation: listclose 0.6s 1 forwards;
+    -o-animation: listclose 0.6s 1 forwards;
+}
+
+#content[data-showlist='1'] .listarrow {
+    animation: listopenarrow 0.6s 1 forwards;
+    -moz-animation: listopenarrow 0.6s 1 forwards;
+    -webkit-animation: listopenarrow 0.6s 1 forwards;
+    -o-animation: listopenarrow 0.6s 1 forwards;
+}
+
+#content[data-showlist='0'] .listarrow {
+    animation: listclosearrow 0.6s 1 forwards;
+    -moz-animation: listclosearrow 0.6s 1 forwards;
+    -webkit-animation: listclosearrow 0.6s 1 forwards;
+    -o-animation: listclosearrow 0.6s 1 forwards;
+}
+
+#content[data-showlist='1'] #page {
+    -moz-animation: contentopen 0.6s 1 forwards;
+    -webkit-animation: contentopen 0.6s 1 forwards;
+    -o-animation: contentopen 0.6s 1 forwards;
+    animation: contentopen 0.6s 1 forwards;
+}
+
+#content[data-showlist='0'] #page {
+    -moz-animation: contentclose 0.6s 1 forwards;
+    -webkit-animation: contentclose 0.6s 1 forwards;
+    -o-animation: contentclose 0.6s 1 forwards;
+    animation: contentclose 0.6s 1 forwards;
+}
+
+@keyframes listclose {
+    from {
+        width: 20%;
+    }
+    to {
+        width: 0%;
+    }
+}
+
+@keyframes listopen {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 20%;
+    }
+}
+
+@keyframes contentclose {
+    from {
+        width: 80%;
+    }
+    to {
+        width: calc(100% - 2px);
+    }
+}
+
+@keyframes contentopen {
+    from {
+        width: calc(100% - 2px);
+    }
+    to {
+        width: 80%;
+    }
+}
+
+@keyframes listclosearrow {
+    from {
+        left: 20%;
+    }
+    to {
+        left: 0%;
+    }
+}
+
+@keyframes listopenarrow {
+    from {
+        left: 0%;
+    }
+    to {
+        left: 20%;
+    }
+}
+
+@keyframes opacitystar {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.5;
+    }
+}
+
+.listarrow:hover {
+    animation: opacitystar 0.6s infinite;
+    -moz-animation: opacitystar 0.6s infinite;
+    -webkit-animation: opacitystar 0.6s infinite;
+    -o-animation: opacitystar 0.6s infinite;
+}
+
+
+/* nav */
+
+.nav {
+    width: 100%;
+    height: 100%;
+    background: #074677;
+    transition: all .3s;
+}
+
+.nav a {
+    display: block;
+    overflow: hidden;
+    padding-left: 20px;
+    line-height: 46px;
+    max-height: 46px;
+    color: #FFFFFF;
+    transition: all .3s;
+}
+
+.nav a span {
+    margin-left: 30px;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-item.nav-show {
+    border-bottom: none;
+}
+
+.nav-item ul {
+    /*display: none;*/
+    background: rgba(0, 0, 0, .1);
+}
+
+.nav-item ul.hidden {
+    display: none;
+}
+
+.nav-item.nav-show ul {
+    display: block;
+}
+
+.nav .nav-icon {
+    font-size: 20px;
+    position: absolute;
+    margin-left: -1px;
+}
+
+
+/* 此处修改导航图标 可自定义iconfont 替换*/
+
+.icon_1::after {
+    content: "\e62b";
+}
+
+.icon_2::after {
+    content: "\e669";
+}
+
+.icon_3::after {
+    content: "\e61d";
+}
+
+
+/*---------------------*/
+
+.nav-more {
+    float: right;
+    margin-right: 20px;
+    font-size: 12px;
+    transition: transform .3s;
+}
+
+
+/* 此处为导航右侧箭头 如果自定义iconfont 也需要替换*/
+
+.nav-more::after {
+    content: "\e621";
+}
+
+
+/*---------------------*/
+
+.slideDown .nav-more {
+    transform: rotate(90deg);
+}
+
+.nav-show,
+.nav-item>a:hover {
+    color: #FFF;
+    background: rgba(0, 0, 0, .1);
+}
+
+.nav-show {
+    color: #FFF;
+    background: rgba(0, 0, 0, .1);
+}
+
+.nav-show>a:before,
+.nav-item>a:hover:before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    width: 2px;
+    height: 46px;
+    background: #34A0CE;
+    opacity: 1;
+    transition: all .3s;
+}
+
+.nav-show>a:before,
+.nav-item>a[data-chosen='1'] {
+    opacity: 1;
+}
+
+.nav-item li:hover a {
+    color: #FFF;
+    background: rgba(0, 0, 0, .1);
+}
+
+.nav-item li a[data-chosen='1'] {
+    color: #FFF;
+    background: rgba(0, 0, 0, .1);
+    position: relative
+}
+
+.repertory {
+    display: inline-block;
+    vertical-align: middle;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 18px;
+}
+
+#mini img {
+    vertical-align: middle;
+}
+
+#home-btn {
+    position: relative;
+    top: -1px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    background: url("../Images/home2.png") no-repeat center;
+}

@@ -1,0 +1,266 @@
+/*
+ * ......................................&&.........................
+ * ....................................&&&..........................
+ * .................................&&&&............................
+ * ...............................&&&&..............................
+ * .............................&&&&&&..............................
+ * ...........................&&&&&&....&&&..&&&&&&&&&&&&&&&........
+ * ..................&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&..............
+ * ................&...&&&&&&&&&&&&&&&&&&&&&&&&&&&&.................
+ * .......................&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&.........
+ * ...................&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&...............
+ * ..................&&&   &&&&&&&&&&&&&&&&&&&&&&&&&&&&&............
+ * ...............&&&&&@  &&&&&&&&&&..&&&&&&&&&&&&&&&&&&&...........
+ * ..............&&&&&&&&&&&&&&&.&&....&&&&&&&&&&&&&..&&&&&.........
+ * ..........&&&&&&&&&&&&&&&&&&...&.....&&&&&&&&&&&&&...&&&&........
+ * ........&&&&&&&&&&&&&&&&&&&.........&&&&&&&&&&&&&&&....&&&.......
+ * .......&&&&&&&&.....................&&&&&&&&&&&&&&&&.....&&......
+ * ........&&&&&.....................&&&&&&&&&&&&&&&&&&.............
+ * ..........&...................&&&&&&&&&&&&&&&&&&&&&&&............
+ * ................&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&............
+ * ..................&&&&&&&&&&&&&&&&&&&&&&&&&&&&..&&&&&............
+ * ..............&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&....&&&&&............
+ * ...........&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&......&&&&............
+ * .........&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&.........&&&&............
+ * .......&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&...........&&&&............
+ * ......&&&&&&&&&&&&&&&&&&&...&&&&&&...............&&&.............
+ * .....&&&&&&&&&&&&&&&&............................&&..............
+ * ....&&&&&&&&&&&&&&&.................&&...........................
+ * ...&&&&&&&&&&&&&&&.....................&&&&......................
+ * ...&&&&&&&&&&.&&&........................&&&&&...................
+ * ..&&&&&&&&&&&..&&..........................&&&&&&&...............
+ * ..&&&&&&&&&&&&...&............&&&.....&&&&...&&&&&&&.............
+ * ..&&&&&&&&&&&&&.................&&&.....&&&&&&&&&&&&&&...........
+ * ..&&&&&&&&&&&&&&&&..............&&&&&&&&&&&&&&&&&&&&&&&&.........
+ * ..&&.&&&&&&&&&&&&&&&&&.........&&&&&&&&&&&&&&&&&&&&&&&&&&&.......
+ * ...&&..&&&&&&&&&&&&.........&&&&&&&&&&&&&&&&...&&&&&&&&&&&&......
+ * ....&..&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&...........&&&&&&&&.....
+ * .......&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&..............&&&&&&&....
+ * .......&&&&&.&&&&&&&&&&&&&&&&&&..&&&&&&&&...&..........&&&&&&....
+ * ........&&&.....&&&&&&&&&&&&&.....&&&&&&&&&&...........&..&&&&...
+ * .......&&&........&&&.&&&&&&&&&.....&&&&&.................&&&&...
+ * .......&&&...............&&&&&&&.......&&&&&&&&............&&&...
+ * ........&&...................&&&&&&.........................&&&..
+ * .........&.....................&&&&........................&&....
+ * ...............................&&&.......................&&......
+ * ................................&&......................&&.......
+ * .................................&&..............................
+ * ..................................&..............................
+ * 
+ * @Author: zhuzesen
+ * @LastEditors: zhuzesen
+ * @Date: 2020-12-08 13:54:07
+ * @LastEditTime: 2020-12-12 11:01:47
+ * @Description: 
+ * @FilePath: \teacher-development\src\component\fileDetail\index.scss
+ */
+
+@import "../common/mixin.scss";
+.lg-fileDetail {
+    min-height: 600px;
+    padding: 0 50px 50px;
+    .lg-fileDetail-empty {
+        position: absolute;
+        @include center;
+    }
+    .fileDetail-content {
+        position: relative;
+        .fd-content-top {
+            position: relative;
+            height: 101px;
+            text-align: center;
+            padding: 24px 100px 0;
+            border-bottom: 1px solid #e6e6e6;
+            .content-top-msg {
+                display: inline-block;
+                width: 100%;
+                @include textOverFlow;
+                &.content-title {
+                    line-height: 32px;
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: #333333;
+                }
+                &.content-msg {
+                    line-height: 28px;
+                    font-size: 12px;
+                    color: #999;
+                }
+                .cm-text {
+                    margin: 0 10px;
+                }
+            }
+            .preview-return {
+                position: absolute;
+                left: 0;
+                font-size: 14px;
+                line-height: 24px;
+                cursor: pointer;
+                text-decoration: underline;
+                color: #0099ff;
+                @include v-center;
+                opacity: 0.9;
+                &::before {
+                    content: "";
+                    position: relative;
+                    width: 16px;
+                    height: 12px;
+                    display: inline-block;
+                    margin-right: 2px;
+                    vertical-align: middle;
+                    background: url(./images/icon-return.png) no-repeat center center / contain;
+                }
+                &:hover {
+                    opacity: 1;
+                }
+            }
+            .preview-comfirm {
+                position: absolute;
+                right: 0;
+                font-size: 16px;
+                height: 36px;
+                line-height: 36px;
+                cursor: pointer;
+                color: #fefefe;
+                @include v-center;
+                opacity: 0.9;
+                padding: 0 23px;
+                background-image: linear-gradient(90deg, #3bcd3b 0%, #2fb22f 100%), linear-gradient(#a1adb4, #a1adb4);
+                border-radius: 18px;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+        .detail-content {
+            margin-top: 8px;
+            padding: 20px;
+        }
+    }
+    .file-box {
+        min-height: 99px;
+        background-color: #ebebeb;
+        border-radius: 5px;
+        padding-bottom: 5px;
+        .fb-top {
+            line-height: 32px;
+            padding: 0 16px;
+            font-size: 14px;
+            color: #000000;
+            margin-bottom: 0;
+            &::before {
+                content: "";
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+                width: 16px;
+                height: 16px;
+                background: url(./images/icon-filedownload.png) no-repeat center center/contain;
+                margin-right: 7px;
+            }
+        }
+        .fb-content {
+            margin: 0 5px;
+            background-color: #ffffff;
+            border-radius: 3px;
+            padding: 10px 20px;
+            .file-bar {
+                // height: 22px;
+                line-height: 42px;
+                font-size: 14px;
+                &::before {
+                    content: "";
+                    position: relative;
+                    display: inline-block;
+                    vertical-align: sub;
+                    width: 20px;
+                    height: 22px;
+                    margin-right: 9px;
+                    background: url(./images/unknown.png) no-repeat center center / contain;
+                }
+                .file-name,
+                .file-type {
+                    color: #333333;
+                }
+                .file-size {
+                    font-size: 14px;
+                    margin-right: 20px;
+                    color: #999999;
+                }
+                .file-download {
+                    text-decoration: underline;
+                    color: #0099ff;
+                    cursor: pointer;
+                    opacity: 0.9;
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+                .file-name {
+                    display: inline-block;
+                    max-width: 80%;
+                    vertical-align: top;
+                    @include textOverFlow;
+                }
+                .file-type {
+                    margin-right: 10px;
+                }
+            }
+            .file-type-video {
+                &::before {
+                    background: url(./images/video.png) no-repeat center center / contain;
+                }
+            }
+            .file-type-audio {
+                &::before {
+                    background: url(./images/audio.png) no-repeat center center / contain;
+                }
+            }
+            .file-type-zip {
+                &::before {
+                    background: url(./images/zip.png) no-repeat center center / contain;
+                }
+            }
+            .file-type-doc {
+                &::before {
+                    background: url(./images/doc.png) no-repeat center center / contain;
+                }
+            }
+            .file-type-docx {
+                &::before {
+                    background: url(./images/docx.png) no-repeat center center / contain;
+                }
+            }
+            .file-type-excel {
+                &::before {
+                    background: url(./images/excel.png) no-repeat center center / contain;
+                }
+            }
+            .file-type-ppt {
+                &::before {
+                    background: url(./images/ppt.png) no-repeat center center / contain;
+                }
+            }
+            .file-type-pdf {
+                &::before {
+                    background: url(./images/pdf.png) no-repeat center center / contain;
+                }
+            }
+            .file-type-html {
+                &::before {
+                    background: url(./images/html.png) no-repeat center center / contain;
+                }
+            }
+            .file-type-txt {
+                &::before {
+                    background: url(./images/txt.png) no-repeat center center / contain;
+                }
+            }
+            &.file-type-pic {
+                &::before {
+                    background: url(./images/png.png) no-repeat center center / contain;
+                }
+            }
+        }
+    }
+}

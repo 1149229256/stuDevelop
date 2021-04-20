@@ -1,0 +1,554 @@
+@charset "UTF-8";
+@import "./animation";
+$img_url:'../images/frame';
+//界面框架整体
+.frame-drag-flag {
+    min-width: 1200px;
+    background-color: #f5f5f5;
+    min-height: 100%;
+    &.in-work-plant-form {
+        .frame-nav-content {
+            margin-left: 20px;
+        }
+        .frame-content-wrapper {
+            width: 100%;
+        }
+        .frame-content-rightside.frame-fluid {
+            width: 100%;
+        }
+        .frame-time-bar {
+            box-shadow: none;
+        }
+    }
+}
+
+//界面框架头部
+.frame-header-wrapper {
+    position: relative;
+    min-width: 1200px;
+    margin: 0 auto;
+    height: 150px;
+}
+
+.frame-header-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    // background: #2bb5c3;
+    background-image: linear-gradient(90deg, #362df8 0%, #2d53f8 100%);
+    &.triangle {
+        background-image: linear-gradient(90deg, #0044de 0%, #00b4ff 100%);
+    }
+    &.circle {
+        background-image: linear-gradient(90deg, #008aff 0%, #00ccff 100%);
+    }
+    &.square {
+        background-image: linear-gradient(90deg, #004088 0%, #007eff 100%);
+    }
+    &.oblong {
+        background-image: linear-gradient(90deg, #362df8 0%, #2d53f8 100%);
+    }
+}
+
+//星星背景
+.frame-header-star-bg {
+    position: relative;
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    &:after {
+        position: absolute;
+        top: 57px;
+        left: -38px;
+        content: '';
+        display: block;
+        width: 580px;
+        height: 73px;
+        background:url("#{$img_url}/star-bg.png") no-repeat center;
+    }
+}
+
+//长方形动画
+.frame-oblong-animation {
+    position: absolute;
+    right: 53px;
+    top: 0;
+    width: 785px;
+    height: 470px;
+    background: url("#{$img_url}/oblong.png") repeat-y center;
+    animation: oblong 18s linear infinite;
+}
+
+//圆形动画
+.frame-circle-animation1 {
+    position: absolute;
+    left: 880px;
+    top: -120px;
+    width: 320px;
+    height: 310px;
+    background: url("#{$img_url}/circle-big.png") no-repeat center;
+    background-size: contain;
+    opacity: 0.7;
+    animation: circle-animation1 20s linear infinite;
+}
+
+.frame-circle-animation2 {
+    position: absolute;
+    top: 50px;
+    left: 48%;
+    width: 105px;
+    height: 103px;
+    background: url("#{$img_url}/circle.png") no-repeat center;
+    background-size: contain;
+    opacity: 0.7;
+    animation: circle-animation2 22s linear infinite;
+}
+
+.frame-circle-animation3 {
+    position: absolute;
+    top: -10px;
+    left: 4%;
+    width: 64px;
+    height: 64px;
+    background: url("#{$img_url}/circle.png") no-repeat center;
+    background-size: contain;
+    opacity: 0.5;
+    animation: circle-animation3 30s linear infinite;
+}
+
+.frame-circle-animation4 {
+    position: absolute;
+    top: 30px;
+    left: 38%;
+    width: 46px;
+    height: 46px;
+    background: url("#{$img_url}/circle.png") no-repeat center;
+    background-size: contain;
+    opacity: 0.7;
+    animation: circle-animation4 24s linear infinite;
+}
+
+.frame-circle-animation5 {
+    position: absolute;
+    top: 80px;
+    left: 325px;
+    width: 46px;
+    height: 46px;
+    background: url("#{$img_url}/circle.png") no-repeat center;
+    background-size: contain;
+    opacity: 0.7;
+    animation: circle-animation5 30s linear infinite;
+}
+
+.frame-circle-animation6 {
+    position: absolute;
+    left: 1182px;
+    width: 36px;
+    height: 66px;
+    background: url("#{$img_url}/circle.png") no-repeat center;
+    background-size: contain;
+    opacity: 0.7;
+    animation: circle-animation6 24s linear infinite;
+}
+
+//方块和三角动画
+.frame-square-wrapper,
+.frame-triangle-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.frame-square-wrapper,
+.frame-triangle-wrapper {
+    li {
+        position: absolute;
+        list-style: none;
+        display: block;
+        width: 40px;
+        height: 40px;
+        background-size: contain;
+        bottom: -160px;
+        animation: squareAndTriangle 25s infinite;
+        &:nth-child(1) {
+            left: 10%;
+        }
+        &:nth-child(2) {
+            left: 20%;
+            width: 80px;
+            height: 80px;
+            animation-delay: 2s;
+            animation-duration: 17s;
+        }
+        &:nth-child(3) {
+            left: 25%;
+            animation-delay: 4s;
+        }
+        &:nth-child(4) {
+            left: 40%;
+            width: 60px;
+            height: 60px;
+            animation-duration: 22s;
+        }
+        &:nth-child(5) {
+            left: 70%;
+        }
+        &:nth-child(6) {
+            left: 80%;
+            width: 120px;
+            height: 120px;
+            animation-delay: 3s;
+        }
+        &:nth-child(7) {
+            left: 32%;
+            width: 160px;
+            height: 160px;
+            animation-delay: 7s;
+        }
+        &:nth-child(8) {
+            left: 55%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 15s;
+            animation-duration: 40s;
+        }
+        &:nth-child(9) {
+            left: 25%;
+            width: 10px;
+            height: 10px;
+            animation-delay: 2s;
+            animation-duration: 40s;
+        }
+        &:nth-child(10) {
+            left: 90%;
+            width: 160px;
+            height: 160px;
+            animation-delay: 11s;
+        }
+    }
+}
+
+.frame-square-wrapper li {
+    background: url('#{$img_url}/square.png') no-repeat center;
+    &:nth-child(6),
+    &:nth-child(7),
+    &:nth-child(10) {
+        background-image: url("#{$img_url}/square-big.png");
+    }
+}
+
+.frame-triangle-wrapper li {
+    background: url("#{$img_url}/triangle.png") no-repeat center;
+    background-size: contain;
+}
+
+//顶部栏
+.frame-home-header {
+    position: relative;
+    min-width: 1200px;
+    margin: 0 auto;
+    height: 40px;
+    line-height: 40px;
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.2) inset;
+    z-index: 1080;
+}
+
+.frame-home-header-content {
+    position: relative;
+    z-index: 2;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+//logo
+.frame-home-logo {
+    float: left;
+    display: inline-block;
+    vertical-align: middle;
+    color: #d2f3fe;
+    padding-left: 42px;
+    font-size: 16px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 36px;
+    a {
+        color: #fefefe;
+        text-decoration: none;
+        &:hover {
+            color: #fefefe;
+        }
+    }
+}
+
+//模块中文名称
+.frame-block-wrapper {
+    position: relative;
+    width: 1200px;
+    height: 110px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding-left: 110px;
+    padding-top: 36px;
+    background-repeat: no-repeat;
+    background-position: 20px 27px;
+    .frame-top-right-content {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+    }
+    .frame-block-title {
+        float: left;
+    }
+    .frame-block-subtitle {
+        float: left;
+        font-size: 12px;
+        margin-left: 8px;
+        color: rgba(255, 255, 255, 0.8);
+        height: 20px;
+        padding: 0 10px;
+        background-color: rgba(0, 0, 0, 0.2);
+        line-height: 20px;
+        border-radius: 10px;
+        margin-top: 5px;
+        font-weight: normal;
+    }
+}
+
+.frame-block-zh-name {
+    font-weight: bold;
+    font-size: 24px;
+    color: #ffffff;
+    line-height: 30px;
+    font-family: "Microsoft YaHei";
+}
+
+.frame-block-en-name {
+    padding-left: 3px;
+    font-size: 14px;
+    line-height: 18px;
+    color: #ffffff;
+    opacity: 0.8;
+    font-family: "Microsoft YaHei";
+}
+
+//右侧的头部
+.frame-home-header-menus {
+    float: right;
+    display: inline-block;
+    vertical-align: middle;
+    .frame-home-header-menu {
+        position: relative;
+        float: right;
+        min-width: 41px;
+        height: 40px;
+        background: url("#{$img_url}/split-line.png") no-repeat right center;
+        &:first-child {
+            background: none;
+        }
+    }
+    .frame-user-identity {
+        float: right;
+        width: 74px;
+        height: 16px;
+        background-repeat: no-repeat;
+        margin: 12px 4px 0 4px;
+        font-size: 12px;
+        line-height: 16px;
+        padding-left: 17px;
+        color: #ffffff;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+}
+
+.frame-home-username {
+    float: right;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.72);
+    text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 82px;
+    &.no-click {
+        cursor: default;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    &:hover {
+        opacity: 0.8;
+        color: rgba(255, 255, 255, 0.72);
+    }
+}
+
+.frame-home-logout {
+    float: right;
+    position: relative;
+    border: 0;
+    outline: none;
+    top: -1px;
+    width: 14px;
+    height: 14px;
+    margin-left: 4px;
+    margin-top: 14px;
+    cursor: pointer;
+    background: url("#{$img_url}/logout-icon.png") no-repeat center;
+    &:hover {
+        background-image: url("#{$img_url}/logout-icon-hover.png");
+    }
+}
+
+.frame-home-userpic {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-top: 8px;
+    margin-left: 12px;
+    margin-right: 6px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid #1c409c;
+    &.no-click {
+        cursor: default;
+    }
+}
+
+.frame-home-msg-menu {
+    position: relative;
+    display: inline-block;
+    top: 2px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    width: 16px;
+    height: 16px;
+    margin-left: 12px;
+    &.msg {
+        &:after {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            content: '';
+            background-color: #ff0000;
+            right: -2px;
+            top: -2px;
+            border-radius: 50%;
+        }
+    }
+}
+
+.frame-home-tel-menu {
+    position: relative;
+    display: inline-block;
+    top: 2px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    width: 16px;
+    height: 16px;
+    margin-left: 12px;
+    background: url("#{$img_url}/tel.png") no-repeat center top;
+    &.msg {
+        &:after {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            content: '';
+            background-color: #ff0000;
+            right: -2px;
+            top: -2px;
+            border-radius: 50%;
+        }
+    }
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+//中间条
+.frame-time-bar {
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1920px;
+    margin-bottom: 16px;
+    line-height: 50px;
+    background-color: #fff;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.03);
+}
+
+.frame-nav-content {
+    width: 1200px;
+    margin: 0 auto;
+    height: 50px;
+    line-height: 50px;
+    color: #333333;
+}
+
+//中间内容区域
+.frame-content-wrapper {
+    width: 1200px;
+    margin: 0 auto;
+    &.barnerHide {
+        margin-top: 20px;
+    }
+    &.isInitGuide {
+        margin-top: 0;
+    }
+}
+
+.frame-content-rightside {
+    float: right;
+    width: 944px;
+    min-height: 626px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.03);
+    &.frame-fluid {
+        width: 1200px;
+    }
+}
+
+.frame-content-leftside {
+    float: left;
+    width: 240px;
+    min-height: 80px;
+    border-radius: 12px 12px 0 0;
+    &.frame-hide {
+        display: none;
+    }
+    &.fix {
+        position: fixed;
+        top: 0;
+    }
+}
+
+//脚部
+.frame-bottom {
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 60px;
+    padding-bottom: 8px;
+    color: #a8a8a9;
+    text-align: center;
+    &.no-title {
+        padding-bottom: 16px;
+    }
+}

@@ -1,0 +1,114 @@
+//灰色的radio组件
+$grayColor:#758992;
+
+$greenColor:#34aa00;
+
+label{
+
+  &.ant-radio-wrapper.ant-radio-gray{
+    .ant-radio{
+      vertical-align: middle;
+      &:hover{
+        border-color: $grayColor;
+        .ant-radio-inner{
+          border-color:$grayColor;
+        }
+      }
+    }
+    .ant-radio-inner{
+      width: 12px;
+      height: 12px;
+      border-color: $grayColor;
+      &:after{
+        left:1px;
+        top:1px;
+        background-color:$grayColor;
+      }
+    }
+    span:not(.ant-radio){
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .ant-radio-disabled{
+      .ant-radio-inner{
+        border-color: $grayColor!important;
+        background-color:#cfcfcf;
+        &:after{
+          left: 2px;
+          top: 2px;
+          width: 6px;
+          height: 6px;
+        }
+      }
+      &:after{
+        border:0;
+      }
+    }
+    .ant-radio-checked{
+      &:after{
+        border-color:$grayColor;
+      }
+    }
+    .ant-radio-input:focus+.ant-radio-inner{
+      border-color: $grayColor;
+    }
+  }
+
+  &.ant-radio-wrapper.ant-radio-green{
+
+    .ant-radio{
+      vertical-align: middle;
+      &:hover{
+        border-color: $greenColor;
+        .ant-radio-inner{
+          border-color:$greenColor;
+        }
+      }
+    }
+    .ant-radio-inner{
+      width: 12px;
+      height: 12px;
+      border-color:#666666;
+      &:after{
+        left:2px;
+        top:2px;
+        width: 6px;
+
+        height: 6px;
+
+        @include border-radius(2px);
+
+        background-color:$greenColor;
+      }
+    }
+    span:not(.ant-radio){
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .ant-radio-disabled{
+      .ant-radio-inner{
+        border-color: $greenColor!important;
+        background-color:#cfcfcf;
+        &:after{
+          left: 2px;
+          top: 2px;
+          width: 6px;
+          height: 6px;
+        }
+      }
+      &:after{
+        border:0;
+      }
+    }
+    .ant-radio-checked{
+      &:after{
+        border-color:$greenColor;
+      }
+    }
+    .ant-radio-input:focus+.ant-radio-inner{
+      border-color: $greenColor;
+    }
+
+  }
+
+}

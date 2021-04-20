@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>学生成长平台用户使用说明</title>
+    <link rel="shortcut icon" href="./Images/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="CSS/Base.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/iconfont.css">
+    <script type="text/javascript" src="./Scripts/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="./Scripts/Base.js"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div style="display: inline-block; cursor: pointer;" id="index">
+            <a id="home-btn" target="_self"></a>
+            <span class="header-title" style="color: white; font-weight: bold; font-size: 16px; position: relative; margin-left: 0;">帮助主页</span>
+        </div>
+
+        <span style="display: inline-block; width: 1px; height: 16px; background-color: white; vertical-align: middle; opacity: 0.5;"></span>
+        <span style="opacity: 0.72; color: white;">学生成长平台用户使用说明</span>
+    </div>
+
+
+    <div id="content" data-showlist="1">
+        <div class="listarrow"></div>
+        <div id="list">
+            <div class="nav">
+                <div class="nav-top">
+                    <div id="mini" style="border-bottom:1px solid rgba(255,255,255,.1)">
+                        <img src="Images/Base/mini.png">
+                        <div class="repertory">目录索引</div>
+                    </div>
+                </div>
+                <ul>
+                    <li class="nav-item">
+                        <a class="jumpurl" title="系统入口" data-url="./Html/270-L/系统入口/index.html">
+                            <i class="my-icon nav-icon icon_2"></i><span>系统入口</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="jumpurl nav-show" title="智能画像" data-url="./Html/270-L/智能画像/index.html">
+                            <i class="my-icon nav-icon icon_2"></i><span>智能画像</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="jumpurl nav-show" title="学籍档案" data-url="./Html/270-L/学籍档案/index.html">
+                            <i class="my-icon nav-icon icon_2"></i><span>学籍档案</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="jumpurl nav-show" title="学情档案" data-url="./Html/270-L/学情档案/index.html">
+                            <i class="my-icon nav-icon icon_2"></i><span>学情档案</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="jumpurl nav-show" title="考勤档案" data-url="./Html/270-L/考勤档案/index.html"><i
+                            class="my-icon nav-icon icon_2"></i><span>考勤档案</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="jumpurl nav-show" title="健康档案" data-url="./Html/270-L/健康档案/index.html"><i
+                            class="my-icon nav-icon icon_2"></i><span>健康档案</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="jumpurl nav-show" title="奖惩档案" data-url="./Html/270-L/奖惩档案/index.html"><i
+                            class="my-icon nav-icon icon_2"></i><span>奖惩档案</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="jumpurl nav-show" title="校园生活档案" data-url="./Html/270-L/校园生活档案/index.html"><i
+                            class="my-icon nav-icon icon_2"></i><span>校园生活档案</span></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="jumpurl" data-version="1" data-url="./ProVersion.html" title="版本说明"><i
+                            class="my-icon nav-icon icon_2"></i><span>版本说明</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="page">
+            <iframe id="pageframe" src=""></iframe>
+        </div>
+    </div>
+
+    <div id="footer">
+        蓝鸽科技 版权所有
+        <!--<span>V5.2</span>-->
+    </div>
+    <script>
+        $("#index").on('click', function() {
+            $.ajax({
+                type: 'get',
+                url: '/student-growth/api/base/getServerInfo?sysIds=260',
+                dataType: 'json',
+                async: true,
+                success: function(data) {
+                    if (data.code == 1 && data.data) {
+                        var baseUrl = data.data.webSvrAddr;
+                        var url = baseUrl + "html/help/";
+                        var href = location.href;
+                        if (href.indexOf("lg_tk") !== -1) {
+                            var token = href.substr(href.indexOf("lg_tk=") + 6, 36);
+                            console.log(token);
+                            url += "?lg_tk=" + token;
+                            window.open(url);
+                        }
+                        if (href.indexOf("lg_id") !== -1) {
+                            var param = href.substr(href.indexOf("lg_id=") + 6);
+                            console.log(param);
+                            url += "?lg_id=" + param;
+                            window.open(url);
+                        }
+                    }
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

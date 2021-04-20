@@ -1,0 +1,286 @@
+/*组件：下拉 start*/
+
+.dropdown_container {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    color: #333333;
+    .dropdown_title_span {
+        float: left;
+        line-height: 28px;
+    } //dropdown的title
+    .dropdown_wrapper {
+        position: relative;
+        display: inline-block;
+        float: left;
+        vertical-align: middle;
+        margin-left: 8px;
+        .dropdown_default_span {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            text-decoration: none;
+            background-color: #ffffff;
+            overflow: hidden;
+            cursor: pointer;
+            line-height: 26px;
+            height: 28px;
+            border: solid 1px $dropBorder;
+            border-radius: 3px;
+            .dropdown_icon_span {
+                position: absolute;
+                width: 0;
+                height: 0;
+                right: 10px;
+                top: 11px;
+                border-width: 6px;
+                border-color: $dropBorder transparent transparent transparent;
+                border-style: solid;
+                &.slide {
+                    top: 5px;
+                    border-color: transparent transparent $dropBorder transparent;
+                }
+            } //icon
+            .dropdown_text_span {
+                display: block;
+                padding: 0 24px 0 11px;
+                text-align: left;
+                @include textOverFlow;
+            } //已选中
+            &:hover {
+                border-color: $dropHoverBorder;
+                .dropdown_icon_span {
+                    border-color: $dropHoverBorder transparent transparent transparent;
+                    &.slide {
+                        border-color: transparent transparent $dropHoverBorder transparent;
+                    }
+                }
+            } //鼠标上浮状态
+            &.disabled {
+                cursor: not-allowed;
+                border-color: $dropDisabled;
+                background-color: #efefef;
+                .dropdown_icon_span {
+                    border-color: $dropDisabled transparent transparent transparent;
+                }
+                .dropdown_text_span {
+                    color: #999999;
+                }
+                &:hover {
+                    border-color: $dropDisabled;
+                    .dropdown_icon_span {
+                        border-color: $dropDisabled transparent transparent transparent;
+                    }
+                }
+            } //禁用状态
+        } //已选项
+        .dropdown_select_ul {
+            position: absolute;
+            display: none;
+            left: 0;
+            top: 32px;
+            overflow: hidden;
+            border: 1px solid $dropBorder;
+            background-color: #ffffff;
+            border-radius: 3px;
+            .dropdown_select_li {
+                position: relative;
+                height: 24px;
+                font-size: 14px;
+                list-style: none;
+                cursor: pointer;
+                line-height: 24px;
+                text-align: left;
+                padding: 0 10px;
+                @include textOverFlow;
+                &.active {
+                    color: #ff6600;
+                    background-color: $dropHoverBg;
+                }
+                &:hover {
+                    background-color: $dropHoverBg;
+                }
+            } //简单的待选列表
+            .dropdown_multiple_container {
+                padding: 0 10px;
+                //padding-bottom:20px;
+                text-align: center;
+                .dropdown_search_wrapper {
+                    padding: 10px 0;
+                    border-bottom: 1px dashed #dddddd;
+                } //搜索
+                .dropdown_list_ul {
+                    //列表
+                    margin: 10px auto;
+                }
+                .dropdown_list_item1 {
+                    //第一级列表
+                    margin-bottom: 12px;
+                    .dropdown_item1_name {
+                        //第二级title
+                        position: relative;
+                        background: #e5f2fb;
+                        padding-left: 24px;
+                        line-height: 30px;
+                        background-repeat: no-repeat;
+                        background-position: 10px center;
+                        cursor: pointer;
+                        border-bottom: 1px dashed #9abbd1;
+                        text-align: left;
+                        &::after {
+                            //左侧三角
+                            position: absolute;
+                            width: 0;
+                            height: 0;
+                            left: 11px;
+                            top: 11px;
+                            content: "";
+                            border-style: solid;
+                            border-width: 4px;
+                            border-color: transparent transparent transparent #487ea3;
+                        }
+                        &.slide {
+                            background-color: #f8e6d8;
+                            &::after {
+                                //左侧三角
+                                position: absolute;
+                                width: 0;
+                                height: 0;
+                                left: 11px;
+                                top: 14px;
+                                content: "";
+                                border-style: solid;
+                                border-width: 4px;
+                                border-color: #c78e5e transparent transparent transparent;
+                            }
+                        }
+                    }
+                }
+                .dropdown_list_ul3 {
+                    //第二级列表
+                    position: relative;
+                    background-color: #fff8f2;
+                    margin: 0 auto;
+                    display: none;
+                } //第三级列表
+                .dropdown_item3_li {
+                    //第三级列表title
+                    float: left;
+                    width: 134px;
+                    height: 24px;
+                    padding: 0 6px;
+                    line-height: 24px;
+                    cursor: pointer;
+                    border: 1px solid #ebc2a0;
+                    border-radius: 4px;
+                    @include textOverFlow;
+                    margin: 10px 0px 10px 16px;
+                    .dropdown_item3_id {
+                        color: #999999;
+                    }
+                    &:hover,
+                    &.active {
+                        .dropdown_item3_name,
+                        .dropdown_item3_id {
+                            color: #ffffff;
+                        }
+                        background-color: #c26013;
+                    }
+                } //第三级列表的元素
+            } //高级多选列表
+        } //待选列表
+        //scrollbars
+        .dropdown_select_ul {
+            &>.ant-spin-nested-loading {
+                &>.ant-spin-container {
+                    &>div {
+                        &>div:last-child {
+                            right: 0 !important;
+                        }
+                    }
+                }
+            }
+        }
+    } //下拉部分
+    .emptyBox {
+        padding-bottom: 20px;
+        .empty.tips-error-5 {
+            width: 320px;
+            height: 132px;
+            margin-top: 10px;
+            @include background-size(220px 200px);
+            .initTitle {
+                margin-top: 0;
+            }
+        }
+    }
+    .dropdown_select_search {
+        position: relative;
+        .drop_search_btn,
+        .dropdown_search_close {
+            position: absolute;
+            right: 4px;
+            top: 50%;
+            width: 12px;
+            height: 12px;
+            transform: translateY(-50%);
+            cursor: pointer;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+        .dropdown_search_close {
+            background: url("#{$image_url}/search/search-close-icon.png") no-repeat center;
+        }
+        .ant-input {
+            margin: 0;
+            height: 28px;
+            width: 100%;
+        }
+        .drop_search_btn {
+            border: 1px solid #95afd4;
+            border-radius: 50%;
+            right: 6px;
+            &:after {
+                position: absolute;
+                width: 2px;
+                height: 4px;
+                content: "";
+                right: -2px;
+                bottom: -2px;
+                background-color: #95afd4;
+                -webkit-transform: rotate(-45deg);
+                -moz-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                -o-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}
+
+
+/*组件：下拉 end*/
+
+// 新的
+.lg-dropdown {
+    display: inline-block;
+    // vertical-align: middle;
+    .dropdown-title {
+        font-size: 14px;
+        color: #999999;
+        margin-right: 8px;
+        vertical-align: middle;
+    }
+    .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+        border-radius: 3px;
+        border: solid 1px #dedede;
+    }
+    .dropdown-box {
+        vertical-align: middle;
+    }
+    .content {}
+    &.second-level-dropdown {
+        padding-left: 10px;
+    }
+}

@@ -1,0 +1,118 @@
+//灰色的checkbox组件
+$GrayColor:#758992;
+
+$CircleColor:#67a6de;
+
+
+.ant-checkbox-wrapper.ant-checkbox-gray{
+  .ant-checkbox{
+    vertical-align: middle;
+    &:hover{
+      border-color: $GrayColor;
+      .ant-checkbox-inner{
+        border-color:$GrayColor;
+      }
+    }
+  }
+
+  span:not(.ant-checkbox){
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .ant-checkbox-checked{
+    .ant-checkbox-inner{
+      background-color: #ffffff;
+    }
+    &:after{
+      border:0;
+    }
+  }
+  .ant-checkbox-disabled{
+    .ant-checkbox-inner{
+      border-color: $GrayColor!important;
+      background-color:#cfcfcf;
+      &:after{
+        left: 2px;
+        top: 2px;
+        width: 6px;
+        height: 6px;
+      }
+    }
+    &:after{
+      border:0;
+    }
+  }
+  .ant-checkbox-input:focus+.ant-checkbox-inner{
+    border-color: $GrayColor;
+  }
+  .ant-checkbox-inner{
+    width: 12px;
+    height: 12px;
+    border-color: $GrayColor;
+    &:after{
+      width:8px;
+      height: 8px;
+      left:1px;
+      top:1px;
+      content:'';
+      @include transform(rotate(0deg));
+      border:0;
+      background-color:$GrayColor;
+    }
+  }
+}
+
+.ant-checkbox-wrapper.ant-checkbox-circle{
+  .ant-checkbox{
+    vertical-align: middle;
+    &:hover{
+      border-color: $CircleColor;
+      .ant-checkbox-inner{
+        border-color:$CircleColor;
+      }
+    }
+  }
+
+  span:not(.ant-checkbox){
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .ant-checkbox-checked{
+    .ant-checkbox-inner{
+      background-color:$CircleColor;
+    }
+    &:after{
+      border:0;
+    }
+  }
+  .ant-checkbox-disabled{
+    .ant-checkbox-inner{
+      border-color: $GrayColor!important;
+      background-color:$CircleColor;
+      &:after{
+        left: 2px;
+        top: 2px;
+        width: 6px;
+        height: 6px;
+      }
+    }
+    &:after{
+      border:0;
+    }
+  }
+  .ant-checkbox-input:focus+.ant-checkbox-inner{
+    border-color: $GrayColor;
+  }
+  .ant-checkbox-inner{
+    width: 20px;
+    height: 20px;
+    border-color:#abbfd1;
+    @include border-radius(50%);
+    &:after{
+      width: 6px;
+      height: 12px;
+      left:4px;
+      top:8px;
+    }
+  }
+}

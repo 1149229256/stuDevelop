@@ -1,0 +1,20 @@
+.WaveRound {
+    // width: 108px;
+    // height: 108px;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.42) 0%, #ffffff 100%), linear-gradient( #1ca222, #1ca222);
+    background-blend-mode: soft-light, normal;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    overflow: hidden;
+}
+
+.WaveRound-wave {
+    background-color: rgba($color: #fff, $alpha: 0.2);
+    width: 108px;
+    height: 54px;
+    position: absolute;
+    bottom: 0;
+}

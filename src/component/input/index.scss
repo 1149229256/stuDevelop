@@ -1,0 +1,29 @@
+.input-container {
+    display: inline-block;
+    line-height: 30px;
+    height: 30px;
+    .input-title {
+        display: inline-block;
+        vertical-align: middle;
+        width: 102px;
+        color: #666666;
+        text-align: right;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        margin-right: 8px;
+    }
+    .input-btn {
+        display: inline-block;
+        vertical-align: middle;
+        outline: 0;
+        height: 30px;
+        border: 1px solid #dedede;
+        background-color: white;
+        border-radius: 3px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        padding: 0 12px;
+    }
+}

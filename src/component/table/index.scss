@@ -1,0 +1,134 @@
+@import "../common/mixin.scss";
+.lg-table-box {
+    position: relative;
+    min-height: 400px;
+    .lg-table {
+        .ant-table {
+            table {
+                table-layout: fixed !important;
+            }
+            .ant-table-column-sorter {
+                margin-left: 4px;
+            }
+            .ant-table-column-sorters {
+                // margin-left: 20px;
+                padding: 0;
+            }
+            .ant-table-thead {
+                tr th {
+                    height: 40px;
+                    background-color: rgba($color: #1c96fe, $alpha: 0.16);
+                    font-size: 14px;
+                    color: #399cd0;
+                    font-weight: bold;
+                }
+            }
+            .ant-table-tbody {
+                &>tr>td {
+                    padding: 0;
+                    &>* {
+                        display: inline-block;
+                        @include textOverFlow;
+                        vertical-align: top;
+                        font-size: 14px;
+                        line-height: 44px;
+                        padding: 0 5px;
+                        border-top: #fff 2px solid;
+                        border-bottom: #fff 2px solid;
+                    }
+                }
+                td>* {
+                    width: 100%;
+                }
+                .ant-table-row {
+                    .ant-table-cell {
+                        // height: 44px;
+                        // background-color: #f2f9ff;
+                        border-bottom: 1px solid #dbeeff;
+                    }
+                    &:hover {
+                        background: transparent;
+                        &:not(.ant-table-expanded-row) td {
+                            background: transparent;
+                        }
+                        .ant-table-cell {
+                            // height: 44px;
+                            &>* {
+                                background-color: #f2f9ff;
+                                border-top: #fff 2px solid;
+                                border-bottom: #fff 2px solid;
+                                color: #0099ff;
+                            }
+                        }
+                    }
+                }
+                // td里面的span
+                .table-index {
+                    // padding-left: 10px;
+                    // width: 102px;
+                    color: #999999;
+                    // @include textOverFlow;
+                }
+                .table-title {
+                    // width: 102px;
+                    color: #333333;
+                    cursor: pointer;
+                }
+                .table-source {
+                    color: #81370f;
+                }
+                .table-publisher {
+                    color: #666666;
+                }
+                .table-time {
+                    color: #999999;
+                }
+                .table-limit {
+                    color: #333333;
+                }
+                .table-activity {
+                    &.table-activity-0 {
+                        color: #4a9e54;
+                    }
+                    &.table-activity-1 {
+                        color: #d8562e;
+                    }
+                }
+                .table-handle {
+                    .table-btn {
+                        display: inline-block;
+                        vertical-align: middle;
+                        margin: 0 2px;
+                        border-radius: 4px;
+                        border: solid 1px #09aaff;
+                        padding: 0 15px;
+                        font-size: 14px;
+                        color: #0099ff;
+                        background: #fff;
+                        height: 30px;
+                        line-height: 28px;
+                        cursor: pointer;
+                        &:hover {
+                            background: #09aaff;
+                            color: #fff;
+                        }
+                    }
+                    .btn-edit {}
+                }
+            }
+        }
+    }
+    .ant-pagination {
+        text-align: center;
+        margin-top: 20px;
+        .ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+            width: 100%;
+            height: 28px;
+            padding: 0 11px;
+        }
+    }
+    .lg-table-empty {
+        position: absolute;
+        @include center;
+    }
+}

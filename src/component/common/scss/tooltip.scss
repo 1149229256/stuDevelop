@@ -1,0 +1,34 @@
+.ant-tooltip {
+    // max-width: 999px !important;
+    // .ant-tooltip-arrow:before {
+    //     background-color: #d41414;
+    // }
+    // .ant-tooltip-inner {
+    //     background-color: #d41414;
+    //     min-height: 0;
+    //     min-width: 0;
+    //     font-size: 12px;
+    //     line-height: 14px;
+    //     white-space: nowrap;
+    // }
+}
+
+.lg-tip {
+    // .ant-tooltip {
+    max-width: 999px !important;
+    .ant-tooltip-arrow:before {
+        background-color: #d41414;
+    }
+    .ant-tooltip-arrow-content {
+        background-color: #d41414;
+    }
+    .ant-tooltip-inner {
+        background-color: #d41414;
+        min-height: 0;
+        min-width: 0;
+        font-size: 12px;
+        line-height: 14px;
+        white-space: nowrap;
+    }
+    // }
+}

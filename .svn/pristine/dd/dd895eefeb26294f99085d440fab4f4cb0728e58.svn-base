@@ -1,0 +1,172 @@
+.App {
+    text-align: center;
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+p {
+    margin: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+* {
+    font-family: MicrosoftYaHei-Bold;
+}
+
+.App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/**
+ * @description: 基础样式
+ * @param {*}
+ * @return {*}
+ */
+
+.lg-btn {
+    cursor: pointer;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    padding: 0 13px;
+    color: #fefefe;
+    border-radius: 3px;
+}
+
+// 项目的发布编辑界面的公共样式
+.Publish-context {
+    .context-top {
+        height: 64px;
+        line-height: 64px;
+        background-color: #f1f9ff;
+        padding: 0 30px;
+        .title-1 {
+            font-size: 16px;
+            vertical-align: middle;
+            line-height: 16px;
+            color: #1ca6fe;
+            font-weight: bold;
+        }
+        .title-2 {
+            padding: 0 5px;
+            font-size: 14px;
+            vertical-align: middle;
+            line-height: 16px;
+            color: #91b9d2;
+        }
+    }
+}
+
+.teacher-ProVersion {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    line-height: 48px;
+    // margin-bottom: -44px;
+    color: #b8b8b8;
+    bottom: -72px;
+}
+
+.frame-search-all {
+    // margin-right: 20px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+//popover浮层隐藏突起
+.ant-popover-content {
+    .ant-popover-arrow {
+        display: none;
+    }
+    .ant-popover-inner {
+        background: rgba(0, 0, 0, 0.65);
+        border-radius: 3px;
+    }
+    .tooltip-title {
+        color: #fffd64;
+        font-weight: bold;
+        font-size: 12px;
+        margin: 0 0 5px 0;
+    }
+    .tooltip-list {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        li {
+            font-size: 12px;
+            color: #cccccc;
+            span {
+                color: rgba(255, 255, 255, 0.8);
+            }
+            .downlogo {
+                display: inline-block;
+                vertical-align: middle;
+                width: 5px;
+                height: 12px;
+                position: relative;
+                top: -1px;
+                margin-left: 8px;
+                background-image: url(./images/downlogo.png);
+                background-position-y: -2px;
+            }
+            .uplogo {
+                display: inline-block;
+                vertical-align: middle;
+                width: 5px;
+                height: 12px;
+                position: relative;
+                top: -1px;
+                margin-left: 8px;
+                background-image: url(./images/uplogo.png);
+                background-position-y: -2px;
+            }
+            &:before {
+                content: '';
+                display: inline-block;
+                vertical-align: middle;
+                width: 4px;
+                height: 4px;
+                border-radius: 50%;
+                background-color: #cccccc;
+                margin: -2px 8px 0 0;
+            }
+        }
+    }
+}

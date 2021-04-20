@@ -1,0 +1,65 @@
+@import "../common/mixin.scss";
+.frame-context {}
+
+.frame-bar-context {
+    position: relative;
+    width: calc(100% - 32px);
+    // margin: 16px 8px 0;
+    margin-top: 16px;
+    // height: 350px;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    .fbc-top {
+        position: relative;
+        height: 45px;
+        line-height: 44px;
+        border-bottom: 1px solid #e5e5e5;
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 4px;
+            height: 16px;
+            background-color: #0f99a6;
+            @include v-center;
+        }
+        .ftc-bar-name {
+            display: inline-block;
+            padding-left: 20px;
+            max-width: 30%;
+            vertical-align: top;
+            font-size: 14px;
+            color: #0f99a6;
+            font-weight: bold;
+        }
+        .ftc-top-custom {
+            float: right;
+            height: 44px;
+            line-height: 44px;
+            padding-right: 20px;
+            .ftc-default-btn {
+                padding-left: 18px;
+                background: url(./images/icon-show-year.png) no-repeat left center / 15px 15px;
+                font-size: 14px;
+                color: #0249a5;
+                cursor: pointer;
+                opacity: 0.9;
+                text-decoration: underline;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    .fbc-contain {
+        .fbc-contain-box {
+            width: 100%;
+            min-height: 100px;
+        }
+        .bar-empty {
+            height: 200px;
+            padding-top: 30px;
+        }
+    }
+}

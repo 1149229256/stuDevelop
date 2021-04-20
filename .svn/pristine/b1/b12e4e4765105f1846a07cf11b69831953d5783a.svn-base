@@ -1,0 +1,280 @@
+//alert组件
+$img_url:"#{$image_url}/alert";
+
+/*简单的弹出层*/
+
+.alert_tips_tab {
+    //位置垂直左右居中
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 10101;
+    @include transform(translate(-50%, -50%));
+    box-shadow: none;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    max-width: 500px;
+    &.animation {
+        display: block;
+        @include animation(hide 0.8s 0.4s linear);
+    }
+    .border {
+        box-shadow: 0 0 16px 0 rgba(3, 0, 0, 0.16);
+    }
+    .alert_tab_content {
+        //内容区域
+        line-height: 30px;
+        padding: 17px 54px 17px 82px;
+        background-position: 40px center;
+        background-size: 28px;
+        background-color: #ffffff;
+        background-repeat: no-repeat;
+    }
+}
+
+.alert_tab_content {
+    &.success,
+    &.error,
+    &.tips,
+    &.warn {
+        word-break: break-all;
+        font-size: 16px;
+        max-width: 400px;
+        overflow-x: hidden;
+        outline: none;
+        background-size: auto;
+    }
+    &.success {
+        background-image:url("#{$img_url}/success-little.png");
+    }
+    &.error {
+        background-image: url("#{$img_url}/error-little.png");
+    }
+    &.tips {
+        background-image: url("#{$img_url}/tips-little.png");
+    }
+    &.warn {
+        background-image: url("#{$img_url}/warn-middle.png");
+        @include background-size(36px 36px);
+    }
+}
+
+
+/*带按钮的弹出层*/
+
+.alert_dialog_tab {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10101;
+    //@include transform(translate(-50%,-50%));
+    /*min-width: 400px;
+  max-width: 500px;
+  background-color: #ffffff;*/
+    padding: 0;
+    .border {
+        box-shadow: 0 0 16px 0 rgba(3, 0, 0, 0.16);
+    }
+    /*关闭按钮*/
+    .alert_close_btn {
+        position: absolute;
+        right: 16px;
+        top: 16px;
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+        background: url("#{$img_url}/close-btn.png") no-repeat;
+        &:hover {
+            background-image:url("#{$img_url}/close-btn-hover.png")
+        }
+    }
+    #alert_dialog_wrapper {
+        position: absolute;
+        min-width: 400px;
+        max-width: 600px;
+        background-color: #ffffff;
+        /*top:50%;
+
+    left:50%;
+
+    @include transform(translate(-50%,-50%));*/
+    }
+}
+
+.alert_dialog_dragheader {
+    height: 50px;
+}
+
+.alert_dialog_content {
+    @include flex;
+    @include justify-content(center);
+    -ms-flex-pack: center;
+    @include align-items(center);
+    -ms-flex-align: center;
+    //@include flex-direction(column);
+    padding: 0 30px;
+    /*padding-top:50px;*/
+    //大图标
+    .big_icon {
+        width: 54px;
+        height: 56px;
+        background-repeat: no-repeat;
+        background-position: center;
+        &.btn-success {
+            background-image: url("#{$img_url}/success-big.png");
+        }
+        &.btn-error {
+            background-image: url("#{$img_url}/error-big.png");
+        }
+        &.btn-warn {
+            background-image: url("#{$img_url}/warn-big.png");
+        }
+        &.btn-query {
+            background-image: url("#{$img_url}/query-big.png");
+        }
+        &.btn-tips {
+            background-image: url("#{$img_url}/tips-big.png");
+        }
+    }
+    .left-icon {
+        background-repeat: no-repeat;
+        background-position: 0 center;
+        width: 46px;
+        height: 42px;
+        margin-left: -10px;
+        margin-right: 6px;
+        &.btn-success {
+            background-image: url("#{$img_url}/success-middle.png");
+        }
+        &.btn-error {
+            background-image: url("#{$img_url}/error-middle.png");
+        }
+        &.btn-warn {
+            background-image: url("#{$img_url}/warn-middle.png");
+        }
+        &.btn-query {
+            background-image: url("#{$img_url}/query-middle.png");
+        }
+        &.btn-tips {
+            background-image: url("#{$img_url}/tips-middle.png");
+        }
+    }
+    &.has-abstract {
+        @include flex-direction(column);
+    }
+}
+
+//信息内容
+.alert_dialog_msg {
+    //line-height: 44px;
+    /* background-repeat: no-repeat;
+  background-position:0 center;*/
+    max-width: 440px;
+    vertical-align: middle;
+    font-size: 18px;
+    /*padding-left: 52px;*/
+    color: #333;
+    word-break: break-all;
+    //icon图标
+    /* &.btn-success{
+    background-image: url("#{$img_url}/success-middle.png");
+  }
+  &.btn-error{
+    background-image: url("#{$img_url}/error-middle.png");
+  }
+  &.btn-warn{
+    background-image: url("#{$img_url}/warn-middle.png");
+  }
+  &.btn-query{
+    background-image: url("#{$img_url}/query-middle.png");
+  }
+  &.btn-tips{
+    background-image: url("#{$img_url}/tips-middle.png");
+  }*/
+    &.big {
+        padding: 8px 0 2px 0;
+        line-height: 20px;
+    }
+}
+
+//解释
+.alert_dialog_abstract {
+    font-size: 14px;
+    color: #999999;
+    max-width: 480px;
+    word-break: break-word;
+}
+
+//脚部按钮区域
+.alert_dialog_footer {
+    @include flex;
+    @include justify-content(center);
+    -ms-flex-pack: center;
+    -ms-flex-align: center;
+    margin-top: 30px;
+    padding-bottom: 28px;
+    text-align: right;
+    font-size: 14px;
+    line-height: 1.5;
+    input[type="button"] {
+        border: none;
+        background-size: 100% 32px;
+        background-position: center;
+        width: 108px;
+        height: 32px;
+        line-height: 32px;
+        color: #ffffff;
+        outline: none;
+        border-radius: 16px;
+        font-size: 16px;
+        box-shadow: 0 7px 22px -6px #5dcbfe;
+        cursor: pointer;
+        @include textOverFlow;
+        &.ok {
+            background-image: url("#{$img_url}/ok-btn.png");
+            &:hover {
+                background-image: url("#{$img_url}/ok-btn-hover.png");
+            }
+        }
+        &.cancel {
+            margin-left: 12px;
+            color: #0099ff;
+            background-image: url("#{$img_url}/cancel-btn.png");
+            &:hover {
+                background-image: url("#{$img_url}/cancel-btn-hover.png");
+            }
+        }
+    }
+}
+
+//背景蒙层
+.alert_dialog_mask {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.16);
+    left: 0;
+    top: 0;
+}
+
+@include keyframes('hide') {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0.85;
+    }
+    50% {
+        opacity: 0.65;
+    }
+    75% {
+        opacity: 0.35;
+    }
+    100% {
+        opacity: 0;
+    }
+}

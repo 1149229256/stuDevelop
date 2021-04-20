@@ -1,0 +1,1390 @@
+@charset "utf-8";
+@import "~compass-mixins/lib/animate";
+$image-url :"../images";
+.clearfix:before {
+    /* display: block;
+  height: 0;
+  content: '\20';
+  clear:both;*/
+    content: '';
+    display: table;
+}
+
+ul {
+    list-style: none;
+}
+
+.frame_twocols_table>tbody>tr>.col1 {
+    width: 241px;
+    vertical-align: top;
+    background-color: #f0fcff;
+    border-right: 1px solid #98ccd7;
+    box-shadow: 0 0 3px 1px #d9eff4 inset;
+}
+
+.frame_twocols_table>tbody>tr>.col2 {
+    width: 959px;
+    vertical-align: top;
+    background-color: #fff;
+}
+
+.frame_leftpart_container {
+    min-height: 626px;
+    padding-top: 9px;
+}
+
+.frame_leftmenu_mainitem {
+    position: relative;
+    height: 48px;
+    background: #fff;
+    &.active {
+        background-image: linear-gradient(90deg, #ff4200 0%, #ffab3d 100%), linear-gradient( #ff6600, #ff6600);
+        .frame_leftmenu_mainitem_name>a,
+        .frame_leftmenu_mainitem_name {
+            color: #fff;
+        }
+    }
+}
+
+.frame_leftmenu_mainitem {
+    &.selected:not(.active) {
+        .frame_leftmenu_mainitem_name>a,
+        .frame_leftmenu_mainitem_name {
+            color: #ff6600;
+        }
+        .menu10 {
+            background-image: url(#{$image-url}/new/left-menu/new/menu-icon1-hover.png);
+        }
+        .menu19 {
+            background-image: url(#{$image-url}/new/left-menu/new/menu-icon2-hover.png);
+        }
+        .menu20 {
+            background-image: url(#{$image-url}/new/left-menu/new/menu-icon3-hover.png);
+        }
+        .menu21 {
+            background-image: url(#{$image-url}/new/left-menu/new/menu-icon4-hover.png);
+        }
+        .menu22 {
+            background-image: url(#{$image-url}/new/left-menu/new/menu-icon5-hover.png);
+        }
+        .menu23 {
+            background-image: url(#{$image-url}/new/left-menu/new/menu-icon6-hover.png);
+        }
+        .menu24 {
+            background-image: url(#{$image-url}/new/left-menu/new/menu-icon7-hover.png);
+        }
+        .menu25 {
+            background-image: url(#{$image-url}/new/left-menu/new/menu-icon8-hover.png);
+        }
+        .frame_leftmenu_arrow {
+            background-image: url(#{$image-url}/new/left-menu/new/menu-arrow-right-hover.png);
+        }
+    }
+}
+
+.frame_leftmenu_mainitem_name {
+    float: left;
+    display: inline-block;
+    padding-left: 24px;
+    margin-left: 24px;
+    line-height: 48px;
+    height: 48px;
+    font-size: 16px;
+    color: #333333;
+    background-repeat: no-repeat;
+    background-position: 2px center;
+    cursor: pointer;
+    text-decoration: none;
+    a {
+        display: inline-block;
+        line-height: 42px;
+    }
+    &.menu24 {
+        background-position: 2px 14px;
+    }
+    &:hover {
+        color: #ff6600;
+    }
+}
+
+.frame_leftmenu_mainitem_name>a {
+    color: #333333;
+    text-decoration: none;
+}
+
+//.frame_leftmenu_mainitem_name:hover > a,
+.frame_leftmenu_mainitem_name.active>a {
+    color: #fff;
+}
+
+
+/*.frame_leftmenu_mainitem_name:hover {
+  color: #ff6600;
+}
+
+.frame_leftmenu_mainitem_name.frame_nolink:hover {
+  color: #333333;
+}*/
+
+.frame_leftmenu_mainitem_name.userfile {
+    background-image: url(#{$image-url}/new/left-menu/userfile-menu-icon.png);
+}
+
+.frame_leftmenu_mainitem_name.studentfile {
+    background-image: url(#{$image-url}/new/left-menu/studentfile_menu_icon.png);
+}
+
+.frame_leftmenu_mainitem_name.teacherfile {
+    background-image: url(#{$image-url}/new/left-menu/teacherfile_menu_icon.png);
+}
+
+.frame_leftmenu_mainitem_name.adminfile {
+    background-image: url(#{$image-url}/new/left-menu/adminfile_menu_icon.png);
+}
+
+.frame_leftmenu_mainitem_name.person_msg {
+    background-image: url(#{$image-url}/new/left-menu/personmsg-leftmenu-icon.png);
+}
+
+
+/*.frame_leftmenu_mainitem_name.auth_list {
+  background-image: url(#{$image-url}/add/auth-icon.png);
+}*/
+
+.frame_leftmenu_mainitem_name.secure_setting {
+    background-image: url(#{$image-url}/new/left-menu/secure-leftmenu-icon.png);
+}
+
+.frame_leftmenu_mainitem_name.admin_setting {
+    background-image: url(#{$image-url}/new/left-menu/adminsetting-leftmenu-icon.png);
+}
+
+.frame_leftmenu_mainitem_name.teacher_setting {
+    background-image: url(#{$image-url}/new/left-menu/teachersetting-leftmenu-icon.png);
+}
+
+.frame_leftmenu_mainitem_name.news {
+    background-image: url(#{$image-url}/new/left-menu/new-leftmenu-icon.png);
+}
+
+.frame_leftmenu_mainitem_name.notice {
+    background-image: url(#{$image-url}/new/left-menu/notice-leftmenu-icon.png);
+}
+
+.frame_leftmenu_mainitem_name.cloud_disk {
+    background-image: url(#{$image-url}/new/left-menu/cloudedisk-leftmenu-icon.png);
+}
+
+.frame_leftmenu_mainitem_name.collection {
+    background-image: url(#{$image-url}/new/left-menu/collection-leftmenu-icon.png);
+}
+
+.frame_leftmenu_mainitem_name.note {
+    background-image: url(#{$image-url}/new/left-menu/note-leftmenu-icon.png);
+}
+
+.frame_leftmenu_mainitem_name.chinese {
+    background-image: url(#{$image-url}/new/left-menu/chinese-leftmenu-icon.png);
+}
+
+.frame_leftmenu_mainitem_name.math {
+    background-image: url(#{$image-url}/new/left-menu/math-leftmenu-icon.png);
+}
+
+.frame_leftmenu_mainitem_name.english {
+    background-image: url(#{$image-url}/new/left-menu/english-leftmenu-icon.png);
+}
+
+.frame_leftmenu_mainitem_name.politics {
+    background-image: url(#{$image-url}/new/left-menu/politics-leftmenu-icon.png);
+}
+
+.frame_leftmenu_mainitem_name.geography {
+    background-image: url(#{$image-url}/new/left-menu/geography-leftmenu-icon.png);
+}
+
+.frame_leftmenu_mainitem_name.history {
+    background-image: url(#{$image-url}/new/left-menu/history-leftmenu-icon.png);
+}
+
+.frame_leftmenu_mainitem_name.biology {
+    background-image: url(#{$image-url}/new/left-menu/biology-leftmenu-icon.png);
+}
+
+.frame_leftmenu_mainitem_name.chemistry {
+    background-image: url(#{$image-url}/new/left-menu/chemistry-leftmenu-icon.png);
+}
+
+.frame_leftmenu_mainitem_name.physics {
+    background-image: url(#{$image-url}/new/left-menu/physics-leftmenu-icon.png);
+}
+
+.frame_leftmenu_mainitem_name.diy {
+    background-image: url(#{$image-url}/new/left-menu/diy-leftmenu-icon.png);
+}
+
+.frame_leftmenu_mainitem_name.school_net {
+    background-image: url(#{$image-url}/new/left-menu/schoolnet-leftmenu-icon.png);
+}
+
+.frame_leftmenu_mainitem_name.subject_net {
+    background-image: url(#{$image-url}/new/left-menu/subjectnet-leftmenu-icon.png);
+}
+
+.frame_leftmenu_mainitem_name.internet {
+    background-image: url(#{$image-url}/new/left-menu/internet-leftmenu-icon.png);
+}
+
+.frame_leftmenu_mainitem_name.leader {
+    background-image: url(#{$image-url}/new/left-menu/leader-leftmenu-icon.png);
+}
+
+.frame_leftmenu_mainitem_name.expert {
+    background-image: url(#{$image-url}/new/left-menu/expert-leftmenu-icon.png);
+}
+
+.frame_leftmenu_mainitem_name.school {
+    background-image: url(#{$image-url}/new/left-menu/school-leftmenu-icon.png);
+}
+
+.frame_leftmenu_mainitem_name.notice_send_icon {
+    background-image: url(#{$image-url}/new/left-menu/notice_sended_left_menu_icon.png);
+}
+
+.frame_leftmenu_mainitem_name.notice_read_icon {
+    background-image: url(#{$image-url}/new/left-menu/notice_read_left_menu_icon.png);
+}
+
+.frame_leftmenu_mainitem_name.receive_mailbox_icon {
+    background-image: url(#{$image-url}/new/left-menu/receive_mailbox_icon.png);
+}
+
+.frame_leftmenu_mainitem_name.draft_mailbox_icon {
+    background-image: url(#{$image-url}/new/left-menu/draft_mailbox_icon.png);
+}
+
+.frame_leftmenu_mainitem_name.send_mailbox_icon {
+    background-image: url(#{$image-url}/new/left-menu/send_mailbox_icon.png);
+}
+
+.frame_leftmenu_mainitem_name.q_invite_icon {
+    background-image: url(#{$image-url}/new/left-menu/q_invite_icon.png);
+}
+
+.frame_leftmenu_mainitem_name.q_sended_icon {
+    background-image: url(#{$image-url}/new/left-menu/q_sended_icon.png);
+}
+
+.frame_leftmenu_mainitem_name.q_data_icon {
+    background-image: url(#{$image-url}/new/left-menu/q_data_icon.png);
+}
+
+.frame_leftmenu_mainitem_name.forum_admin1 {
+    background-image: url(#{$image-url}/new/left-menu/forum_admin1.png);
+}
+
+.frame_leftmenu_mainitem_name.forum_admin2 {
+    background-image: url(#{$image-url}/new/left-menu/forum_admin2.png);
+}
+
+.frame_leftmenu_mainitem_name.forum_admin3 {
+    background-image: url(#{$image-url}/new/left-menu/forum_admin3.png);
+}
+
+.frame_leftmenu_mainitem_name.forum_admin4 {
+    background-image: url(#{$image-url}/new/left-menu/forum_admin4.png);
+}
+
+.frame_leftmenu_mainitem_name.forum_menu1 {
+    background-image: url(#{$image-url}/new/left-menu/forum_menu1.png);
+}
+
+.frame_leftmenu_mainitem_name.forum_menu2 {
+    background-image: url(#{$image-url}/new/left-menu/forum_menu2.png);
+}
+
+.frame_leftmenu_mainitem_name.forum_menu3 {
+    background-image: url(#{$image-url}/new/left-menu/forum_menu3.png);
+}
+
+.frame_leftmenu_mainitem_name.forum_menu4 {
+    background-image: url(#{$image-url}/new/left-menu/forum_menu4.png);
+}
+
+.frame_leftmenu_mainitem_name.forum_menu5 {
+    background-image: url(#{$image-url}/new/left-menu/forum_menu5.png);
+}
+
+.frame_leftmenu_mainitem_name.research_menu1 {
+    background-image: url(#{$image-url}/new/left-menu/research-menu1.png);
+}
+
+.frame_leftmenu_mainitem_name.research_menu2 {
+    background-image: url(#{$image-url}/new/left-menu/research-menu2.png);
+}
+
+.frame_leftmenu_mainitem_name.research_menu3 {
+    background-image: url(#{$image-url}/new/left-menu/research-menu3.png);
+}
+
+.frame_leftmenu_mainitem_name.research_menu4 {
+    background-image: url(#{$image-url}/new/left-menu/research-menu4.png);
+}
+
+.frame_leftmenu_arrow {
+    float: right;
+    display: inline-block;
+    width: 7px;
+    height: 12px;
+    margin-right: 32px;
+    margin-top: 18px;
+    background: url(#{$image-url}/new/left-menu/new/menu-arrow-right.png) no-repeat center;
+    cursor: pointer;
+    @include transform(rotate(90deg));
+    @include transform-origin(center);
+}
+
+.frame_left_menu_right_arrow {
+    @include transform(rotate(90deg));
+    @include transform-origin(center);
+}
+
+.frame_leftmenu_mainitem {
+    &.active {
+        .frame_leftmenu_arrow {
+            background-image: url(#{$image-url}/new/left-menu/new/menu-arrow-right-active.png);
+        }
+    }
+}
+
+
+/*.frame_leftmenu_arrow:hover {
+  background: url(#{$image-url}/new/left-menu/new/menu-arrow-right-active.png) no-repeat center;
+}*/
+
+.frame_leftmenu_addalink {
+    float: right;
+    display: inline-block;
+    margin-top: 15px;
+    margin-right: 14px;
+    padding-left: 13px;
+    color: #0099ff;
+    font-size: 12px;
+    text-decoration: none;
+    background: url(#{$image-url}/new/left-menu/leftmenu-add-icon.png) no-repeat left;
+}
+
+.frame_leftmenu_addalink:hover {
+    color: #ff6600;
+    text-decoration: none;
+    background-image: url(#{$image-url}/new/left-menu/leftmenu-add-icon-hover.png);
+}
+
+.frame_leftmenu_nextgrade_container {
+    /*  margin-bottom: 22px;*/
+}
+
+.frame_leftmenu_onegrade_ul {
+    //padding-left: 48px;
+    padding-left: 24px;
+    margin-bottom: 0;
+    >li {
+        padding-left: 24px;
+        &.active {
+            background-image: linear-gradient(90deg, #ff4200 0%, #ffab3d 100%), linear-gradient( #ffffff, #ffffff);
+            background-blend-mode: normal, normal;
+            .frame_leftmenu_point {
+                background-image: url(#{$image-url}/new/left-menu/new/rectangle-active.png);
+            }
+        }
+    }
+    // 最后一级为点
+    &.point_style>li {
+        .frame_leftmenu_point {
+            background-image: url(#{$image-url}/new/left-menu/new/point.png);
+            &.hover {
+                background-image: url(#{$image-url}/new/left-menu/new/point-active.png);
+            }
+        }
+        &.active {
+            .frame_leftmenu_point {
+                background-image: url(#{$image-url}/new/left-menu/new/point-white.png);
+            }
+        }
+    }
+}
+
+.frame_leftmenu_onegrade_ul li {
+    font-size: 14px;
+    color: #333333;
+    line-height: 40px;
+    a {
+        color: #333;
+        text-decoration: none;
+    }
+    &:hover .frame_leftmenu_point {
+        //background-image: url(#{$image-url}/new/left-menu/new/rectangle-hover.png);
+    }
+}
+
+.frame_leftmenu_point.active {
+    /*  color: #ff6600;*/
+    background-image: url(#{$image-url}/new/left-menu/new/rectangle-hover.png);
+}
+
+.frame_leftmenu_point {
+    @include inline-block;
+    width: 8px;
+    height: 40px;
+    float: left;
+    padding-right: 4px;
+    /*  color: #9b9798;*/
+    background: url(#{$image-url}/new/left-menu/new/rectangle.png) no-repeat left;
+    &:not(.active):hover {
+        background-image: url(#{$image-url}/new/left-menu/new/rectangle.png) !important;
+    }
+}
+
+.frame_leftmenu_point.hover {
+    /*  color: #ff6600;*/
+    background-image: url(#{$image-url}/new/left-menu/new/rectangle-hover.png);
+}
+
+.frame_leftmenu_onegrade_name {
+    float: left;
+    max-width: 140px;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-left: 8px;
+    &.active {
+        color: #fff;
+    }
+}
+
+.frame_leftmenu_onegrade_name:not(.active):hover {
+    color: #ff6600;
+}
+
+.frame_leftmenu_onegrade_name:hover * {
+    /*  color: #ff6600;*/
+}
+
+.frame_leftmenu_twograde_grounp {
+    padding-left: 24px;
+    margin-left: 24px;
+    font-size: 14px;
+    color: #333;
+    line-height: 30px;
+    a {
+        color: #333;
+        text-decoration: none;
+        &:hover {
+            color: #ff6600;
+        }
+    }
+    &.active {
+        .frame_leftmenu_twograde_text {
+            color: #fff !important;
+        }
+        .frame_leftmenu_twograde_arrow {
+            background-image: url(#{$image-url}/new/left-menu/new/rectangle-hover.png);
+        }
+        .frame_left_menu_right_arrow {
+            background-image: url(#{$image-url}/new/left-menu/new/menu-arrow-right-active.png) !important;
+        }
+    }
+}
+
+.frame_leftmenu_lastgrade_ul {
+    padding-left: 48px;
+}
+
+.frame_leftmenu_lastgrade_ul li {
+    padding-left: 18px;
+    font-size: 14px;
+    color: #333333;
+    line-height: 30px;
+    a {
+        color: #333;
+        text-decoration: none;
+    }
+    .frame_leftmenu_point {
+        width: 4px;
+        height: 30px;
+        margin-right: 8px;
+        background: url(#{$image-url}/new/left-menu/new/point.png) no-repeat center;
+        &.active {
+            background: url(#{$image-url}/new/left-menu/new/point-active.png) no-repeat center;
+        }
+    }
+    /*  &:not(.active):hover {
+      .frame_leftmenu_point {
+        background: url(#{$image-url}/new/left-menu/new/point-active.png) no-repeat center;
+      }
+    }*/
+}
+
+.frame_leftmenu_lastgrade_ul {
+    .frame_leftmenu_point.hover {
+        background: url(#{$image-url}/new/left-menu/new/point-active.png) no-repeat center !important;
+    }
+}
+
+.frame_leftmenu_lastgrade_ul li:hover .frame_leftmenu_del_btn,
+.frame_leftmenu_lastgrade_ul li:hover .frame_leftmenu_edit_btn {
+    display: inline-block;
+}
+
+
+/*
+.frame_leftmenu_lastgrade_ul li:hover .frame_leftmenu_point {
+  color: #ff6600;
+}
+*/
+
+.frame_leftmenu_mainitem:hover .frame_leftmenu_del_btn,
+.frame_leftmenu_mainitem:hover .frame_leftmenu_edit_btn {
+    display: inline-block;
+}
+
+.frame_leftmenu_mainitem .frame_leftmenu_del_btn,
+.frame_leftmenu_mainitem .frame_leftmenu_edit_btn {
+    margin-top: 13px;
+}
+
+.frame_leftmenu_lastgrade_ul .frame_leftmenu_onegrade_name {
+    max-width: 116px;
+}
+
+.frame_leftmenu_arrow.spread {
+    //background-image: url(#{$image-url}/new/left-menu/leftmenu-arrow-down.png);
+    background-image: url(#{$image-url}/new/left-menu/new/menu-arrow-right.png);
+    @include transform(rotate(-90deg));
+    @include transform-origin(center);
+}
+
+.frame_leftmenu_arrow.spread:hover {
+    //background-image: url(#{$image-url}/new/left-menu/leftmenu-arrow-down-hover.png);
+}
+
+.frame_leftmenu_twograde_grounp.spread {
+    background-image: url(#{$image-url}/new/left-menu/leftmenu-grade-arrow-down.png);
+}
+
+.frame_leftmenu_mainitem_name.active,
+.frame_leftmenu_onegrade_name.active,
+.frame_leftmenu_twograde_grounp.active {
+    /*  color: #ff6600;
+    a {
+      color: #ff6600;
+    }*/
+}
+
+.frame_left_menu_right_arrow {
+    /*
+    display: none;
+    width: 5px;
+    height: 7px;
+    margin-left: 18px;
+    position: relative;
+    top: -2px;
+    background-image: url(#{$image-url}/new/left-menu/add/left-menu-right-arrow.png);*/
+    display: none;
+    width: 7px;
+    height: 12px;
+    margin-top: 13px;
+    margin-right: 32px;
+    float: right;
+    background: url(#{$image-url}/new/left-menu/new/menu-arrow-right-active.png) no-repeat center;
+}
+
+.frame_leftmenu_twograde_grounp {
+    @extend .clearfix;
+    height: 40px;
+    line-height: 40px;
+    &:hover {
+        .frame_leftmenu_twograde_arrow {
+            //background-image: url(#{$image-url}/new/left-menu/new/rectangle-hover.png);
+        }
+    }
+}
+
+.frame_leftmenu_twograde_text {
+    float: left;
+    cursor: pointer;
+}
+
+.frame_left_menu_right_arrow.active {
+    display: inline-block;
+}
+
+.frame_leftmenu_twograde_grounp .frame_left_menu_right_arrow {
+    margin-left: 13px;
+}
+
+// 新增样式
+.frame_leftmenu_twograde_grounp {
+    position: relative;
+}
+
+.frame_leftmenu_twograde_grounp.new {
+    background: none;
+}
+
+.frame_leftmenu_twograde_arrow {
+    @extend .frame_leftmenu_point;
+    /*  position: absolute;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    left: 20px;
+    top: 8px;
+    cursor: pointer;
+    background: url(#{$image-url}/new/left-menu/leftmenu-grade-arrow-right.png) no-repeat center;*/
+}
+
+.frame_leftmenu_twograde_text:hover~.frame_leftmenu_twograde_arrow {
+    background-image: url(#{$image-url}/new/left-menu/new/rectangle-hover.png) !important;
+}
+
+.frame_leftmenu_twograde_arrow:hover {
+    //background-image: url(#{$image-url}/new/left-menu/leftmenu-grade-arrow-right-hover.png);
+}
+
+.frame_leftmenu_twograde_grounp.new:hover .frame_leftmenu_twograde_text {
+    color: #333;
+}
+
+.frame_leftmenu_twograde_text:hover {
+    color: #ff6600 !important;
+}
+
+.frame_leftmenu_twograde_text.active {
+    color: #ff6600 !important;
+}
+
+.frame_leftmenu_twograde_arrow.arrow_spread {
+    //background-image: url(#{$image-url}/new/left-menu/leftmenu-grade-arrow-down-init.png);
+}
+
+.frame_leftmenu_twograde_arrow.arrow_spread:hover {
+    //background-image: url(#{$image-url}/new/left-menu/leftmenu-grade-arrow-down.png);
+}
+
+// 左侧菜单 icon
+.frame_leftmenu_mainitem_name {
+    /* 学校开户设置 */
+    /*&.menu1 {
+    background-image: url(#{$image-url}/new/left-menu/add/menu1.png);
+  }
+  !* 学年学期设置 *!
+  &.menu2 {
+    background-image: url(#{$image-url}/new/left-menu/add/menu2.png);
+  }
+  !* 基础信息设置 *!
+  &.menu3 {
+    background-image: url(#{$image-url}/new/left-menu/add/menu3.png);
+  }
+  !* 子系统访问设置 *!
+  &.menu4 {
+    background-image: url(#{$image-url}/new/left-menu/add/menu4.png);
+  }
+  !* 管理员档案 *!
+  &.menu5 {
+    background-image: url(#{$image-url}/new/left-menu/add/menu5.png);
+  }
+  !* 教师档案 *!
+  &.menu6 {
+    background-image: url(#{$image-url}/new/left-menu/add/menu6.png);
+  }
+  !* 学生档案 *!
+  &.menu7 {
+    background-image: url(#{$image-url}/new/left-menu/add/menu7.png);
+  }
+  !* 学校领导 *!
+  &.menu8 {
+    background-image: url(#{$image-url}/new/left-menu/add/menu8.png);
+  }
+  !* 学校用户 *!
+  &.menu9 {
+    background-image: url(#{$image-url}/new/left-menu/add/menu9.png);
+  }*/
+    /* 总览 */
+    &.menu10 {
+        //background-image: url(#{$image-url}/new/left-menu/add/menu10.png);
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon1.png);
+        &.active {
+            background-image: url(#{$image-url}/new/left-menu/new/menu-icon1-active.png);
+        }
+    }
+    /* 年级 */
+    /*&.menu11 {
+    background-image: url(#{$image-url}/new/left-menu/add/menu11.png);
+  }
+  !* vip 模块设置 *!
+  &.menu12 {
+    background-image: url(#{$image-url}/new/left-menu/add/menu12.png);
+    background-position: 14px center;
+  }
+  !* vip 充值卡设置 *!
+  &.menu13 {
+    background-image: url(#{$image-url}/new/left-menu/add/menu13.png);
+    background-position: 14px center;
+  }
+  !* 交易订单详情 *!
+  &.menu14 {
+    background-image: url(#{$image-url}/new/left-menu/add/menu14.png);
+    background-position: 14px center;
+  }
+  !* 基本资料 *!
+  &.menu15 {
+    background-image: url(#{$image-url}/new/left-menu/add/menu15.png);
+    background-position: 14px center;
+  }
+  !* 安全保护信息 *!
+  &.menu16 {
+    background-image: url(#{$image-url}/new/left-menu/add/menu16.png);
+    background-position: 14px center;
+  }
+  !* 第三方账号 *!
+  &.menu17 {
+    background-image: url(#{$image-url}/new/left-menu/add/menu17.png);
+    background-position: 14px center;
+  }
+  !* VIP会员 *!
+  &.menu18 {
+    background-image: url(#{$image-url}/new/left-menu/add/menu18.png);
+    background-position: 14px center;
+  }*/
+    //
+    &.menu19 {
+        //background-image: url(#{$image-url}/new/left-menu/add/menu10.png);
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon2.png);
+        &.active {
+            background-image: url(#{$image-url}/new/left-menu/new/menu-icon2-active.png);
+        }
+    }
+    &.menu20 {
+        //background-image: url(#{$image-url}/new/left-menu/add/menu10.png);
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon3.png);
+        &.active {
+            background-image: url(#{$image-url}/new/left-menu/new/menu-icon3-active.png);
+        }
+    }
+    &.menu21 {
+        //background-image: url(#{$image-url}/new/left-menu/add/menu10.png);
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon4.png);
+        &.active {
+            background-image: url(#{$image-url}/new/left-menu/new/menu-icon4-active.png);
+        }
+    }
+    &.menu22 {
+        //background-image: url(#{$image-url}/new/left-menu/add/menu10.png);
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon5.png);
+        &.active {
+            background-image: url(#{$image-url}/new/left-menu/new/menu-icon5-active.png);
+        }
+    }
+    &.menu23 {
+        //background-image: url(#{$image-url}/new/left-menu/add/menu10.png);
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon6.png);
+        &.active {
+            background-image: url(#{$image-url}/new/left-menu/new/menu-icon6-active.png);
+        }
+    }
+    &.menu24 {
+        //background-image: url(#{$image-url}/new/left-menu/add/menu10.png);
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon7.png);
+        &.active {
+            background-image: url(#{$image-url}/new/left-menu/new/menu-icon7-active.png);
+        }
+    }
+    &.menu25 {
+        //background-image: url(#{$image-url}/new/left-menu/add/menu10.png);
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon8.png);
+        &.active {
+            background-image: url(#{$image-url}/new/left-menu/new/menu-icon8-active.png);
+        }
+    }
+    &.menu26 {
+        //background-image: url(#{$image-url}/new/left-menu/add/menu10.png);
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon9.png);
+        &.active {
+            background-image: url(#{$image-url}/new/left-menu/new/menu-icon9-active.png);
+        }
+    }
+    &.menu27 {
+        //background-image: url(#{$image-url}/new/left-menu/add/menu10.png);
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon10.png);
+        &.active {
+            background-image: url(#{$image-url}/new/left-menu/new/menu-icon10-active.png);
+        }
+    }
+    &.menu28 {
+        //background-image: url(#{$image-url}/new/left-menu/add/menu10.png);
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon11.png);
+        &.active {
+            background-image: url(#{$image-url}/new/left-menu/new/menu-icon11-active.png);
+        }
+    }
+    &.menu29 {
+        //background-image: url(#{$image-url}/new/left-menu/add/menu10.png);
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon12.png);
+        &.active {
+            background-image: url(#{$image-url}/new/left-menu/new/menu-icon12-active.png);
+        }
+    }
+    &.menu30 {
+        //background-image: url(#{$image-url}/new/left-menu/add/menu10.png);
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon13.png);
+        &.active {
+            background-image: url(#{$image-url}/new/left-menu/new/menu-icon13-active.png);
+        }
+    }
+    &.menu31 {
+        //background-image: url(#{$image-url}/new/left-menu/add/menu10.png);
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon14.png);
+        &.active {
+            background-image: url(#{$image-url}/new/left-menu/new/menu-icon14-active.png);
+        }
+    }
+    &.menu32 {
+        //background-image: url(#{$image-url}/new/left-menu/add/menu10.png);
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon15.png);
+        &.active {
+            background-image: url(#{$image-url}/new/left-menu/new/menu-icon15-active.png);
+        }
+    }
+    &.menu33 {
+        //background-image: url(#{$image-url}/new/left-menu/add/menu10.png);
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon16.png);
+        &.active {
+            background-image: url(#{$image-url}/new/left-menu/new/menu-icon16-active.png);
+        }
+    }
+    &.menu34 {
+        //background-image: url(#{$image-url}/new/left-menu/add/menu10.png);
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon17.png);
+        &.active {
+            background-image: url(#{$image-url}/new/left-menu/new/menu-icon17-active.png);
+        }
+    }
+    &.menu35 {
+        //background-image: url(#{$image-url}/new/left-menu/add/menu10.png);
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon18.png);
+        &.active {
+            background-image: url(#{$image-url}/new/left-menu/new/menu-icon18-active.png);
+        }
+    }
+    &.menu36 {
+        //background-image: url(#{$image-url}/new/left-menu/add/menu10.png);
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon19.png);
+        &.active {
+            background-image: url(#{$image-url}/new/left-menu/new/menu-icon19-active.png);
+        }
+    }
+    &.menu37 {
+        //background-image: url(#{$image-url}/new/left-menu/add/menu10.png);
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon20.png);
+        &.active {
+            background-image: url(#{$image-url}/new/left-menu/new/menu-icon20-active.png);
+        }
+    }
+    &.menu38 {
+        //background-image: url(#{$image-url}/new/left-menu/add/menu10.png);
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon21.png);
+        &.active {
+            background-image: url(#{$image-url}/new/left-menu/new/menu-icon21-active.png);
+        }
+    }
+    &.menu39 {
+        //background-image: url(#{$image-url}/new/left-menu/add/menu10.png);
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon22.png);
+        &.active {
+            background-image: url(#{$image-url}/new/left-menu/new/menu-icon22-active.png);
+        }
+    }
+    &.menu40 {
+        //background-image: url(#{$image-url}/new/left-menu/add/menu10.png);
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon23.png);
+        &.active {
+            background-image: url(#{$image-url}/new/left-menu/new/menu-icon23-active.png);
+        }
+    }
+    &.menu41 {
+        //background-image: url(#{$image-url}/new/left-menu/add/menu10.png);
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon24.png);
+        &.active {
+            background-image: url(#{$image-url}/new/left-menu/new/menu-icon24-active.png);
+        }
+    }
+    &.menu42 {
+        //background-image: url(#{$image-url}/new/left-menu/add/menu10.png);
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon25.png);
+        &.active {
+            background-image: url(#{$image-url}/new/left-menu/new/menu-icon25-active.png);
+        }
+    }
+    &.menu43 {
+        //background-image: url(#{$image-url}/new/left-menu/add/menu10.png);
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon26.png);
+        &.active {
+            background-image: url(#{$image-url}/new/left-menu/new/menu-icon26-active.png);
+        }
+    }
+    &.menu44 {
+        //background-image: url(#{$image-url}/new/left-menu/add/menu10.png);
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon27.png);
+        &.active {
+            background-image: url(#{$image-url}/new/left-menu/new/menu-icon27-active.png);
+        }
+    }
+
+    &.menu45 {
+        //background-image: url(#{$image-url}/new/left-menu/add/menu10.png);
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon28.png);
+        &.active {
+            background-image: url(#{$image-url}/new/left-menu/new/menu-icon28-active.png);
+        }
+    }
+
+    &.menu46 {
+        //background-image: url(#{$image-url}/new/left-menu/add/menu10.png);
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon29.png);
+        &.active {
+            background-image: url(#{$image-url}/new/left-menu/new/menu-icon29-active.png);
+        }
+    }
+
+}
+
+// 新左侧菜单
+.frame_left_menu_pic {
+    margin-bottom: 1px;
+    height: 80px;
+    &.pic1 {
+        background: url(#{$image-url}/new/left-menu/new/pic1.png) no-repeat center bottom;
+    }
+    &.pic2 {
+        background: url(#{$image-url}/new/left-menu/new/pic2.png) no-repeat center bottom;
+    }
+    &.pic3 {
+        background: url(#{$image-url}/new/left-menu/new/pic3.png) no-repeat center bottom;
+    }
+    &.pic4 {
+        background: url(#{$image-url}/new/left-menu/new/pic4.png) no-repeat center bottom;
+    }
+    &.pic5 {
+        background: url(#{$image-url}/new/left-menu/new/pic5.png) no-repeat center bottom;
+    }
+    &.pic6 {
+        background: url(#{$image-url}/new/left-menu/new/pic6.png) no-repeat center bottom;
+    }
+    &.pic7 {
+        background: url(#{$image-url}/new/left-menu/new/pic7.png) no-repeat center bottom;
+    }
+    &.pic8 {
+        background: url(#{$image-url}/new/left-menu/new/pic8.png) no-repeat center bottom;
+    }
+    &.pic9 {
+        background: url(#{$image-url}/new/left-menu/new/pic9.png) no-repeat center bottom;
+    }
+}
+
+.frame_leftmenu_mainitem:not(.selected):hover {
+    /*  .frame_leftmenu_mainitem_name {
+      > a {
+        color: #ff6600;
+      }
+    }
+    > .menu10 {
+      background-image: url(#{$image-url}/new/left-menu/new/menu-icon1-hover.png);
+    }*/
+}
+
+.frame_leftmenu_mainitem_name:hover {
+    >a {
+        color: #ff6600;
+    }
+    &.menu10 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon1-hover.png);
+    }
+    &.menu19 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon2-hover.png);
+    }
+    &.menu20 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon3-hover.png);
+    }
+    &.menu21 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon4-hover.png);
+    }
+    &.menu22 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon5-hover.png);
+    }
+    &.menu23 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon6-hover.png);
+    }
+    &.menu24 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon7-hover.png);
+    }
+    &.menu25 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon8-hover.png);
+    }
+    &.menu26 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon9-hover.png);
+    }
+    &.menu27 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon10-hover.png);
+    }
+    &.menu28 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon11-hover.png);
+    }
+    &.menu29 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon12-hover.png);
+    }
+    &.menu30 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon13-hover.png);
+    }
+    &.menu31 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon14-hover.png);
+    }
+    &.menu32 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon15-hover.png);
+    }
+    &.menu33 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon16-hover.png);
+    }
+    &.menu34 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon17-hover.png);
+    }
+    &.menu35 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon18-hover.png);
+    }
+    &.menu36 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon19-hover.png);
+    }
+    &.menu37 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon20-hover.png);
+    }
+    &.menu38 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon21-hover.png);
+    }
+    &.menu39 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon22-hover.png);
+    }
+    &.menu40 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon23-hover.png);
+    }
+    &.menu41 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon24-hover.png);
+    }
+    &.menu42 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon25-hover.png);
+    }
+    &.menu43 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon26-hover.png);
+    }
+    &.menu44 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon27-hover.png);
+    }
+
+    &.menu45 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon28-hover.png);
+    }
+    &.menu46 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon29-hover.png);
+    }
+}
+
+:not(.no_child):not(.active)>.frame_leftmenu_arrow:hover {
+    background: url(#{$image-url}/new/left-menu/new/menu-arrow-right-hover.png) no-repeat center;
+}
+
+.frame_leftmenu_mainitem.active {
+    >.menu10 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon1-active.png);
+    }
+    >.menu19 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon2-active.png);
+    }
+    >.menu20 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon3-active.png);
+    }
+    >.menu21 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon4-active.png);
+    }
+    >.menu22 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon5-active.png);
+    }
+    >.menu23 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon6-active.png);
+    }
+    >.menu24 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon7-active.png);
+    }
+    >.menu25 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon8-active.png);
+    }
+    >.menu26 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon9-active.png);
+    }
+    >.menu27 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon10-active.png);
+    }
+    >.menu28 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon11-active.png);
+    }
+    >.menu29 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon12-active.png);
+    }
+    >.menu30 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon13-active.png);
+    }
+    >.menu31 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon14-active.png);
+    }
+    >.menu32 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon15-active.png);
+    }
+    >.menu33 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon16-active.png);
+    }
+    >.menu34 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon17-active.png);
+    }
+    >.menu35 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon18-active.png);
+    }
+    >.menu36 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon19-active.png);
+    }
+    >.menu37 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon20-active.png);
+    }
+    >.menu38 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon21-active.png);
+    }
+    >.menu39 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon22-active.png);
+    }
+    >.menu40 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon23-active.png);
+    }
+    >.menu41 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon24-active.png);
+    }
+    >.menu42 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon25-active.png);
+    }
+    >.menu43 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon26-active.png);
+    }
+    >.menu44 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon27-active.png);
+    }
+    >.menu45 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon28-active.png);
+    }
+    >.menu46 {
+        background-image: url(#{$image-url}/new/left-menu/new/menu-icon29-active.png);
+    }
+}
+
+.frame_leftmenu_mainitem {
+    &.no_child {
+        .frame_leftmenu_arrow {
+            cursor: default;
+        }
+    }
+}
+
+.frame_leftmenu_twograde_grounp {
+    .frame_left_menu_right_arrow {
+        display: inline-block;
+        background: url(#{$image-url}/new/left-menu/new/menu-arrow-right.png) no-repeat center;
+        cursor: pointer;
+        &:hover {
+            background: url(#{$image-url}/new/left-menu/new/menu-arrow-right-hover.png) no-repeat center;
+        }
+    }
+    &.active {
+        background-image: linear-gradient(90deg, #ff4200 0%, #ffab3d 100%), linear-gradient( #ffffff, #ffffff);
+        background-blend-mode: normal, normal;
+        .frame_leftmenu_twograde_text {
+            color: #fff;
+            &:hover {
+                color: #fff !important;
+            }
+        }
+        .frame_leftmenu_twograde_arrow {
+            background-image: url(#{$image-url}/new/left-menu/new/rectangle-active.png) !important;
+        }
+        .frame_left_menu_right_arrow {
+            background: url(#{$image-url}/new/left-menu/new/menu-arrow-right-active.png) no-repeat center;
+        }
+    }
+}
+
+.frame_leftmenu_lastgrade_ul {
+    &>li {
+        .frame_leftmenu_point:hover {
+            background-image: url(#{$image-url}/new/left-menu/new/point.png) !important;
+        }
+        &.active {
+            background-image: linear-gradient(90deg, #ff4200 0%, #ffab3d 100%), linear-gradient( #ffffff, #ffffff);
+            background-blend-mode: normal, normal;
+            .frame_leftmenu_point {
+                background-image: url(#{$image-url}/new/left-menu/new/point-white.png) !important;
+            }
+        }
+        .frame_left_menu_right_arrow {
+            margin-top: 9px;
+            margin-right: 33px;
+        }
+    }
+}
+
+.frame_left_menu_right_arrow {
+    &.arrow_spread {
+        @include transform(rotate(-90deg));
+        @include transform-origin(center);
+    }
+}
+
+.frame_leftmenu_twograde_grounp {
+    &.selected {
+        .frame_leftmenu_twograde_text {
+            color: #ff6600;
+        }
+        .frame_leftmenu_twograde_arrow {
+            background-image: url(#{$image-url}/new/left-menu/new/rectangle-hover.png);
+        }
+        .frame_left_menu_right_arrow {
+            background: url(#{$image-url}/new/left-menu/new/menu-arrow-right-hover.png) no-repeat center;
+        }
+    }
+}
+
+// 超长字数截取样式补充
+.frame_leftmenu_mainitem_name,
+.frame_leftmenu_twograde_text {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.frame_leftmenu_twograde_text {
+    max-width: 125px;
+}
+
+.frame_leftmenu_lastgrade_ul .frame_leftmenu_twograde_grounp .frame_leftmenu_twograde_text {
+    max-width: 115px;
+}
+
+.frame_leftmenu_mainitem_name {
+    max-width: 200px;
+}
+
+// 其它交互补充样式
+.frame_left_menu_pin {
+    width: 240px;
+}
+
+.frame_left_menu_scroll_wrapper {
+    width: 240px;
+    overflow: hidden;
+}
+
+// 四级菜单补充样式
+.frame_leftmenu_twograde_container {
+    >.frame_leftmenu_lastgrade_ul {
+        >.frame_leftmenu_twograde_grounp {
+            margin-left: -11px;
+            .frame_leftmenu_twograde_arrow.hover {
+                background: url(#{$image-url}/new/left-menu/new/rectangle-hover.png) no-repeat left center !important;
+            }
+            &.active {
+                .frame_leftmenu_twograde_arrow.hover {
+                    background-position: left center !important;
+                }
+                &.selected {
+                    .frame_leftmenu_twograde_arrow {
+                        background-image: url(#{$image-url}/new/left-menu/new/rectangle-active.png) !important;
+                    }
+                }
+                .frame_leftmenu_twograde_arrow {
+                    background-image: url(#{$image-url}/new/left-menu/new/rectangle-active.png) !important;
+                }
+            }
+        }
+        >.frame_leftmenu_lastgrade_ul {
+            padding-left: 10px;
+        }
+    }
+}
+
+.frame_left_menu_container {
+    padding-bottom: 8px;
+}
+
+// 新左侧菜单
+.MenuBox_top {
+    margin-bottom: 1px;
+    height: 80px;
+    &.menu_top_pic1 {
+        background: url(#{$image-url}/new/left-menu/new/pic1.png) no-repeat center bottom;
+    }
+    &.menu_top_pic2 {
+        background: url(#{$image-url}/new/left-menu/new/pic2.png) no-repeat center bottom;
+    }
+    &.menu_top_pic3 {
+        background: url(#{$image-url}/new/left-menu/new/pic3.png) no-repeat center bottom;
+    }
+    &.menu_top_pic4 {
+        background: url(#{$image-url}/new/left-menu/new/pic4.png) no-repeat center bottom;
+    }
+    &.menu_top_pic5 {
+        background: url(#{$image-url}/new/left-menu/new/pic5.png) no-repeat center bottom;
+    }
+    &.menu_top_pic6 {
+        background: url(#{$image-url}/new/left-menu/new/pic6.png) no-repeat center bottom;
+    }
+    &.menu_top_pic7 {
+        background: url(#{$image-url}/new/left-menu/new/pic7.png) no-repeat center bottom;
+    }
+    &.menu_top_pic8 {
+        background: url(#{$image-url}/new/left-menu/new/pic8.png) no-repeat center bottom;
+    }
+    &.menu_top_pic9 {
+        background: url(#{$image-url}/new/left-menu/new/pic9.png) no-repeat center bottom;
+    }
+    &.menu_top_pic10 {
+        background: url(#{$image-url}/new/left-menu/new/pic10.png) no-repeat center bottom;
+    }
+    background-color: #ffffff;
+}
+
+.frame_left_menu_container::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: #f5f5f5;
+}
+
+
+/*定义滚动条轨道 内阴影+圆角*/
+
+.frame_left_menu_container::-webkit-scrollbar-track {
+    width: 0;
+}
+
+
+/*定义滑块 内阴影+圆角*/
+
+.frame_left_menu_container::-webkit-scrollbar-thumb {
+    width: 6px;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.2);
+}

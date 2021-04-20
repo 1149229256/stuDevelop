@@ -1,0 +1,930 @@
+@mixin circle-color($color) {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto;
+    line-height: 72px;
+    border-radius: 50%;
+    font-size: 20px;
+    background-color: $color;
+    color: white;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    box-shadow: 0px 4px 10px 0px rgba($color, 0.45);
+}
+
+.kind-list {
+    // &>div {
+    //     display: inline-block;
+    //     vertical-align: middle;
+    // }
+    .ant-carousel {
+        width: 85%;
+        display: inline-block;
+        vertical-align: middle;
+        height: 27px;
+        position: relative;
+        top: 2px;
+        .award-dot {
+            bottom: -18px !important;
+            left: -12%;
+            li {
+                width: 7px !important;
+                height: 7px !important;
+                border-radius: 50% !important;
+                background-color: #cccccc !important;
+                button {
+                    height: 7px !important;
+                    background: transparent !important;
+                }
+            }
+            .slick-active {
+                width: 7px !important;
+                height: 7px !important;
+                border-radius: 50% !important;
+                background-color: #2edba6 !important;
+            }
+        }
+    }
+    .span-container {
+        display: inline-block;
+        vertical-align: middle;
+        height: 27px;
+        text-align: left;
+    }
+    &>span {
+        &:first-of-type {
+            margin-right: 8px;
+        }
+    }
+    span {
+        height: 19px;
+        line-height: 19px;
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 12px;
+        text-align: center;
+        // text-overflow: ellipsis;
+        // overflow: hidden;
+        // white-space: nowrap;
+    }
+    .list-slice-line {
+        width: 1px;
+        height: 19px;
+        background-image: linear-gradient(0deg, rgba(68, 128, 169, 0) 10%, rgba(68, 128, 169, 0.72) 50%, rgba(68, 128, 169, 0) 90%);
+        margin: 0 5px;
+    }
+    .list-one {
+        display: inline-block;
+        vertical-align: middle;
+        max-width: 100px;
+        padding: 0 10px;
+        color: #0a5057;
+        background-color: #c8e1e4;
+        cursor: pointer;
+        border-radius: 3px;
+        position: relative;
+        &.active,
+        &:hover {
+            background-color: #1a909c;
+            color: #ffffff;
+            &:after {
+                content: "";
+                display: block;
+                width: 6px;
+                height: 6px;
+                position: absolute;
+                bottom: -3px;
+                left: calc(50% - 3px);
+                transform: rotate(45deg);
+                background-color: #1a909c;
+            }
+        }
+    }
+}
+
+.condition-rank {
+    padding-bottom: 30px;
+    .rank-list {
+        padding: 0 20px 0 0;
+        margin: 0;
+        list-style: none;
+        li {
+            line-height: 20px;
+            margin-bottom: 12px;
+            .ranklogo {
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 12px;
+                width: 18px;
+                height: 20px;
+                background-image: url(../../app/images/rank-medal-4.png);
+                background-position: center center;
+                background-repeat: no-repeat;
+                &.one {
+                    background-image: url(../../app/images/rank-medal-1.png);
+                }
+                &.two {
+                    background-image: url(../../app/images/rank-medal-2.png);
+                }
+                &.three {
+                    background-image: url(../../app/images/rank-medal-3.png);
+                }
+            }
+            img {
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                margin-right: 7px;
+            }
+            .rank-name {
+                display: inline-block;
+                vertical-align: middle;
+                width: calc(75% - 77px);
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+            .rank-grade {
+                width: 25%;
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: 14px;
+                color: #999999;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                &.one {
+                    color: #f13132;
+                }
+                &.two {
+                    color: #a247e8;
+                }
+                &.three {
+                    color: #001e97;
+                }
+            }
+        }
+    }
+    .course-show-rank,
+    .detail-work-rank,
+    .person-study-rank,
+    .test-grade-rank {
+        position: relative;
+        // width: calc(25% - 1px);
+        //自学排行暂无，先设置为33%
+        width: calc(25% - 1px);
+        height: 204px;
+        display: inline-block;
+        vertical-align: top;
+        padding: 24px 0 0 82px;
+        .course-show-logo {
+            display: inline-block;
+            width: 30px;
+            height: 78px;
+            position: absolute;
+            top: 0;
+            left: 32px;
+            background-image: url(../../app/images/rank-courseshow.png);
+        }
+        .detail-work-logo {
+            display: inline-block;
+            width: 30px;
+            height: 78px;
+            position: absolute;
+            top: 0;
+            left: 32px;
+            background-image: url(../../app/images/rank-detailwork.png);
+        }
+        .person-study-logo {
+            display: inline-block;
+            width: 30px;
+            height: 78px;
+            position: absolute;
+            top: 0;
+            left: 32px;
+            background-image: url(../../app/images/rank-personstudy.png);
+        }
+        .test-grade-logo {
+            display: inline-block;
+            width: 30px;
+            height: 78px;
+            position: absolute;
+            top: 0;
+            left: 32px;
+            background-image: url(../../app/images/rank-testgrade.png);
+        }
+    }
+    .slice-line {
+        display: inline-block;
+        vertical-align: top;
+        width: 1px;
+        height: 127px;
+        margin-top: 38px;
+        background-color: #cccccc;
+    }
+    .tip {
+        color: #999999;
+        padding-left: 48px;
+        .tiplogo {
+            display: inline-block;
+            vertical-align: middle;
+            width: 16px;
+            height: 16px;
+            margin-right: 5px;
+            background-image: url(../../app/images/rank-tiplogo.png);
+        }
+    }
+}
+
+.leader-condition-rank {
+    padding-bottom: 30px;
+    .condition-rank-top {
+        display: inline-block;
+        position: relative;
+        height: 168px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding-top: 36px;
+        .circle-container {
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 107px;
+            .circle-violet {
+                @include circle-color(#9780f8);
+            }
+            .circle-red {
+                @include circle-color(#fd8276);
+            }
+            .circle-orange {
+                @include circle-color(#ffaf54);
+            }
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+        p {
+            margin: 12px 0 0 0;
+            text-align: center;
+            color: #656565;
+        }
+    }
+    .condition-rank-bottom {
+        width: calc(100% - 40px);
+        margin: 0 auto;
+        padding: 0 28px;
+        background-color: #f5f5f5;
+    }
+    .rank-list {
+        padding: 0 14px 0 0;
+        margin: 0;
+        list-style: none;
+        li {
+            line-height: 20px;
+            margin-bottom: 12px;
+            .ranklogo {
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 12px;
+                width: 18px;
+                height: 20px;
+                background-image: url(../../app/images/rank-medal-4.png);
+                background-position: center center;
+                background-repeat: no-repeat;
+                &.one {
+                    background-image: url(../../app/images/rank-medal-1.png);
+                }
+                &.two {
+                    background-image: url(../../app/images/rank-medal-2.png);
+                }
+                &.three {
+                    background-image: url(../../app/images/rank-medal-3.png);
+                }
+            }
+            img {
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                margin-right: 7px;
+            }
+            .rank-name {
+                display: inline-block;
+                vertical-align: middle;
+                width: calc(70% - 57px);
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+            .rank-grade {
+                width: 30%;
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: 20px;
+                color: #999999;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                &.one {
+                    color: #f13132;
+                }
+                &.two {
+                    color: #a247e8;
+                }
+                &.three {
+                    color: #001e97;
+                }
+            }
+        }
+    }
+    .course-show-rank,
+    .detail-work-rank,
+    .person-study-rank,
+    .test-grade-rank {
+        position: relative;
+        width: calc(33% - 1px);
+        height: 204px;
+        display: inline-block;
+        vertical-align: top;
+        padding: 24px 0 0 90px;
+        .course-show-logo {
+            display: inline-block;
+            width: 30px;
+            height: 101px;
+            position: absolute;
+            top: 0;
+            left: 40px;
+            background-image: url(../../app/images/leader-rank-courseShow.png);
+        }
+        .detail-work-logo {
+            display: inline-block;
+            width: 30px;
+            height: 118px;
+            position: absolute;
+            top: 0;
+            left: 40px;
+            background-image: url(../../app/images/leader-rank-work.png);
+        }
+        .person-study-logo {
+            display: inline-block;
+            width: 30px;
+            height: 101px;
+            position: absolute;
+            top: 0;
+            left: 40px;
+            background-image: url(../../app/images/leader-rank-study.png);
+        }
+    }
+    .slice-line {
+        display: inline-block;
+        vertical-align: top;
+        width: 1px;
+        height: 127px;
+        margin-top: 38px;
+        background-color: #cccccc;
+    }
+    .tip {
+        color: #999999;
+        padding-left: 48px;
+        .tiplogo {
+            display: inline-block;
+            vertical-align: middle;
+            width: 16px;
+            height: 16px;
+            margin-right: 5px;
+            background-image: url(../../app/images/rank-tiplogo.png);
+        }
+    }
+}
+
+.course-show {
+    padding: 0 20px 20px;
+    .show-top {
+        height: 168px;
+        display: inline-block;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        padding-top: 36px;
+        &:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .course-liveness,
+        .course-add,
+        .course-reduce,
+        .raise-hand {
+            float: left;
+            margin-right: 128px;
+            .circle-blue {
+                @include circle-color(#3caeff);
+            }
+            .circle-violet {
+                @include circle-color(#9780f8);
+            }
+            .circle-red {
+                @include circle-color(#fd8276);
+            }
+            .circle-green {
+                @include circle-color(#2edba6);
+            }
+            .circle-orange {
+                @include circle-color(#ffaf54);
+            }
+            p {
+                margin: 12px 0 0 0;
+                text-align: center;
+                color: #656565;
+            }
+        }
+        .raise-hand {
+            margin-right: 0;
+        }
+    }
+    .show-bottom {
+        height: 320px;
+        background-color: #f5f5f5;
+        &:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .grade-compare-status,
+        .subject-grade-statistic {
+            float: left;
+            width: calc(50% - 0.5px);
+            height: 320px;
+            .grade-compare-echart,
+            .grade-statistic-echart {
+                width: 100%;
+                height: 320px;
+            }
+        }
+        .slice-line {
+            float: left;
+            width: 1px;
+            height: 240px;
+            margin-top: 46px;
+            background-color: #cccccc;
+            border-radius: 1px;
+        }
+    }
+}
+
+.detail-work {
+    padding: 0 20px 40px;
+    .detail-work-top {
+        .ant-carousel {
+            display: inline-block;
+            width: calc(61% - 1px);
+            vertical-align: middle;
+            position: relative;
+            bottom: 10px;
+            .award-dot {
+                bottom: -40px !important;
+                li {
+                    width: 7px !important;
+                    height: 7px !important;
+                    border-radius: 50% !important;
+                    background-color: #cccccc !important;
+                    button {
+                        height: 7px !important;
+                        background: transparent !important;
+                    }
+                }
+                .slick-active {
+                    width: 7px !important;
+                    height: 7px !important;
+                    border-radius: 50% !important;
+                    background-color: #2edba6 !important;
+                }
+            }
+        }
+        .rate-echart-container {
+            display: inline-block;
+            width: 39%;
+            padding: 0 60px;
+            .complete-rate,
+            .pass-rate {
+                display: inline-block;
+                width: 50%;
+                height: 176px;
+                vertical-align: middle;
+                .progress {
+                    display: block;
+                    width: 92px;
+                    height: 92px;
+                    margin: 30px auto 8px;
+                }
+                p {
+                    text-align: center;
+                    color: #656565;
+                    margin-top: 8px;
+                }
+            }
+        }
+        .slice-line {
+            display: inline-block;
+            width: 1px;
+            height: 80px;
+            background-color: #cccccc;
+            border-radius: 1px;
+            vertical-align: middle;
+        }
+        .subject-grade-list {
+            display: inline-block;
+            width: calc(61% - 1px);
+            vertical-align: middle;
+            padding: 0 68px;
+            .grade-list-one {
+                width: 20%;
+                display: inline-block;
+                vertical-align: middle;
+                p {
+                    margin: 0;
+                    text-align: center;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    &:last-of-type {
+                        margin-top: -5px;
+                    }
+                }
+                .grade-num {
+                    font-size: 30px;
+                    &.orange {
+                        color: #ffaf54;
+                    }
+                    &.blue {
+                        color: #3caeff;
+                    }
+                    &.red {
+                        color: #fd8276;
+                    }
+                    &.green {
+                        color: #2edba6;
+                    }
+                    &.violet {
+                        color: #957ae4;
+                    }
+                }
+            }
+        }
+    }
+    .work-complete {
+        .ant-progress-text {
+            color: #5ca634;
+            font-size: 24px;
+            &:after {
+                content: "%";
+                font-size: 16px;
+            }
+        }
+    }
+    .work-pass {
+        .ant-progress-text {
+            color: #49aaea;
+            font-size: 24px;
+            &:after {
+                content: "%";
+                font-size: 16px;
+            }
+        }
+    }
+    .select {
+        .ant-select-selector {
+            width: 80px;
+            height: 24px;
+            border-radius: 3px;
+            vertical-align: middle;
+        }
+        .ant-select-selection-item {
+            color: #333333;
+        }
+    }
+    .work-echart-container {
+        height: 605px;
+        background-color: #f5f5f5;
+        position: relative;
+        .x-line {
+            position: absolute;
+            top: 46%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            width: 95%;
+            height: 1px;
+            background-color: #cccccc;
+        }
+        .y-line {
+            position: absolute;
+            top: 52%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            width: 1px;
+            height: 525px;
+            background-color: #cccccc;
+        }
+        .echart-title {
+            display: inline-block;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            span {
+                display: inline-block;
+                line-height: 24px;
+                color: #333333;
+                margin-right: 5px;
+            }
+            .ant-select-selection-item {
+                color: #333333;
+                padding-right: 0;
+                font-size: 12px;
+                line-height: 22px;
+            }
+            .ant-select-arrow {
+                right: 2px;
+            }
+        }
+        .work-complete-rate,
+        .work-pass-rate {
+            display: inline-block;
+            width: 50%;
+            height: 281px;
+            vertical-align: middle;
+            padding-top: 18px;
+            .complete-rate-echart,
+            .pass-rate-echart {
+                width: 100%;
+                height: 210px;
+            }
+        }
+        .allsubject-work-avg,
+        .subject-detail-grade {
+            display: inline-block;
+            width: 50%;
+            vertical-align: middle;
+            height: 323px;
+            padding-top: 18px;
+            .kind-list {
+                margin-left: 60px;
+            }
+            .work-avg-echart {
+                width: 100%;
+                height: 250px;
+            }
+        }
+        .subject-detail-grade {
+            .ant-carousel {
+                width: 85%;
+                display: inline-block;
+                vertical-align: middle;
+                height: 27px;
+                position: relative;
+                top: 2px;
+                .award-dot {
+                    bottom: -18px !important;
+                    left: -12%;
+                    li {
+                        width: 6px !important;
+                        height: 6px !important;
+                        border-radius: 50% !important;
+                        background-color: #cccccc !important;
+                        button {
+                            height: 6px !important;
+                            background: transparent !important;
+                        }
+                    }
+                    .slick-active {
+                        width: 6px !important;
+                        height: 6px !important;
+                        border-radius: 50% !important;
+                        background-color: #2edba6 !important;
+                    }
+                }
+            }
+            .echart-title {
+                margin-top: 14px;
+            }
+            .detail-grade-echart {
+                width: 100%;
+                height: 215px;
+            }
+        }
+    }
+}
+
+.test-grade {
+    padding: 20px;
+    .test-grade-top {
+        height: 40px;
+        .kind-list {
+            display: inline-block;
+        }
+        .select-container {
+            float: right;
+            position: relative;
+            top: -5px;
+            margin-right: 16px;
+            span {
+                display: inline-block;
+                line-height: 30px;
+                color: #999999;
+                margin-right: 8px;
+            }
+            .select {
+                .ant-select-selector {
+                    width: 100px;
+                    height: 30px;
+                    border-radius: 3px;
+                    vertical-align: middle;
+                }
+                .ant-select-selection-item {
+                    color: #333333;
+                    padding-right: 0;
+                }
+                .ant-select-arrow {
+                    right: 0;
+                }
+            }
+        }
+    }
+    .manager-grade-bottom {
+        .manager-grade-echart {
+            height: 281px;
+            // padding: 0 50px;
+        }
+    }
+    .test-grade-bottom {
+        background-color: #f5f5f5;
+        .slice-line {
+            display: inline-block;
+            vertical-align: middle;
+            width: 1px;
+            height: 201px;
+            background-color: #cccccc;
+            border-radius: 1px;
+        }
+        .common-grade-echart,
+        .common-rank-echart {
+            width: calc(50% - 0.5px);
+            display: inline-block;
+            height: 281px;
+            vertical-align: middle;
+        }
+    }
+}
+
+.grade-statistic {
+    padding: 0 6px 42px 42px;
+    .course-count {
+        height: 56px;
+        line-height: 56px;
+        color: #666666;
+        margin: 0;
+        padding-right: 36px;
+        span {
+            font-size: 18px;
+            color: #ff0000;
+        }
+    }
+    .course-grade-one {
+        display: inline-block;
+        width: 254px;
+        height: 152px;
+        border-radius: 6px;
+        margin: 0 36px 24px 0;
+        &.A {
+            background-image: url(../../app/images/grade-A.png);
+            background-repeat: no-repeat;
+            .course-grade-statistic {
+                .grade-sum {
+                    .grade-num {
+                        color: #6d91ff;
+                    }
+                }
+            }
+        }
+        &.B {
+            background-image: url(../../app/images/grade-B.png);
+            background-repeat: no-repeat;
+            .course-grade-statistic {
+                .grade-sum {
+                    .grade-num {
+                        color: #0db58f;
+                    }
+                }
+            }
+        }
+        &.C {
+            background-image: url(../../app/images/grade-C.png);
+            background-repeat: no-repeat;
+            .course-grade-statistic {
+                .grade-sum {
+                    .grade-num {
+                        color: #ff895a;
+                    }
+                }
+            }
+        }
+        &.D {
+            background-image: url(../../app/images/grade-D.png);
+            background-repeat: no-repeat;
+            .course-grade-statistic {
+                .grade-sum {
+                    .grade-num {
+                        color: #ff5b6f;
+                    }
+                }
+            }
+        }
+        .leader-statistic {
+            padding: 15px 10px 0 !important;
+        }
+        .grade-avg-one {
+            display: inline-block;
+            vertical-align: top;
+            width: 50%;
+            text-align: center;
+            font-size: 12px;
+            color: #999999;
+            span {
+                color: #333333;
+            }
+        }
+        p {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            margin: 0;
+        }
+        .course-name {
+            line-height: 56px;
+            padding: 0 18px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .course-grade-statistic {
+            height: 96px;
+            padding-top: 5px;
+            .grade-sum {
+                display: inline-block;
+                width: 106px;
+                height: 96px;
+                // line-height: 96px;
+                p {
+                    text-align: center;
+                    color: #999999;
+                }
+                .grade-num {
+                    font-size: 36px;
+                    color: #ff895a;
+                    margin: 5px 0 -5px;
+                }
+            }
+            .slice-line {
+                display: inline-block;
+                width: 1px;
+                height: 60px;
+                margin-top: 20px;
+                background-color: #e6e6e6;
+            }
+            .grade-avg {
+                display: inline-block;
+                width: 147px;
+                height: 96px;
+                padding: 24px 21px;
+                vertical-align: top;
+                p {
+                    color: #999999;
+                    .compare-score {
+                        color: #333333;
+                    }
+                }
+            }
+        }
+    }
+    .teacher-remark {
+        padding-right: 36px;
+        .remark-name {
+            display: inline-block;
+            width: 85px;
+            padding: 12px 8px 0 0;
+            color: #333333;
+            vertical-align: top;
+        }
+        .remark-content {
+            display: inline-block;
+            width: calc(100% - 85px);
+            padding: 16px;
+            background-color: #eff3f7;
+            border-radius: 6px;
+        }
+    }
+}

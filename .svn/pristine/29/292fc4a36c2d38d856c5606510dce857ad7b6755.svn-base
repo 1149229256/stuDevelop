@@ -1,0 +1,380 @@
+.ant-modal-mask {
+    z-index: 2000!important;
+}
+
+.ant-modal-wrap {
+    z-index: 2001!important;
+}
+
+.ant-tooltip {
+    z-index: 2002!important;
+}
+
+.ant-calendar-picker-container {
+    z-index: 2003!important;
+}
+
+.ant-modal-wrap {
+    /*  div.ant-modal{
+
+    position: absolute;
+
+    padding:0;
+
+  }*/
+}
+
+.ant-modal {
+    .ant-modal-footer {
+        button+button {
+            margin-left: 12px;
+        }
+    }
+}
+
+.ant-modal-close {
+    .ant-modal-close-x {
+        .anticon {
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+}
+
+
+/*
+模态框
+*/
+
+.ant-modal-content,
+.ant-modal-header {
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+
+.Modal-1 {
+    position: relative;
+    width: 810px;
+    .ant-modal-close {
+        height: 48px;
+        .ant-modal-close-x {
+            height: 48px;
+            width: 48px;
+            .modal-close-icon {
+                display: inline-block;
+                width: 24px;
+                height: 24px;
+                background: url("../images/detailsModal/close.png") no-repeat center;
+                &:hover {
+                    opacity: 0.75;
+                }
+            }
+        }
+    }
+    .ant-modal-content,
+    .ant-modal-header {
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
+    }
+    .ant-modal-header {
+        width: 100%;
+        height: 48px;
+        padding: 16px 20px 14px;
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        // background-image: linear-gradient(-90deg, #05e4f8 0%, #03c3fc 62%, #00a1ff 100%);
+        background-image: linear-gradient(-90deg, #26cbdb 0%, #16b0bf 62%, #0594a2 100%);
+        .ant-modal-title {
+            color: #fff;
+            font-size: 18px;
+        }
+    }
+    .ant-modal-body {
+        position: relative;
+        height: 456px;
+        overflow: visible;
+        box-sizing: border-box;
+        padding: 24px 36px;
+    }
+    .ant-modal-footer {
+        height: 56px;
+        padding: 13px 24px;
+        background-color: #e8eff7;
+        .ant-btn {
+            color: #fff;
+            font-size: 16px;
+            span {
+                color: #fff;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+.Modal-2 {
+    position: relative;
+    width: 810px;
+    .ant-modal-close {
+        height: 56px;
+        .ant-modal-close-x {
+            height: 56px;
+            line-height: 56px;
+            width: 48px;
+            color: #b8b8b8;
+        }
+    }
+    .ant-modal-content,
+    .ant-modal-header {
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
+    }
+    .ant-modal-header {
+        width: 100%;
+        height: 56px;
+        background: #fff;
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        border-bottom: dashed 1px #ccc;
+        .ant-modal-title {
+            color: #333;
+            font-size: 20px;
+        }
+    }
+    .ant-modal-body {
+        position: relative;
+        height: 411px;
+        box-sizing: border-box;
+        padding: 33px 48px;
+        overflow: visible;
+    }
+    .ant-modal-footer {
+        .ant-btn {
+            color: #fff;
+            font-size: 16px;
+            span {
+                color: #fff;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+.Modal-3 {
+    position: relative;
+    width: 588px;
+    .ant-modal-close {
+        height: 42px;
+        .ant-modal-close-x {
+            height: 48px;
+            line-height: 48px;
+            width: 48px;
+            color: #fff;
+        }
+    }
+    .ant-modal-content,
+    .ant-modal-header {
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
+    }
+    .ant-modal-header {
+        width: 100%;
+        height: 48px;
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        background-image: linear-gradient(-90deg, #00ffe4 0%, #0099ff 100%);
+        .ant-modal-title {
+            color: #fff;
+            font-size: 16px;
+        }
+    }
+    .ant-modal-body {
+        position: relative;
+        height: 293px;
+        box-sizing: border-box;
+        padding: 20px 24px;
+        overflow: visible;
+    }
+    .ant-modal-footer {
+        height: 48px;
+        background-color: #ffffff;
+        box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.36);
+        .ant-btn {
+            color: #fff;
+            font-size: 16px;
+            span {
+                color: #fff;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+.DetailsMsgModal {
+    .ant-modal-body {
+        overflow: hidden;
+    }
+    .ant-modal-close {
+        width: 36px;
+        height: 36px;
+        .ant-modal-close-x {
+            width: 36px;
+            height: 36px;
+            line-height: 36px;
+            path {
+                color: #fff;
+            }
+        }
+    }
+    .icon-close {
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        background: url(../images/detailsModal/icon-close.png) no-repeat center center;
+        background-size: 12px 12px;
+    }
+    .modal-top {
+        width: 100%;
+        position: relative;
+        height: 200px;
+        background: url(../images/detailsModal/detailsModalTop.png) no-repeat center top;
+        background-size: contain;
+        .top-img {
+            position: relative;
+            display: inline-block;
+            margin-top: 42px;
+            width: 80px;
+            height: 80px;
+            border: #00a1ff 2px solid;
+            border-radius: 50%;
+            margin-left: -40px;
+            overflow: hidden;
+            left: 50%;
+            img {
+                object-fit: cover;
+            }
+        }
+        .top-userName {
+            position: relative;
+            line-height: 25px;
+            text-align: center;
+            color: #fff;
+            font-size: 18px;
+            margin: 8px 0;
+        }
+        .top-userText {
+            position: relative;
+            line-height: 20px;
+            text-align: center;
+            color: #fff;
+            font-size: 14px;
+            opacity: 0.8;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            -o-transform: translateX(-50%);
+        }
+    }
+    .modal-content {
+        width: 100%;
+        position: relative;
+        min-height: 300px;
+        // overflow: auto;
+        .content-box {
+            width: 100%;
+            padding-top: 30px;
+            .row {
+                width: 100%;
+                min-height: 30px;
+                //overflow: hidden;
+                &.row-adress {
+                    height: 40px;
+                    margin-top: 5px;
+                    span {
+                        line-height: 20px;
+                    }
+                }
+                .col-left {
+                    float: left;
+                    width: 30%;
+                    margin-right: 3%;
+                    line-height: 30px;
+                    text-align: right;
+                    color: #999;
+                    font-size: 14px;
+                }
+                .col-right {
+                    float: left;
+                    width: 60%;
+                    line-height: 30px;
+                    text-align: left;
+                    color: #333;
+                    font-size: 14px;
+                    // max-width: 240px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    // .text {
+                    //     // display: inline-block;
+                    //     // max-width: 240px;
+                    //     // overflow: hidden;
+                    //     // text-overflow: ellipsis;
+                    //     // white-space: nowrap;
+                    // }
+                    .content-null {
+                        color: #999;
+                        font-size: 14px;
+                        line-height: 20px;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.DetailsMsgModal {
+    .ant-modal-footer {
+        border: none;
+        position: relative;
+        height: 70px;
+    }
+    .antdModal-btn-footer {
+        width: 112px;
+        height: 36px;
+        color: #fff;
+        text-align: center;
+        border: none;
+        &.left {
+            position: absolute;
+            left: 50%;
+            margin-left: -120px;
+        }
+        &.right {
+            position: absolute;
+            right: 50%;
+            margin-right: -120px;
+        }
+    }
+}

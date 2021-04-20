@@ -1,0 +1,85 @@
+/*
+ * _______________#########_______________________ 
+ * ______________############_____________________ 
+ * ______________#############____________________ 
+ * _____________##__###########___________________ 
+ * ____________###__######_#####__________________ 
+ * ____________###_#######___####_________________ 
+ * ___________###__##########_####________________ 
+ * __________####__###########_####_______________ 
+ * ________#####___###########__#####_____________ 
+ * _______######___###_########___#####___________ 
+ * _______#####___###___########___######_________ 
+ * ______######___###__###########___######_______ 
+ * _____######___####_##############__######______ 
+ * ____#######__#####################_#######_____ 
+ * ____#######__##############################____ 
+ * ___#######__######_#################_#######___ 
+ * ___#######__######_######_#########___######___ 
+ * ___#######____##__######___######_____######___ 
+ * ___#######________######____#####_____#####____ 
+ * ____######________#####_____#####_____####_____ 
+ * _____#####________####______#####_____###______ 
+ * ______#####______;###________###______#________ 
+ * ________##_______####________####______________ 
+ * 
+ * @Author: zhuzesen
+ * @LastEditors: zhuzesen
+ * @Date: 2020-12-08 11:27:41
+ * @LastEditTime: 2020-12-14 10:10:34
+ * @Description: 
+ * @FilePath: \teacher-development\src\component\homeTop\index.scss
+ */
+
+.home-top {
+    padding: 12px 0;
+    height: 54px;
+    .btn-publish {
+        float: right;
+        margin-left: 10px;
+        background-image: linear-gradient(90deg, #39d7ff 0%, #009cff 100%), linear-gradient(#a1adb4, #a1adb4);
+        &::before {
+            content: "";
+            position: relative;
+            left: 0;
+            display: inline-block;
+            // top: 5;
+            vertical-align: top;
+            height: 100%;
+            width: 14px;
+            margin-right: 4px;
+            background: url(./images/icon-publish.png) no-repeat center center / 14px 14px;
+        }
+    }
+    .btn-draft {
+        float: right;
+        margin-left: 10px;
+        background-image: linear-gradient(90deg, #00d86b 0%, #10bf36 62%, #1fa500 100%), linear-gradient(#a1adb4, #a1adb4);
+        &::before {
+            content: "";
+            position: relative;
+            left: 0;
+            display: inline-block;
+            // top: 5;
+            vertical-align: top;
+            height: 100%;
+            width: 12px;
+            margin-right: 4px;
+            background: url(./images/icon-draft.png) no-repeat center center / 12px 12px;
+        }
+    }
+    .home-search {
+        float: right;
+        border-radius: 3px;
+        border: solid 1px #dedede;
+        height: 30px;
+        line-height: 30px;
+    }
+}
+
+.draft-box {
+    max-width: 1000px;
+    .ant-tooltip-inner {
+        padding-bottom: 16px;
+    }
+}

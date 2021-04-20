@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="./Images/favicon.png" />
+    <title>产品版权信息</title>
+    <style type="text/css">
+        /* 全局样式 */
+        html,
+        body {
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+            font-family: 微软雅黑;
+        }
+
+        html,
+        body span {
+            font-family: 微软雅黑;
+            font-size: 16px;
+            color: #333;
+            text-align: left;
+            font-weight: normal;
+        }
+
+        html,
+        body label {
+            font-family: 微软雅黑;
+            font-size: 16px;
+            color: #333;
+        }
+
+        html,
+        body a {
+            font-family: 微软雅黑;
+            font-size: 16px;
+            color: blue;
+            text-align: left;
+        }
+
+        html,
+        body p {
+            font-family: 微软雅黑;
+            font-size: 16px;
+            color: #333;
+            text-align: left;
+        }
+
+        html,
+        body input {
+            font-family: 微软雅黑;
+            font-size: 16px;
+            color: #333;
+        }
+
+        html,
+        body div {
+            box-sizing: border-box;
+            word-break: break-all;
+        }
+
+        /*内容页相关样式*/
+        .Content {
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 20px;
+        }
+
+        h2 {
+            font-size: 16px;
+        }
+
+        p {
+            line-height: 26px;
+            margin: 15px 0;
+        }
+
+        .pcimg {
+            width: 1060px;
+            height: 509px;
+            margin-right: 30px;
+        }
+
+        /*版权信息*/
+        .product-title {
+            font-size: 36px;
+            margin: 0 0 25px 0;
+        }
+
+        .product-title span {
+            font-size: 24px;
+        }
+
+        .product-icon {
+            float: left;
+            width: 128px;
+            height: 128px;
+        }
+
+        .product-info {
+            float: left;
+            font-size: 18px;
+            width: calc(100% - 260px);
+            margin: 8px 25px;
+        }
+
+        .product-info span {
+            font-size: 18px;
+            color: #999;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Content" style="padding: 46px;">
+        <p class="product-title">
+            学生成长平台</p>
+        <p>
+            <img class="product-icon" alt="Logo" src="Images/Logo.png" />
+            <p class="product-info">
+                <span>版本：</span>1.0</p>
+            <p class="product-info">
+                <span>日期：</span>2021-03-30 10:00</p>
+            <p class="product-info">
+                <span>型号：</span>SD5.0</p>
+        </p>
+    </div>
+</body>
+
+</html>
